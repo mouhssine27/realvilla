@@ -40,6 +40,8 @@ header -->
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
+
+        
           <div class="d-block d-md-flex align-items-center text-center">
             <div class="me-3 d-inline-block">
               <a href="tel:1-800-555-1234"><i class="fa fa-phone me-2 fa fa-flip-horizontal"></i>1-800-555-1234 </a>
