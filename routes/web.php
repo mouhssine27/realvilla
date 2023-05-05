@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\controllers\AnnonceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,5 @@ Route::get('/contact', function () {
 Route::get('/propertySubmit', function () {
     return view('submit-property');
 });
+Route::get('/afficher', [AnnonceController::class, 'selectAnonce']);
+Route::get('/create', [AnnonceController::class, 'CreateAnonnce']);
