@@ -16,18 +16,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,500,600,700%7CRoboto:300,400,500,700">
 
     <!-- CSS Global Compulsory (Do not remove)-->
-    <link rel="stylesheet" href="css/font-awesome/all.min.css" />
-    <link rel="stylesheet" href="css/flaticon/flaticon.css" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="{{ asset('css/font-awesome/all.min.css') }}" />
+    <!<link rel="stylesheet" href="{{ asset('css/flaticon/flaticon.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}" />
 
     <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
-    <link rel="stylesheet" href="css/select2/select2.css" />
-    <link rel="stylesheet" href="css/range-slider/ion.rangeSlider.css" />
-    <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="{{ asset('css/select2/select2.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/range-slider/ion.rangeSlider.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/owl-carousel/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup/magnific-popup.css') }}" />
 
     <!-- Template Style -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 
   </head>
 
@@ -88,7 +88,7 @@ header -->
           <div class="navbar-collapse collapse justify-content-center">
             <ul class="nav navbar-nav">
               <li class="nav-item dropdown">
-                <a class="nav-link" href="index.html">Accueil</a>
+                <a class="nav-link" href="{{ url('/') }}">Accueil</a>
                 </a>
                 <!-- <ul> -->
                   <!-- <li><a class="dropdown-item" href="index.html">Home Default</a></li> -->
@@ -103,7 +103,7 @@ header -->
                 <!-- </ul> -->
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="about-us.html">Qui sommes-nous ? </a>
+                <a class="nav-link" href="{{ url('/aboute') }}">Qui sommes-nous ? </a>
                 </li>
 
               <!-- <li class="dropdown nav-item">
@@ -1638,22 +1638,22 @@ footer-->
 Javascript -->
 
   <!-- JS Global Compulsory (Do not remove)-->
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/popper/popper.min.js"></script>
-  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
+  <script src="{{ asset('js/popper/popper.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
 
   <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
-  <script src="js/jquery.appear.js"></script>
-  <script src="js/counter/jquery.countTo.js"></script>
-  <script src="js/select2/select2.full.js"></script>
-  <script src="js/range-slider/ion.rangeSlider.min.js"></script>
-  <script src="js/owl-carousel/owl.carousel.min.js"></script>
-  <script src="js/jarallax/jarallax.min.js"></script>
-  <script src="js/jarallax/jarallax-video.min.js"></script>
-  <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="{{ asset('js/jquery.appear.js') }}"></script>
+  <script src="{{ asset('js/counter/jquery.countTo.js') }}"></script>
+  <script src="{{ asset('js/select2/select2.full.js') }}"></script>
+  <script src="{{ asset('js/range-slider/ion.rangeSlider.min.js') }}"></script>
+  <script src="{{ asset('js/owl-carousel/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('js/jarallax/jarallax.min.js') }}"></script>
+  <script src="{{ asset('js/jarallax/jarallax-video.min.js') }}"></script>
+  <script src="{{ asset('js/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
 
   <!-- Template Scripts (Do not remove)-->
-  <script src="js/custom.js"></script>
+  <script src="{{ asset('js/custom.js') }}"></script>
 
 </body>
 </html>
