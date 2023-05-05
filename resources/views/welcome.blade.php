@@ -42,6 +42,8 @@ header -->
         <div class="col-12">
           <div class="d-block d-md-flex align-items-center text-center">
             <div class="me-3 d-inline-block">
+
+
               <a href="tel:1-800-555-1234"><i class="fa fa-phone me-2 fa fa-flip-horizontal"></i>1-800-555-1234 </a>
             </div>
             <div class="me-auto d-inline-block">
@@ -56,6 +58,10 @@ header -->
               <div class="dropdown-menu mt-0" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">Global</a>
                 <a class="dropdown-item" href="#">Arizona</a>
+
+
+
+                
                 <a class="dropdown-item" href="#">British columbia</a>
                 <a class="dropdown-item" href="#">Commercial</a>
               </div>
