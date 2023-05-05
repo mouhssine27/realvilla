@@ -1,8 +1,9 @@
+
 @extends('layouts.master')
 @section('content')
-<!--=================================
 
-  
+
+<!--=================================
 banner -->
 <section class="banner bg-holder bg-overlay-black-30" style="background-image: url(images/slider1\ .jpg);">
   <div class="container">
