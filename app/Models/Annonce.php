@@ -9,12 +9,12 @@ class Annonce extends Model
 {
     use HasFactory;
 
+    protected $table ='annonces';
     protected $fillable = [
-
-        'titre' ,
+        'titre',
         'Dureelocation',
         'prix',
-        'pieces' ,
+        'pieces',
         'offre',
         'categorie',
         'zone',
@@ -39,7 +39,7 @@ class Annonce extends Model
         'fichiernavigateur',
         'zonenavigateur',
         'descreption',
-        'titredetage'
+        'titredetage',
 
     ];
 
