@@ -1,132 +1,1656 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Real Villa - Real Estate HTML5 Template" />
+    <meta name="author" content="potenzaglobalsolutions.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Real Villa - Real Estate HTML5 Template</title>
 
-        <title>Laravel</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
 
-        <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,500,600,700%7CRoboto:300,400,500,700">
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gray-100{--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.border-gray-200{--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.text-center{text-align:center}.text-gray-200{--tw-text-opacity: 1;color:rgb(229 231 235 / var(--tw-text-opacity))}.text-gray-300{--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity))}.text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity: 1;color:rgb(55 65 81 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity: 1;color:rgb(17 24 39 / var(--tw-text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity))}.dark\:bg-gray-900{--tw-bg-opacity: 1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:border-gray-700{--tw-border-opacity: 1;border-color:rgb(55 65 81 / var(--tw-border-opacity))}.dark\:text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}}
-        </style>
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" href="css/font-awesome/all.min.css" />
+    <link rel="stylesheet" href="css/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" href="css/select2/select2.css" />
+    <link rel="stylesheet" href="css/range-slider/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup/magnific-popup.css" />
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+    <!-- Template Style -->
+    <link rel="stylesheet" href="css/style.css" />
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
+  </head>
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
+<body>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
-                </div>
+<!--=================================
+header -->
+<header class="header">
+  <div class="topbar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-block d-md-flex align-items-center text-center">
+            <div class="me-3 d-inline-block">
+              <a href="tel:1-800-555-1234"><i class="fa fa-phone me-2 fa fa-flip-horizontal"></i>1-800-555-1234 </a>
             </div>
+            <div class="me-auto d-inline-block">
+              <span class="me-2 text-white">Obtenir l'application:</span>
+              <a class="pe-1" href="#"><i class="fab fa-android"></i></a>
+              <a href="#"><i class="fab fa-apple"></i></a>
+            </div>
+            <div class="dropdown d-inline-block ps-2 ps-md-0">
+              <a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Choisissez l'emplacement<i class="fas fa-chevron-down ps-2"></i>
+              </a>
+              <div class="dropdown-menu mt-0" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Global</a>
+                <a class="dropdown-item" href="#">Arizona</a>
+                <a class="dropdown-item" href="#">British columbia</a>
+                <a class="dropdown-item" href="#">Commercial</a>
+              </div>
+            </div>
+            <div class="social d-inline-block">
+              <ul class="list-unstyled">
+                <li><a href="#"> <i class="fab fa-facebook-f"></i> </a></li>
+                <li><a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                <li><a href="#"> <i class="fab fa-linkedin"></i> </a></li>
+                <li><a href="#"> <i class="fab fa-pinterest"></i> </a></li>
+                <li><a href="#"> <i class="fab fa-instagram"></i> </a></li>
+              </ul>
+            </div>
+            <div class="login d-inline-block">
+              <a data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Bonjour connectez-vous<i class="fa fa-user ps-2"></i></a>
+            </div>
+          </div>
         </div>
-    </body>
+      </div>
+    </div>
+  </div>
+    <nav class="navbar navbar-light bg-white navbar-static-top navbar-expand-lg header-sticky">
+        <div class="container-fluid">
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><i class="fas fa-align-left"></i></button>
+          <a class="navbar-brand" href="index.html">
+            <img class="img-fluid" src="images/logo.svg" alt="logo">
+          </a>
+          <div class="navbar-collapse collapse justify-content-center">
+            <ul class="nav navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="index.html">Accueil</a>
+                </a>
+                <!-- <ul> -->
+                  <!-- <li><a class="dropdown-item" href="index.html">Home Default</a></li> -->
+                  <!-- <li><a class="dropdown-item" href="index-02.html">Home Modern</a></li>
+                  <li><a class="dropdown-item" href="index-map.html">Home map</a></li>
+                  <li><a class="dropdown-item" href="index-bg-slider.html">index bg slider</a></li>
+                  <li><a class="dropdown-item" href="index-bg-video.html">index bg video</a></li>
+                  <li><a class="dropdown-item" href="index-half-map.html">index half map</a></li>
+                  <li><a class="dropdown-item" href="index-slider.html">index slider</a></li>
+                  <li><a class="dropdown-item" href="index-property.html">index property</a></li>
+                  <li><a class="dropdown-item" href="index-splash.html">index splash</a></li> -->
+                <!-- </ul> -->
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="about-us.html">Qui sommes-nous ? </a>
+                </li>
+
+              <!-- <li class="dropdown nav-item">
+                <a href="properties.html" class="nav-link" data-bs-toggle="dropdown">Pages<i class="fas fa-chevron-down fa-xs"></i></a>
+                <ul class="dropdown-menu megamenu dropdown-menu-lg">
+                  <li>
+                    <div class="row g-0 d-none d-lg-block">
+                      <div class="col-12 mb-4">
+                        <div class="d-flex align-items-center p-4 bg-light">
+                          <div class="me-4">
+                            <i class="flaticon-pin display-4 text-primary"></i>
+                          </div>
+                          <div class="media-body">
+                            <h6 class="mb-1">Find properties in these cities</h6>
+                            <p class="mb-0">To browse in your areas of interest, look for properties by location.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <h6 class="mb-3 nav-title">Pages </h6>
+                        <ul class="list-unstyled mt-lg-3">
+                          <li><a href="mortgage.html">Mortgage <span class="badge bg-danger ms-2">Hot</span> </a></li>
+                          <li><a href="services.html">Services</a></li>
+                          <li><a href="submit-property.html">Submit property</a></li>
+                          <li><a href="advertising.html">Advertising</a></li>
+                          <li><a href="careers.html">careers</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <h6 class="mb-3 nav-title">Pages</h6>
+                        <ul class="list-unstyled mt-lg-3">
+                          <li><a href="faqs.html">Faqs</a></li>
+                          <li><a href="pricing.html">Pricing</a></li>
+                          <li><a href="compare-properties.html">Compare properties</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <h6 class="mb-3 nav-title">Authentication</h6>
+                        <ul class="list-unstyled mt-lg-3">
+                          <li><a href="search-no-result.html">Search no result</a></li>
+                          <li><a href="login.html">login</a></li>
+                          <li><a href="coming-soon.html">Coming soon</a></li>
+                          <li><a href="terms-and-conditions.html">T&C</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-12 mt-4 d-none d-lg-block">
+                        <div class="p-4 bg-holder bg-overlay-black-70" style="background-image: url(images/banner-01.jpg);">
+                          <div class="position-relative">
+                            <div class="position-relative d-flex align-items-center">
+                              <div class="pe-1">
+                                <h6 class="text-white mb-0">Looking for Home to Buy?</h6>
+                                <small class="text-white mb-0">We’ll help you find a place you’ll love.</small>
+                              </div>
+                              <div class="ms-auto">
+                                <a class="btn btn-light btn-sm" href="#">Get started</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="property-list.html">Achat/Location </a>
+                
+                <!-- <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="property-list.html">Property list</a></li>
+                  <li><a class="dropdown-item" href="property-list-map.html">Property list with map</a></li>
+                  <li><a class="dropdown-item" href="property-grid.html">Property grid</a></li>
+                  <li><a class="dropdown-item" href="property-grid-map.html">Property grid with map</a></li>
+                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Dropdown <i class="fas fa-chevron-right fa-xs"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Submenu</a></li>
+                    <li><a class="dropdown-item" href="#">Submenu</a></li>
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 01 <i class="fas fa-chevron-right fa-xs"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Subsubmenu 01</a></li>
+                      <li><a class="dropdown-item" href="#">Subsubmenu 01</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 02 <i class="fas fa-chevron-right fa-xs"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Subsubmenu 02</a></li>
+                    <li><a class="dropdown-item" href="#">Subsubmenu 02</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Property <i class="fas fa-chevron-down fa-xs"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="property-detail-style-01.html">property detail style 01</a></li>
+            <li><a class="dropdown-item" href="property-detail-style-02.html">property detail style 02</a></li>
+            <li><a class="dropdown-item" href="property-detail-style-03.html">property detail style 03</a></li>
+            <li><a class="dropdown-item" href="property-detail-style-04.html">property detail style 04</a></li>
+          </ul>
+        </li> -->
+        <!-- <li class="dropdown nav-item mega-menu">
+          <a href="#" class="nav-link" data-bs-toggle="dropdown">Elements<i class="fas fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown-menu megamenu">
+            <li>
+              <div class="row">
+                <div class="col-sm-6 col-lg-3">
+                  <h6 class="mb-3 nav-title">Search types</h6>
+                  <ul class="list-unstyled mt-lg-3">
+                    <li><a href="search-style-under-banner.html">Search style under banner</a></li>
+                    <li><a href="search-style-above-banner.html">Search style above banner</a></li>
+                    <li><a href="search-style-below-banner.html">Search style below banner</a></li>
+                    <li><a href="search-style-advanced.html">Advanced Search style </a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                  <h6 class="mb-3 nav-title">Search types</h6>
+                  <ul class="list-unstyled mt-lg-3">
+                    <li><a href="search-style-classic.html">Search style classic</a></li>
+                    <li><a href="search-style-with-filter.html">Search style with filter</a></li>
+                    <li><a href="search-style-advanced-02.html">Advanced Search style 02 </a></li>
+                    <li><a href="search-style-advanced-03.html">Advanced Search style 03 </a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                  <h6 class="mb-3 nav-title">Elements</h6>
+                  <ul class="list-unstyled mt-lg-3">
+                    <li><a href="element-feature-box.html">Feature box</a></li>
+                    <li><a href="element-testimonials.html">Testimonials</a></li>
+                    <li><a href="element-accordion.html">Accordion</a></li>
+                    <li><a href="element-tabs.html">Tabs</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                  <h6 class="mb-3 nav-title">Elements</h6>
+                  <ul class="list-unstyled mt-lg-3">
+                    <li><a href="element-typography.html">Typography</a></li>
+                    <li><a href="element-counter.html">counter</a></li>
+                    <li><a href="element-countdown.html">Countdown</a></li>
+                    <li><a href="element-category.html">Category</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="agency-grid.html">Agences </a>
+
+          <!-- <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="agency-grid.html">Agency grid</a></li>
+            <li><a class="dropdown-item" href="agency-list.html">Agency list</a></li>
+            <li><a class="dropdown-item" href="agency-detail.html">Agency detail</a></li>
+          </ul> -->
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Agent <i class="fas fa-chevron-down fa-xs"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="agent-grid.html">Agent grid</a></li>
+            <li><a class="dropdown-item" href="agent-list.html">Agent list</a></li>
+            <li><a class="dropdown-item" href="agent-detail.html">Agent detail</a></li>
+            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Account <span class="badge bg-danger ms-2">Hot</span> <i class="fas fa-chevron-right fa-xs"></i></a>
+            <ul class="dropdown-menu left-side">
+              <li><a class="dropdown-item" href="account-profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="account-my-properties.html">My properties </a></li>
+              <li><a class="dropdown-item" href="account-agency-management.html">Agency management</a></li>
+              <li><a class="dropdown-item" href="account-saved-homes.html">Saved homes</a></li>
+              <li><a class="dropdown-item" href="account-saved-rental.html">Saved rental</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li> -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="blog.html"> Blog </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="contact-us.html"> Contactez-Nous </a>
+        </li>
+    </ul>
+    
+    </div>
+    <div class="add-listing d-none d-sm-block">
+      <a class="btn btn-primary btn-md" href="submit-property.html"> <i class="fa fa-plus-circle"></i>Ajouter une annonce </a>
+    </div>
+    </div>
+  </nav>
+</header>
+<!--=================================
+ header -->
+
+<!--=================================
+ Modal login -->
+<div class="modal login fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="loginModalLabel">Log in & Register</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs nav-tabs-02 justify-content-center" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="false">Log in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="register-tab" data-bs-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="true">Register</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <form class="row my-4 align-items-center">
+              <div class="mb-3 col-sm-12">
+                <input type="text" class="form-control" placeholder="Username">
+              </div>
+              <div class="mb-3 col-sm-12">
+                <input type="Password" class="form-control" placeholder="Password">
+              </div>
+              <div class="col-sm-6 d-grid">
+                <button type="submit" class="btn btn-primary">Sign up</button>
+              </div>
+              <div class="col-sm-6">
+                <ul class="list-unstyled d-flex mb-1 mt-sm-0 mt-3">
+                  <li class="me-1"><a href="#"><b>Already Registered User? Click here to login</b></a></li>
+                </ul>
+              </div>
+            </form>
+            <div class="login-social-media border ps-4 pe-4 pb-4 pt-0 rounded">
+              <div class="mb-4 d-block text-center"><b class="bg-white ps-2 pe-2 mt-3 d-block">Login or Sign in with</b></div>
+              <form class="row">
+                <div class="col-sm-6">
+                  <a class="btn facebook-bg social-bg-hover d-block mb-3" href="#"><span><i class="fab fa-facebook-f"></i>Login with Facebook</span></a>
+                </div>
+                <div class="col-sm-6">
+                  <a class="btn twitter-bg social-bg-hover d-block mb-3" href="#"><span><i class="fab fa-twitter"></i>Login with Twitter</span></a>
+                </div>
+                <div class="col-sm-6">
+                  <a class="btn google-bg social-bg-hover d-block mb-3 mb-sm-0" href="#"><span><i class="fab fa-google"></i>Login with Google</span></a>
+                </div>
+                <div class="col-sm-6">
+                  <a class="btn linkedin-bg social-bg-hover d-block" href="#"><span><i class="fab fa-linkedin-in"></i>Login with Linkedin</span></a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+            <form class="row mt-4 mb-5 align-items-center">
+              <div class="mb-3 col-sm-12">
+                <input type="text" class="form-control" placeholder="Username">
+              </div>
+              <div class="mb-3 col-sm-12">
+                <input type="email" class="form-control" placeholder="Email Address">
+              </div>
+              <div class="mb-3 col-sm-12">
+                <input type="Password" class="form-control" placeholder="Password">
+              </div>
+              <div class="mb-3 col-sm-12">
+                <input type="Password" class="form-control" placeholder="Confirm Password">
+              </div>
+              <div class="col-sm-6 d-grid">
+                <button type="submit" class="btn btn-primary">Sign up</button>
+              </div>
+              <div class="col-sm-6">
+                <ul class="list-unstyled d-flex mb-1 mt-sm-0 mt-3">
+                  <li class="me-1"><a href="#"><b>Already Registered User? Click here to login</b></a></li>
+                </ul>
+              </div>
+            </form>
+            <div class="login-social-media border ps-4 pe-4 pb-4 pt-0 rounded">
+              <div class="mb-4 d-block text-center"><b class="bg-white ps-2 pe-2 mt-3 d-block">Login or Sign in with</b></div>
+              <form class="row">
+                <div class="col-sm-6">
+                  <a class="btn facebook-bg social-bg-hover d-block mb-3" href="#"><span><i class="fab fa-facebook-f"></i>Login with Facebook</span></a>
+                </div>
+                <div class="col-sm-6">
+                  <a class="btn twitter-bg social-bg-hover d-block mb-3" href="#"><span><i class="fab fa-twitter"></i>Login with Twitter</span></a>
+                </div>
+                <div class="col-sm-6">
+                  <a class="btn google-bg social-bg-hover d-block mb-3 mb-sm-0" href="#"><span><i class="fab fa-google"></i>Login with Google</span></a>
+                </div>
+                <div class="col-sm-6">
+                  <a class="btn linkedin-bg social-bg-hover d-block" href="#"><span><i class="fab fa-linkedin-in"></i>Login with Linkedin</span></a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--=================================
+  Modal login -->
+
+<!--=================================
+banner -->
+<section class="banner bg-holder bg-overlay-black-30" style="background-image: url(images/slider1\ .jpg);">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 position-relative">
+        <h1 class="text-white text-center mb-2">Créer Une Richesse Durable Grâce À Real Villa</h1>
+        <p class="lead text-center text-white mb-4 fw-normal">Faites un pas vers la réalisation de votre rêve. #C'est le moment de partir</p>
+        <div class="property-search-field bg-white">
+          <div class="property-search-item">
+            <form class="row basic-select-wrapper">
+              <div class="form-group col-lg-3 col-md-6">
+                <label class="form-label">Type de propriété</label>
+                <select class="form-control basic-select">
+                  <option>Tous les types</option>
+                  <option>Villa</option>
+                  <option>Apartment Building</option>
+                  <option>Commercial</option>
+                  <option>Office</option>
+                  <option>Residential</option>
+                  <option>Shop</option>
+                  <option>Apartment</option>
+                </select>
+              </div>
+              <div class="form-group col-lg-3 col-md-6">
+                <label class="form-label">Statut</label>
+                <select class="form-control basic-select">
+                  <option>A vendre </option>
+                  <option>A louer </option>
+                </select>
+              </div>
+              <div class="form-group d-flex col-lg-4">
+                <div class="form-group-search">
+                  <label class="form-label">
+                    Emplacement
+                    </label>
+                  <div class="d-flex align-items-center"><i class="far fa-compass me-1"></i><input class="form-control" type="search" placeholder="Emplacement de la localisation"></div>
+                </div>
+                <span class="align-items-center ms-3 d-none d-lg-block"><button class="btn btn-primary d-flex align-items-center" type="submit"><i class="fas fa-search me-1"></i><span>Recherche</span></button></span>
+              </div>
+              <div class="form-group text-center col-lg-2">
+                <div class="d-flex justify-content-center d-md-inline-block">
+                  <a class="more-search p-0" data-bs-toggle="collapse" href="#advanced-search" role="button" aria-expanded="false" aria-controls="advanced-search"> <span class="d-block pe-2 mb-1">Recherche Avancée</span>
+                  <i class="fas fa-angle-double-down"></i></a>
+                </div>
+              </div>
+              <div class="collapse advanced-search p-0" id="advanced-search">
+                <div class="card card-body">
+                  <div class="row">
+                    <div class="form-group col-md-3">
+                      <label class="form-label">Distance from location</label>
+                      <select class="form-control basic-select">
+                        <option>This area only</option>
+                        <option>Within 1 mile</option>
+                        <option>Within 3 miles</option>
+                        <option>Within 5 miles</option>
+                        <option>Within 10 miles</option>
+                        <option>Within 15 miles</option>
+                        <option>Within 30 miles</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                      <label class="form-label">Bedrooms</label>
+                      <select class="form-control basic-select">
+                        <option>No max</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                      <label class="form-label">Sort by</label>
+                      <select class="form-control basic-select">
+                        <option>Most popular</option>
+                        <option>Highest price</option>
+                        <option>Lowest price</option>
+                        <option>Most reduced</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                      <label class="form-label">Floor</label>
+                      <select class="form-control basic-select">
+                        <option>Select Floor</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-3">
+                      <label class="form-label">Min Area (sq ft)</label>
+                      <input class="form-control" placeholder="Type (sq ft)">
+                    </div>
+                    <div class="form-group col-md-3">
+                      <label class="form-label">Max Area (sq ft)</label>
+                      <input class="form-control" placeholder="Type (sq ft)">
+                    </div>
+                    <div class="form-group col-md-6 property-price-slider ">
+                      <label class="form-label">Select Price Range</label>
+                      <input type="text" id="property-price-slider" name="example_name" value="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-lg-none btn-mobile p-3 d-grid">
+                <button class="btn btn-primary align-items-center" type="submit"><i class="fas fa-search me-1"></i><span>Search</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=================================
+banner -->
+
+<!--=================================
+Browse properties -->
+<section class="space-ptb">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2>Parcourir Par Catégorie</h2>
+          <p>Pour parcourir et acheter dans vos domaines d'intérêt, recherchez des propriétés par catégorie.  </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="category">
+          <ul class="list-unstyled mb-0">
+            <li class="category-item">
+              <a href="property-list.html">
+                <div class="category-icon">
+                  <i class="flaticon-building-2"></i>
+                </div>
+                <h6 class="mb-0">Résidentiel</h6>
+                <span>(457)</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="property-list.html">
+                <div class="category-icon">
+                  <i class="flaticon-skyline"></i>
+                </div>
+                <h6 class="mb-0">Commercial</h6>
+                <span>(659)</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="property-list.html">
+                <div class="category-icon">
+                  <i class="flaticon-apartment"></i>
+                </div>
+                <h6 class="mb-0">Industriel</h6>
+                <span>(298)</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="property-list.html">
+                <div class="category-icon">
+                  <i class="flaticon-apartment-1"></i>
+                </div>
+                <h6 class="mb-0">Appartement</h6>
+                <span>(235)</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="property-list.html">
+                <div class="category-icon">
+                  <i class="flaticon-real-estate"></i>
+                </div>
+                <h6 class="mb-0">Atterir</h6>
+                <span>(478)</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="property-list.html">
+                <div class="category-icon">
+                  <i class="flaticon-building-1"></i>
+                </div>
+                <h6 class="mb-0">Code De Construction</h6>
+                <span>(698)</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="property-list.html">
+                <div class="category-icon">
+                  <i class="flaticon-building"></i>
+                </div>
+                <h6 class="mb-0">Communal land</h6>
+                <span>(152)</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="property-list.html">
+                <div class="category-icon">
+                  <i class="flaticon-pin"></i>
+                </div>
+                <h6 class="mb-0">Surface De Plancher</h6>
+                <span>(256)</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="property-list.html">
+                <div class="category-icon">
+                  <i class="flaticon-building-3"></i>
+                </div>
+                <h6 class="mb-0">Assurabilité</h6>
+                <span>(145)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=================================
+ Browse properties -->
+
+<!--=================================
+  Featured properties-->
+<section class="space-pb">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2>Propriétés Nouvellement Répertoriées</h2>
+          <p>Trouvez la maison de vos rêves parmi nos propriétés nouvellement ajoutées</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="property-item">
+          <div class="property-image bg-overlay-gradient-04">
+            <img class="img-fluid" src="images/appartement1.webp" alt="">
+            <div class="property-lable">
+              <span class="badge badge-md bg-primary">Bungalow</span>
+              <span class="badge badge-md bg-info">Vente </span>
+            </div>
+            <span class="property-trending" title="trending"><i class="fas fa-bolt"></i></span>
+            <div class="property-agent">
+              <div class="property-agent-image">
+                <img class="img-fluid" src="images/avatar/01.jpg" alt="">
+              </div>
+              <div class="property-agent-info">
+                <a class="property-agent-name" href="#">Alice Williams</a>
+                <span class="d-block">Agent de la societé</span>
+                <ul class="property-agent-contact list-unstyled">
+                  <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
+                  <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="property-agent-popup">
+              <a href="#"><i class="fas fa-camera"></i> 06</a>
+            </div>
+          </div>
+          <div class="property-details">
+            <div class="property-details-inner">
+              <h5 class="property-title"><a href="property-detail-style-01.html">Grand Appartement Au Dernier Etage </a></h5>
+              <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Collines du temple de Virginia </span>
+              <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 10 jours</span>
+              <div class="property-price">$150.00<span> / mois</span> </div>
+              <ul class="property-info list-unstyled d-flex">
+                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Chambres<span>3</span></li>
+                <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bains<span>2</span></li>
+                <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>145m²</span></li>
+              </ul>
+            </div>
+            <div class="property-btn">
+              <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
+              <ul class="property-listing-actions list-unstyled mb-0">
+                <li class="property-compare">
+                  <a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a>
+                </li>
+                <li class="property-favourites">
+                  <a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="property-item">
+          <div class="property-image bg-overlay-gradient-04">
+            <img class="img-fluid" src="images/appartement2.webp" alt="">
+            <div class="property-lable">
+              <span class="badge badge-md bg-primary">Appartement</span>
+              <span class="badge badge-md bg-info">Nouveau </span>
+            </div>
+            <div class="property-agent">
+              <div class="property-agent-image">
+                <img class="img-fluid" src="images/avatar/02.jpg" alt="">
+              </div>
+              <div class="property-agent-info">
+                <a class="property-agent-name" href="#">John doe</a>
+                <span class="d-block">Agent de la societé</span>
+                <ul class="property-agent-contact list-unstyled">
+                  <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
+                  <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="property-agent-popup">
+              <a href="#"><i class="fas fa-camera"></i> 12</a>
+            </div>
+          </div>
+          <div class="property-details">
+            <div class="property-details-inner">
+              <h5 class="property-title"><a href="property-detail-style-01.html">Superbe Maison Familiale </a></h5>
+              <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Vermont dr. hephzibah</span>
+              <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 2 mois</span>
+              <div class="property-price">$326.00<span> / month</span> </div>
+              <ul class="property-info list-unstyled d-flex">
+                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Chambres<span>2</span></li>
+                <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bains<span>3</span></li>
+                <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>215m²</span></li>
+              </ul>
+            </div>
+            <div class="property-btn">
+              <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
+              <ul class="property-listing-actions list-unstyled mb-0">
+                <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
+                <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="property-item">
+          <div class="property-image bg-overlay-gradient-04">
+            <img class="img-fluid" src="images/appartement3.webp" alt="">
+            <div class="property-lable">
+              <span class="badge badge-md bg-primary">Maison d'été </span>
+              <span class="badge badge-md bg-info">Chaud </span>
+            </div>
+            <span class="property-trending" title="trending"><i class="fas fa-bolt"></i></span>
+            <div class="property-agent">
+              <div class="property-agent-image">
+                <img class="img-fluid" src="images/avatar/03.jpg" alt="">
+              </div>
+              <div class="property-agent-info">
+                <a class="property-agent-name" href="#">Felica queen</a>
+                <span class="d-block">Investissement</span>
+                <ul class="property-agent-contact list-unstyled">
+                  <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
+                  <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="property-agent-popup">
+              <a href="#"><i class="fas fa-camera"></i> 03</a>
+            </div>
+          </div>
+          <div class="property-details">
+            <div class="property-details-inner">
+              <h5 class="property-title"><a href="property-detail-style-01.html">Appartement Contemporain</a></h5>
+              <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>rue Newport. mebane, nc</span>
+              <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 6 mois</span>
+              <div class="property-price">$658.00<span> / mois</span> </div>
+              <ul class="property-info list-unstyled d-flex">
+                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Chambres<span>3</span></li>
+                <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bains<span>4</span></li>
+                <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>3,189m²</span></li>
+              </ul>
+            </div>
+            <div class="property-btn">
+              <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
+              <ul class="property-listing-actions list-unstyled mb-0">
+                <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
+                <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="property-item">
+          <div class="property-image bg-overlay-gradient-04">
+            <img class="img-fluid" src="images/appartement4.webp" alt="">
+            <div class="property-lable">
+              <span class="badge badge-md bg-primary">Duplex</span>
+              <span class="badge badge-md bg-info">Chaud</span>
+            </div>
+            <div class="property-agent">
+              <div class="property-agent-image">
+                <img class="img-fluid" src="images/avatar/04.jpg" alt="">
+              </div>
+              <div class="property-agent-info">
+                <a class="property-agent-name" href="#">Sara lisbon</a>
+                <span class="d-block">Construction</span>
+                <ul class="property-agent-contact list-unstyled">
+                  <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
+                  <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="property-agent-popup">
+              <a href="#"><i class="fas fa-camera"></i> 04</a>
+            </div>
+          </div>
+          <div class="property-details">
+            <div class="property-details-inner">
+              <h5 class="property-title"><a href="property-detail-style-01.html">Maison Familiale A Vendre</a></h5>
+              <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Border st. nicholasville, ky</span>
+              <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 12 mois</span>
+              <div class="property-price">$485.00<span> / mois</span> </div>
+              <ul class="property-info list-unstyled d-flex">
+                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Chambres<span>2</span></li>
+                <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bain<span>1</span></li>
+                <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>2,356m²</span></li>
+              </ul>
+            </div>
+            <div class="property-btn">
+              <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
+              <ul class="property-listing-actions list-unstyled mb-0">
+                <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
+                <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="property-item">
+          <div class="property-image bg-overlay-gradient-04">
+            <img class="img-fluid" src="images/appartement5.webp" alt="">
+            <div class="property-lable">
+              <span class="badge badge-md bg-primary">Attiques </span>
+              <span class="badge badge-md bg-info">Louer </span>
+            </div>
+            <span class="property-trending" title="trending"><i class="fas fa-bolt"></i></span>
+            <div class="property-agent">
+              <div class="property-agent-image">
+                <img class="img-fluid" src="images/avatar/05.jpg" alt="">
+              </div>
+              <div class="property-agent-info">
+                <a class="property-agent-name" href="#">Mellissa Doe</a>
+                <span class="d-block">Fondateur & PDG </span>
+                <ul class="property-agent-contact list-unstyled">
+                  <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
+                  <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="property-agent-popup">
+              <a href="#"><i class="fas fa-camera"></i> 10</a>
+            </div>
+          </div>
+          <div class="property-details">
+            <div class="property-details-inner">
+              <h5 class="property-title"><a href="property-detail-style-01.html">Villa De Luxe Avec Piscine</a></h5>
+              <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>West Indian St. Missoula</span>
+              <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 2 ans</span>
+              <div class="property-price">$698.00<span> / mois</span> </div>
+              <ul class="property-info list-unstyled d-flex">
+                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Chambres<span>5</span></li>
+                <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bains<span>4</span></li>
+                <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>1,658m²</span></li>
+              </ul>
+            </div>
+            <div class="property-btn">
+              <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
+              <ul class="property-listing-actions list-unstyled mb-0">
+                <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
+                <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="property-item">
+          <div class="property-image bg-overlay-gradient-04">
+            <img class="img-fluid" src="images/appartement6.webp" alt="">
+            <div class="property-lable">
+              <span class="badge badge-md bg-primary">Studio</span>
+              <span class="badge badge-md bg-info">Nouveau </span>
+            </div>
+            <div class="property-agent">
+              <div class="property-agent-image">
+                <img class="img-fluid" src="images/avatar/06.jpg" alt="">
+              </div>
+              <div class="property-agent-info">
+                <a class="property-agent-name" href="#">Michael Bean</a>
+                <span class="d-block">Recherche</span>
+                <ul class="property-agent-contact list-unstyled">
+                  <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
+                  <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="property-agent-popup">
+              <a href="#"><i class="fas fa-camera"></i> 02</a>
+            </div>
+          </div>
+          <div class="property-details">
+            <div class="property-details-inner">
+              <h5 class="property-title"><a href="property-detail-style-01.html">184 Avenue Lexington </a></h5>
+              <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Hamilton rd. willoughby </span>
+              <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 3 ans</span>
+              <div class="property-price">$236.00<span> / mois</span> </div>
+              <ul class="property-info list-unstyled d-flex">
+                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Chambres<span>2</span></li>
+                <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bains<span>2</span></li>
+                <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>3,657m²</span></li>
+              </ul>
+            </div>
+            <div class="property-btn">
+              <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
+              <ul class="property-listing-actions list-unstyled mb-0">
+                <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
+                <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 text-center">
+        <a class="btn btn-link" href="property-list.html"><i class="fas fa-plus"></i>Voir toutes les annonces</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=================================
+Featured properties-->
+
+<!--=================================
+ offering the Best Real Estate-->
+<section class="clearfix">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2>Découvrez Nos Meilleures Offres</h2>
+          <p>Consultez les annonces du meilleur revendeur sur Real Villa et contactez l'agence ou son agent par téléphone ou via le formulaire de contact.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="owl-carousel owl-nav-top-right" data-animateOut="fadeOut" data-nav-arrow="true" data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="0">
+          <div class="item">
+            <div class="property-offer">
+              <div class="property-offer-item">
+                <div class="property-offer-image bg-holder" style="background: url('images/offre1.jpg');">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-10 col-sm-12">
+                      <div class="property-details">
+                        <div class="property-details-inner">
+                          <h5 class="property-title"><a href="property-detail-style-01.html">Grand Appartement Au Dernier Etage </a></h5>
+                          <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Collines du temple Virginia</span>
+                          <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 10 jours</span>
+                          <p class="mb-0 d-block mt-3">Pour ceux d'entre vous qui veulent vraiment avoir plus, faire plus, donner plus et être plus.</p>
+                          <div class="property-price">$150.00<span> / mois</span> </div>
+                          <ul class="property-info list-unstyled d-flex">
+                            <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Lits<span>1</span></li>
+                            <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Chambres<span>2</span></li>
+                            <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>145m²</span></li>
+                          </ul>
+                        </div>
+                        <div class="property-btn">
+                          <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
+                          <ul class="property-listing-actions list-unstyled mb-0">
+                            <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
+                            <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="property-offer">
+              <div class="property-offer-item">
+                <div class="property-offer-image bg-holder" style="background: url('images/offre2.jpg');">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-10 col-sm-12">
+                      <div class="property-details">
+                        <div class="property-details-inner">
+                          <h5 class="property-title"><a href="property-detail-style-01.html">Villa De Luxe Avec Piscine</a></h5>
+                          <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Antillais Saint Missoula</span>
+                          <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 2 ans</span>
+                          <p class="mb-0 d-block mt-3">Pour ceux d'entre vous qui veulent vraiment avoir plus, faire plus, donner plus et être plus.</p>
+                          <div class="property-price">$698.00<span> / mois</span> </div>
+                          <ul class="property-info list-unstyled d-flex">
+                            <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Lits<span>5</span></li>
+                            <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Chambres<span>4</span></li>
+                            <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>1,658m²</span></li>
+                          </ul>
+                        </div>
+                        <div class="property-btn">
+                          <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
+                          <ul class="property-listing-actions list-unstyled mb-0">
+                            <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
+                            <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   <!--=================================
+  offering the Best Real Estate-->
+
+<!--=================================
+  Feature -->
+<section class="space-ptb bg-holder-bottom building-space" style="background-image: url(images/building-bg.png);">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-9">
+        <div class="section-title mb-0">
+          <h2>De Nombreuses Raisons De Nous Choisir</h2>
+          <p>Notre agence a de nombreux domaines spécialisés, mais nos CLIENTS sont notre vraie spécialité.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 text-lg-end">
+        <a class="btn btn-primary" href="about-us.html">En savoir plus sur nous </a>
+      </div>
+    </div>
+    <div class="row g-0 mt-4">
+      <div class="col-lg-3 col-sm-6">
+        <div class="feature-info h-100">
+          <div class="feature-info-icon">
+            <i class="flaticon-like"></i>
+          </div>
+          <div class="feature-info-content">
+            <h6 class="mb-3 feature-info-title">Excellente Réputation</h6>
+            <p class="mb-0">Notre base de données complète d'annonces et d'informations sur le marché donne la vue la plus précise du marché et de la valeur de votre maison.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="feature-info h-100">
+          <div class="feature-info-icon">
+            <i class="flaticon-agent"></i>
+          </div>
+          <div class="feature-info-content">
+            <h6 class="mb-3 feature-info-title">Les Meilleurs Agents Locaux</h6>
+            <p class="mb-0">Vous n'êtes qu'à quelques minutes de vous joindre aux meilleurs agents qui sont enthousiastes à l'idée de vous aider à acheter ou à vendre.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="feature-info h-100">
+          <div class="feature-info-icon">
+            <i class="flaticon-like-1"></i>
+          </div>
+          <div class="feature-info-content">
+            <h6 class="mb-3 feature-info-title">Tranquilité D'esprit</h6>
+            <p class="mb-0">Soyew assuré que votre argent et son équipe d'expert gèrent chaque détail  de votre transaction du début à la fin:</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="feature-info h-100">
+          <div class="feature-info-icon">
+            <i class="flaticon-house-1"></i>
+          </div>
+          <div class="feature-info-content">
+            <h6 class="mb-3 feature-info-title">Des Tonnes D'options</h6>
+            <p class="mb-0">Découvrez un endroit où vous aimerez vivre. Faites votre choix parmi notre vaste inventaire et choisissez la maison que vous désirez.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-7 text-center">
+        <p class="mb-4">Dix ans et des milliers d'acheteurs de maisons se sont tournés vers Real Villa pour trouver la maison de leurs rêves. Nous proposons une liste complète de propriétés à vendre, ainsi que les connaissances et les outils nécessaires pour prendre des décisions immobilières éclairées. Aujourd'hui, plus que jamais, Real Villa est le foyer de Home Search.</p>
+        <div class="popup-video">
+          <a class="popup-icon popup-youtube" href="https://youtu.be/gRKp9H4Fo08"> <i class="flaticon-play-button"></i> </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!--=================================
+  Feature -->
+
+<!--=================================
+testimonial -->
+<section class="testimonial-main bg-holder" style="background-image: url(images/bg/02.jpg);">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="owl-carousel owl-dots-bottom-left" data-nav-dots="true" data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="0">
+          <div class="item">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p><i class="quotes">"</i>Merci Martin d'avoir vendu notre appartement. Nous sommes ravis du résultat. Je peux fortement recommander Martin à tous ceux qui recherchent un agent immobilier vraiment professionel.</p>
+              </div>
+              <div class="testimonial-name">
+                <h6 class="text-primary mb-1">Lisa & Graeme</h6>
+                <span>Chemin Hamilton. Willoughby</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p><i class="quotes">"</i>Olivier avait toujours le sourire et était si rapide à repondre et à faire le travail. Je vais certainement vous suggérer à tous ceux que nous connaissons qui vendent ou veulent achetez une maison. Il est le meilleur!</p>
+              </div>
+              <div class="testimonial-name">
+                <h6 class="text-primary mb-1">Jessica Alex</h6>
+                <span>Rue Division Ouest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=================================
+testimonial -->
+
+<!--=================================
+Meet our agent -->
+<section class="space-ptb">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2>Rencontrez Nos Agents</h2>
+          <p>Les Real Villa Agents sont les défenseurs des clients. Nous sommes responsables d'aider les clients à acheter et à vendre la bonne maison, au bon prix.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row g-0">
+      <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0">
+        <div class="agent text-center">
+          <div class="agent-detail">
+            <div class="agent-avatar avatar avatar-xllll">
+              <img class="img-fluid rounded-circle" src="images/agent/01.jpg" alt="">
+            </div>
+            <div class="agent-info">
+              <h6 class="mb-0"> <a href="agent-detail.html">Alice Williams </a></h6>
+              <span class="text-primary font-sm">Fondateur & PDG </span>
+              <p class="mt-3 mb-0">La première chose à retenir à propos du succès est qu'il s'agit d'un processus - rien de plus, rien de moins.</p>
+            </div>
+          </div>
+          <div class="agent-button">
+            <a class="btn btn-light d-grid" href="agent-detail.html">Voir le profil</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0">
+        <div class="agent text-center">
+          <div class="agent-detail">
+            <div class="agent-avatar avatar avatar-xllll">
+              <img class="img-fluid rounded-circle" src="images/agent/02.jpg" alt="">
+            </div>
+            <div class="agent-info">
+              <h6 class="mb-0"> <a href="agent-detail.html">Felica queen </a></h6>
+              <span class="text-primary font-sm">Construction</span>
+              <p class="mt-3 mb-0">Il existe essentiellement six domaines clés pour une meilleure réussite. Certains vous diront qu'il y en a quatre.</p>
+            </div>
+          </div>
+          <div class="agent-button">
+            <a class="btn btn-light d-grid" href="agent-detail.html">Voir le profil</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0">
+        <div class="agent text-center">
+          <div class="agent-detail">
+            <div class="agent-avatar avatar avatar-xllll">
+              <img class="img-fluid rounded-circle" src="images/agent/03.jpg" alt="">
+            </div>
+            <div class="agent-info">
+              <h6 class="mb-0"> <a href="agent-detail.html">Paul flavius </a></h6>
+              <span class="text-primary font-sm">Investissement</span>
+              <p class="mt-3 mb-0">Alors que d'autres peuvent vous dire qu'il y en a huit. Une chose est certaine cependant, c'est que quel que soit le.</p>
+            </div>
+          </div>
+          <div class="agent-button">
+            <a class="btn btn-light d-grid" href="agent-detail.html">Voir le profil</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="agent text-center">
+          <div class="agent-detail">
+            <div class="agent-avatar avatar avatar-xllll">
+              <img class="img-fluid rounded-circle" src="images/agent/04.jpg" alt="">
+            </div>
+            <div class="agent-info">
+              <h6 class="mb-0"> <a href="agent-detail.html">Sara lisbon  </a></h6>
+              <span class="text-primary font-sm">Développement agraire</span>
+              <p class="mt-3 mb-0">Si le succès est un processus avec un certain nombre d'étapes définies, alors c'est comme n'importe quel autre processus.</p>
+            </div>
+          </div>
+          <div class="agent-button">
+            <a class="btn btn-light d-grid" href="agent-detail.html">Voir le profil</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=================================
+Meet our agent -->
+
+<!--=================================
+Most popular places -->
+<section class="space-pb">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2>Endroits Les Plus Populaires</h2>
+          <p>Découvrez les maisons dans la vraie villa Villes les plus populaires</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-md-6 mb-4 mb-lg-0">
+            <a href="property-grid.html">
+              <div class="location-item bg-overlay-gradient bg-holder" style="background-image: url(images/location/01.jpg);">
+                <div class="location-item-info">
+                  <h5 class="location-item-title">Bombay</h5>
+                  <span class="location-item-list">10 propriétés</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 mb-4 mb-md-0">
+            <a href="property-grid.html">
+              <div class="location-item bg-overlay-gradient bg-holder" style="background-image: url(images/location/02.jpg);">
+                <div class="location-item-info">
+                  <h5 class="location-item-title">Los angeles</h5>
+                  <span class="location-item-list">14 propriétés</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-12 mt-0 mt-lg-4">
+            <a href="property-grid.html">
+              <div class="location-item bg-overlay-gradient bg-holder" style="background-image: url(images/location/04.jpg);">
+                <div class="location-item-info">
+                  <h5 class="location-item-title">Miami</h5>
+                  <span class="location-item-list">22 propriétés</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mt-4 mt-lg-0">
+        <a href="property-grid.html">
+          <div class="location-item location-item-big bg-overlay-gradient bg-holder" data-jarallax='{"speed": 0.6}' data-jarallax-video="https://www.youtube.com/embed/kacyaEXqVhs?showinfo=0&enablejsapi=1&origin=https://themes.potenzaglobalsolutions.com/html/real-villa/">
+            <div class="location-item-info">
+              <h5 class="location-item-title">San francisco </h5>
+              <span class="location-item-list">29 propriétés</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--=================================
+Browse properties by location -->
+<section class="space-ptb bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-title">
+          <h2>Parcourir les propriétés par emplacement</h2>
+        </div>
+      </div>
+      <div class="col-lg-4 text-lg-end mt-lg-2 mb-lg-0 mb-3">
+        <a class="btn btn-link p-0 mt-1" href="#"> Afficher toutes les propriétés</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="location-list">
+          <div class="row align-items-center">
+            <div class="col-lg-4 col-sm-6  border-end">
+              <ul class="list-unstyled mb-0">
+                <li><a href="property-list.html">Australia <span class="ms-auto">02</span> </a></li>
+                <li><a href="property-list.html">Belgium <span class="ms-auto">02</span> </a></li>
+                <li><a href="property-list.html">Brazil <span class="ms-auto">02</span> </a></li>
+                <li><a href="property-list.html">Central African Republic <span class="ms-auto">02</span> </a></li>
+                <li><a href="property-list.html">Cook/ Chef <span class="ms-auto">02</span> </a></li>
+                <li><a href="property-list.html">Dominica <span class="ms-auto">02</span> </a></li>
+                <li><a href="property-list.html">Egypt <span class="ms-auto">02</span> </a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <ul class="list-unstyled mb-0">
+                <li><a href="property-list.html">France <span class="ms-auto">02</span> </a></li>
+                <li><a href="property-list.html">Greece <span class="ms-auto">02</span> </a></li>
+                <li><a href="property-list.html">Hawaii* <span class="ms-auto">02</span> </a></li>
+                <li><a href="property-list.html">India <span class="ms-auto">02</span> </a></li>
+                <li><a href="property-list.html">Italy <span class="ms-auto">02</span> </a></li>
+                <li><a href="property-list.html">Jordan <span class="ms-auto">02</span> </a></li>
+                <li><a href="property-list.html">Kazakhstan <span class="ms-auto">02</span> </a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              <div class="bg-holder py-sm-5" style="background-image: url(images/google-map.png);">
+                <div class="d-flex align-items-center justify-content-center">
+                  <div class="counter">
+                    <span class="timer text-primary" data-to="1500" data-speed="10000">1500</span>
+                  </div>
+                  <div class="ms-3 mt-2">
+                    <span>Large éventail de</span>
+                    <h5>Propriété</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=================================
+Most popular places -->
+
+<!--=================================
+mobile app -->
+<section class="space-pt bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="section-title">
+          <h2>Téléchargez Notre Application Android Et IOS Pour Obtenir Des Fonctionnalités Intéressantes.</h2>
+          <p>Notre application immobilière simplifie votre recherche de maison. Voir spontanément les maisons à vendre à proximité, les appartements à louer.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-5">
+            <div class="d-flex">
+              <div class="me-3">
+                <i class="flaticon-rent font-xlll"></i>
+              </div>
+              <h6 class="text-primary">Annonce Immobilière En Temps Réel</h6>
+            </div>
+          </div>
+          <div class="col-md-4 mb-5">
+            <div class="d-flex">
+              <div class="me-3">
+                <i class="flaticon-contract font-xlll"></i>
+              </div>
+              <h6 class="text-primary">Filtre Budgétaire Pour Le Budget</h6>
+            </div>
+          </div>
+          <div class="col-md-4 mb-5">
+            <div class="d-flex">
+              <div class="me-3">
+                <i class="flaticon-notification font-xlll"></i>
+              </div>
+              <h6 class="text-primary">Notification De Réduction De Prix</h6>
+            </div>
+          </div>
+        </div>
+        <div class="d-block d-sm-flex">
+          <a class="btn btn-dark btn-sm btn-app me-0 me-sm-2 mb-2 mb-sm-0" href="#">
+            <i class="fab fa-apple"></i>
+            <div class="btn-text text-start">
+              <small class="small-text">Télécharger sur le  </small>
+              <span class="mb-0 text-white d-block">Magasin d'Applications </span>
+            </div>
+          </a>
+          <a class="btn btn-dark btn-sm btn-app mb-2 mb-sm-0" href="#">
+            <i class="fab fa-google-play"></i>
+            <div class="btn-text text-start">
+              <small class="small-text">Entrez dans </small>
+              <span class="mb-0 text-white d-block">jeu de Google</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-5 mt-5 mt-lg-0 text-center">
+        <img class="img-fluid" src="images/mobile-app.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+<!--=================================
+mobile app -->
+
+<!--=================================
+News, tips & articles -->
+<section class="space-ptb">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2>Nouvelles, Conseils Et Articles</h2>
+          <p>Développez votre évaluation et votre carrière dans l'immobilier avec des conseils, des tendances, des idées et apprenez-en plus sur les conseils de nos experts.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="blog-post">
+          <div class="blog-post-image">
+            <img class="img-fluid" src="images/blog/01.jpg" alt="">
+          </div>
+          <div class="blog-post-content">
+            <div class="blog-post-details">
+              <div class="blog-post-category">
+                <a class="mb-3" href="#"><strong>Amélioration de l'habitat</strong></a>
+              </div>
+              <div class="blog-post-title">
+                <h5><a href="blog-detail.html">7 Conseils Aux Débutants</a></h5>
+              </div>
+              <div class="blog-post-description">
+                <p class="mb-0">Vous partez en croisière, mais lorsque le bateau appareille, vous découvrez.</p>
+              </div>
+            </div>
+            <div class="blog-post-footer">
+              <div class="blog-post-time">
+                <a href="#"> <i class="far fa-clock"></i>02 janv. 2019</a>
+              </div>
+              <div class="blog-post-author">
+                <span> Par <a href="#"> <img class="img-fluid" src="images/avatar/01.jpg" alt="">Sara lisbon </a> </span>
+              </div>
+              <div class="blog-post-comment">
+                <a href="#"> <i class="far fa-comment"></i>(12) </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <div class="blog-post">
+          <div class="blog-post-image">
+            <img class="img-fluid" src="images/blog/02.jpg" alt="">
+          </div>
+          <div class="blog-post-content">
+            <div class="blog-post-details">
+              <div class="blog-post-category">
+                <a class="mb-3" href="#"><strong>Astuces & Conseils</strong></a>
+              </div>
+              <div class="blog-post-title">
+                <h5><a href="blog-detail.html">Où Investir Dans L'immobilier</a></h5>
+              </div>
+              <div class="blog-post-description">
+                <p class="mb-0">Vous naviguerez jusqu'à ce que vous heurtiez un objet immobile.</p>
+              </div>
+            </div>
+            <div class="blog-post-footer">
+              <div class="blog-post-time">
+                <a href="#"> <i class="far fa-clock"></i>14 février 2019</a>
+              </div>
+              <div class="blog-post-author">
+                <span> Par <a href="#"> <img class="img-fluid" src="images/avatar/02.jpg" alt="">Anne Smith</a> </span>
+              </div>
+              <div class="blog-post-comment">
+                <a href="#"> <i class="far fa-comment"></i>(32) </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <div class="blog-post">
+          <div class="blog-post-image">
+            <img class="img-fluid" src="images/blog/03.jpg" alt="">
+          </div>
+          <div class="blog-post-content">
+            <div class="blog-post-details">
+              <div class="blog-post-category">
+                <a class="mb-3" href="#"><strong>Tendances du marché</strong></a>
+              </div>
+              <div class="blog-post-title">
+                <h5><a href="blog-detail.html">Réduire Vos Pertes Dans L'immobilier</a></h5>
+              </div>
+              <div class="blog-post-description">
+                <p class="mb-0">Essayer de traverser la vie sans clarté est similaire à la voile.</p>
+              </div>
+            </div>
+            <div class="blog-post-footer">
+              <div class="blog-post-time">
+                <a href="#"> <i class="far fa-clock"></i>30 mars 2019</a>
+              </div>
+              <div class="blog-post-author">
+                <span> Par <a href="#"> <img class="img-fluid" src="images/avatar/03.jpg" alt="">Alice Williams</a> </span>
+              </div>
+              <div class="blog-post-comment">
+                <a href="#"> <i class="far fa-comment"></i>(45) </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=================================
+News, tips & articles -->
+
+<!--=================================
+call to action -->
+<section class="py-5 bg-primary">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-9">
+        <h2 class="text-white mb-0">Vous Souhaitez Vendre Ou Louer Votre Bien ? </h2>
+      </div>
+      <div class="col-lg-3 text-lg-end mt-3 mt-lg-0">
+        <a class="btn btn-white" href="#">Obtenir un devis gratuit</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=================================
+call to action -->
+
+<!--=================================
+footer-->
+<footer class="footer bg-dark space-pt">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-contact-info">
+          <h5 class="text-primary mb-4">About real villa</h5>
+          <p class="text-white mb-4">Real Villa helped thousands of clients to find the right property for their needs.</p>
+          <ul class="list-unstyled mb-0">
+            <li> <b> <i class="fas fa-map-marker-alt"></i></b><span>214 West Arnold St. New York, NY 10002</span> </li>
+            <li> <b><i class="fas fa-microphone-alt"></i></b><span>(123) 345-6789</span> </li>
+            <li> <b><i class="fas fa-headset"></i></b><span>support@realvilla.demo</span> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+        <div class="footer-link">
+          <h5 class="text-primary mb-4">Useful links</h5>
+          <ul class="list-unstyled mb-0">
+            <li> <a href="#">Commercial </a> </li>
+            <li> <a href="#">House </a> </li>
+            <li> <a href="#">Office </a> </li>
+            <li> <a href="#">Residential </a> </li>
+            <li> <a href="#">Residential Tower </a> </li>
+          </ul>
+          <ul class="list-unstyled mb-0">
+            <li> <a href="#">Beverly Hills </a> </li>
+            <li> <a href="#">Los angeles </a> </li>
+            <li> <a href="#">Mission Viejo </a> </li>
+            <li> <a href="#">Newport  </a> </li>
+            <li> <a href="#">Beach Pasadena </a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+        <div class="footer-recent-List">
+          <h5 class="text-primary mb-4">Recently listed properties</h5>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <div class="footer-recent-list-item">
+                <img class="img-fluid" src="images/property/list/01.jpg" alt="">
+                <div class="footer-recent-list-item-info">
+                  <h6 class="text-white"><a class="category font-md mb-2" href="property-detail-style-01.html">Awesome family home</a></h6>
+                  <a class="address mb-2 font-sm" href="#">Vermont dr. hephzibah</a>
+                  <span class="price text-white">$3,456,235 </span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="footer-recent-list-item">
+                <img class="img-fluid" src="images/property/list/02.jpg" alt="">
+                <div class="footer-recent-list-item-info">
+                  <h6 class="text-white"><a class="category font-md mb-2" href="property-detail-style-01.html">Lawn court villa</a></h6>
+                  <a class="address mb-2 font-sm" href="#">Newport st. mebane, nc</a>
+                  <span class="price text-white">$1,265,456 </span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+        <h5 class="text-primary mb-4">Subscribe us</h5>
+        <div class="footer-subscribe">
+          <p class="text-white">Sign up to our newsletter to get the latest news and offers.</p>
+          <form>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Enter email">
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">Get notified</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center text-md-start">
+          <a href="index.html"><img class="img-fluid footer-logo" src="images/logo-light.svg" alt=""> </a>
+        </div>
+        <div class="col-md-4 text-center my-3 mt-md-0 mb-md-0">
+          <a id="back-to-top" class="back-to-top" href="#"><i class="fas fa-angle-double-up"></i> </a>
+        </div>
+        <div class="col-md-4 text-center text-md-end">
+          <p class="mb-0 text-white"> &copy;Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="#"> Real villa </a> All Rights Reserved </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--=================================
+footer-->
+
+<!--=================================
+Javascript -->
+
+  <!-- JS Global Compulsory (Do not remove)-->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/popper/popper.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+
+  <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/counter/jquery.countTo.js"></script>
+  <script src="js/select2/select2.full.js"></script>
+  <script src="js/range-slider/ion.rangeSlider.min.js"></script>
+  <script src="js/owl-carousel/owl.carousel.min.js"></script>
+  <script src="js/jarallax/jarallax.min.js"></script>
+  <script src="js/jarallax/jarallax-video.min.js"></script>
+  <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Template Scripts (Do not remove)-->
+  <script src="js/custom.js"></script>
+
+</body>
 </html>
