@@ -58,6 +58,9 @@ header -->
               <a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Choisissez l'emplacement<i class="fas fa-chevron-down ps-2"></i>
               </a>
+
+
+              
               <div class="dropdown-menu mt-0" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">Global</a>
                 <a class="dropdown-item" href="#">Arizona</a>
