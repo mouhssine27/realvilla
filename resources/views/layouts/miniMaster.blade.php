@@ -9,7 +9,7 @@
     <title>Real Villa - Real Estate HTML5 Template</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" />
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,500,600,700%7CRoboto:300,400,500,700">
@@ -20,8 +20,6 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}" />
 
     <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
-    <link rel="stylesheet" href="{{ asset('css/select2/select2.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/range-slider/ion.rangeSlider.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/owl-carousel/owl.carousel.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/magnific-popup/magnific-popup.css') }}" />
 
@@ -30,7 +28,7 @@
 
   </head>
 
-<body>
+  <body>
 
 <!--=================================
 header -->
@@ -50,7 +48,7 @@ header -->
             </div>
             <div class="dropdown d-inline-block ps-2 ps-md-0">
               <a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Choisissez l'emplacement<i class="fas fa-chevron-down ps-2"></i>
+                Choose location<i class="fas fa-chevron-down ps-2"></i>
               </a>
               <div class="dropdown-menu mt-0" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">Global</a>
@@ -69,7 +67,7 @@ header -->
               </ul>
             </div>
             <div class="login d-inline-block">
-              <a data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Bonjour connectez-vous<i class="fa fa-user ps-2"></i></a>
+              <a href="login.html">Bonjour connectez-vous<i class="fa fa-user ps-2"></i></a>
             </div>
           </div>
         </div>
@@ -298,129 +296,26 @@ header -->
  header -->
 
 <!--=================================
- Modal login -->
-<div class="modal login fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="loginModalLabel">Log in & Register</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <ul class="nav nav-tabs nav-tabs-02 justify-content-center" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="false">Log in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="register-tab" data-bs-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="true">Register</a>
-          </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-            <form class="row my-4 align-items-center">
-              <div class="mb-3 col-sm-12">
-                <input type="text" class="form-control" placeholder="Username">
-              </div>
-              <div class="mb-3 col-sm-12">
-                <input type="Password" class="form-control" placeholder="Password">
-              </div>
-              <div class="col-sm-6 d-grid">
-                <button type="submit" class="btn btn-primary">Sign up</button>
-              </div>
-              <div class="col-sm-6">
-                <ul class="list-unstyled d-flex mb-1 mt-sm-0 mt-3">
-                  <li class="me-1"><a href="#"><b>Already Registered User? Click here to login</b></a></li>
-                </ul>
-              </div>
-            </form>
-            <div class="login-social-media border ps-4 pe-4 pb-4 pt-0 rounded">
-              <div class="mb-4 d-block text-center"><b class="bg-white ps-2 pe-2 mt-3 d-block">Login or Sign in with</b></div>
-              <form class="row">
-                <div class="col-sm-6">
-                  <a class="btn facebook-bg social-bg-hover d-block mb-3" href="#"><span><i class="fab fa-facebook-f"></i>Login with Facebook</span></a>
-                </div>
-                <div class="col-sm-6">
-                  <a class="btn twitter-bg social-bg-hover d-block mb-3" href="#"><span><i class="fab fa-twitter"></i>Login with Twitter</span></a>
-                </div>
-                <div class="col-sm-6">
-                  <a class="btn google-bg social-bg-hover d-block mb-3 mb-sm-0" href="#"><span><i class="fab fa-google"></i>Login with Google</span></a>
-                </div>
-                <div class="col-sm-6">
-                  <a class="btn linkedin-bg social-bg-hover d-block" href="#"><span><i class="fab fa-linkedin-in"></i>Login with Linkedin</span></a>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-            <form class="row mt-4 mb-5 align-items-center">
-              <div class="mb-3 col-sm-12">
-                <input type="text" class="form-control" placeholder="Username">
-              </div>
-              <div class="mb-3 col-sm-12">
-                <input type="email" class="form-control" placeholder="Email Address">
-              </div>
-              <div class="mb-3 col-sm-12">
-                <input type="Password" class="form-control" placeholder="Password">
-              </div>
-              <div class="mb-3 col-sm-12">
-                <input type="Password" class="form-control" placeholder="Confirm Password">
-              </div>
-              <div class="col-sm-6 d-grid">
-                <button type="submit" class="btn btn-primary">Sign up</button>
-              </div>
-              <div class="col-sm-6">
-                <ul class="list-unstyled d-flex mb-1 mt-sm-0 mt-3">
-                  <li class="me-1"><a href="#"><b>Already Registered User? Click here to login</b></a></li>
-                </ul>
-              </div>
-            </form>
-            <div class="login-social-media border ps-4 pe-4 pb-4 pt-0 rounded">
-              <div class="mb-4 d-block text-center"><b class="bg-white ps-2 pe-2 mt-3 d-block">Login or Sign in with</b></div>
-              <form class="row">
-                <div class="col-sm-6">
-                  <a class="btn facebook-bg social-bg-hover d-block mb-3" href="#"><span><i class="fab fa-facebook-f"></i>Login with Facebook</span></a>
-                </div>
-                <div class="col-sm-6">
-                  <a class="btn twitter-bg social-bg-hover d-block mb-3" href="#"><span><i class="fab fa-twitter"></i>Login with Twitter</span></a>
-                </div>
-                <div class="col-sm-6">
-                  <a class="btn google-bg social-bg-hover d-block mb-3 mb-sm-0" href="#"><span><i class="fab fa-google"></i>Login with Google</span></a>
-                </div>
-                <div class="col-sm-6">
-                  <a class="btn linkedin-bg social-bg-hover d-block" href="#"><span><i class="fab fa-linkedin-in"></i>Login with Linkedin</span></a>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
+breadcrumb -->
+<div class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html"> <i class="fas fa-home"></i> </a></li>
+          <li class="breadcrumb-item"> <i class="fas fa-chevron-right"></i> <a href="#">Accueil </a></li>
+          <li class="breadcrumb-item active"> <i class="fas fa-chevron-right"></i> <span> Qui Sommes-Nous?</span></li>
+        </ol>
       </div>
     </div>
   </div>
 </div>
 <!--=================================
-  Modal login -->
-  <!--=================================
-call to action -->
-<section class="py-5 bg-primary">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-9">
-          <h2 class="text-white mb-0">Vous Souhaitez Vendre Ou Louer Votre Bien ? </h2>
-        </div>
-        <div class="col-lg-3 text-lg-end mt-3 mt-lg-0">
-          <a class="btn btn-white" href="#">Obtenir un devis gratuit</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--=================================
-  call to action -->
-
-  @yield('content')
-  
-  <!--=================================
-  footer-->
-  <footer class="footer bg-dark space-pt">
+breadcrumb -->
+@yield('content')
+<!--=================================
+footer-->
+<footer class="footer bg-dark space-pt">
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6">
@@ -519,16 +414,12 @@ call to action -->
     <!-- JS Global Compulsory (Do not remove)-->
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('js/popper/popper.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
   
     <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
     <script src="{{ asset('js/jquery.appear.js') }}"></script>
     <script src="{{ asset('js/counter/jquery.countTo.js') }}"></script>
-    <script src="{{ asset('js/select2/select2.full.js') }}"></script>
-    <script src="{{ asset('js/range-slider/ion.rangeSlider.min.js') }}"></script>
     <script src="{{ asset('js/owl-carousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('js/jarallax/jarallax.min.js') }}"></script>
-    <script src="{{ asset('js/jarallax/jarallax-video.min.js') }}"></script>
     <script src="{{ asset('js/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
   
     <!-- Template Scripts (Do not remove)-->

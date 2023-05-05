@@ -24,3 +24,18 @@ Route::get('/aboute', function () {
 Route::get('/property_list', function () {
     return view('property_list');
 });
+
+Route::get('/agency', function () {
+    return view('agency-grid');
+});
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+Route::get('/propertySubmit', function () {
+    return view('submit-property');
+});
