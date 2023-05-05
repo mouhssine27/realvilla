@@ -52,6 +52,9 @@ header -->
               <a href="#"><i class="fab fa-apple"></i></a>
             </div>
             <div class="dropdown d-inline-block ps-2 ps-md-0">
+
+
+            
               <a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Choisissez l'emplacement<i class="fas fa-chevron-down ps-2"></i>
               </a>
