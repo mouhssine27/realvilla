@@ -263,6 +263,7 @@ newsletter -->
         </div>
     </div>
 </section>
+
 <!--=================================
 newsletter -->
 @endsection
