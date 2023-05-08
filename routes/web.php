@@ -18,10 +18,6 @@ Route::get('/aboute', function () {
     return view('aboute_us');
 });
 
-Route::get('/property_list', function () {
-    return view('property_list');
-});
-
 Route::get('/agency', function () {
     return view('agency-grid');
 });
@@ -45,6 +41,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Route::get('/', [AnnonceController::class, 'categoriesHomes']);
+
+Route::get('/property_list', [AnnonceController::class, 'propertlist']);
 
 

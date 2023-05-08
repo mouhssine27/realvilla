@@ -422,7 +422,7 @@ header -->
                                 </div>
                                 <div class="col-sm-6">
                                     <ul class="list-unstyled d-flex mb-1 mt-sm-0 mt-3">
-                                        <li class="me-1"><a href="{{ route('login') }}"><b>You do not have an account? Click here to register</b></a>
+                                        <li class="me-1"><a href="{{ route('register') }}"><b>You do not have an account? Click here to register</b></a>
                                         </li>
                                     </ul>
                                 </div>
