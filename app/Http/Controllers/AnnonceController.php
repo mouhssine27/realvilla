@@ -71,7 +71,9 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
      public function pageprincipale()
      {
         $createData  = DB::Select('select * from annonces where annonces.id!="" limit 6');
-        return view("welcome",compact('createData'));
+        $categories  =$user_info = annonce::groupBy('categorie')->select('categorie', DB::raw('count(*) as total'))->get();
+          return view("welcome",compact('createData','categories'));
+    
      }
 
      public function propertySubmit()
@@ -80,11 +82,13 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
     $Offer =  Offer::select()->get();
     return view('submit-property', compact('categories','Offer'));
      }
-     ///propriete list 
+
+    
      public function propertlist()
      {   
        $data = Annonce::paginate(5);
          $dataCount=Annonce::paginate(5)->lastPage();
       return view('property_list',compact('data','dataCount'));
      }
+
 }

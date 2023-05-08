@@ -41,5 +41,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
 Route::get('/property_list', [AnnonceController::class, 'propertlist']);
+
 

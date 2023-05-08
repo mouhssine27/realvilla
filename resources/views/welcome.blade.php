@@ -3,6 +3,7 @@
 @section('content')
 <!--=================================
 banner -->
+
 <section class="banner bg-holder bg-overlay-black-30" style="background-image: url(images/slider1\ .jpg);">
   <div class="container">
     <div class="row">
@@ -135,16 +136,21 @@ Browse properties -->
       <div class="col-12">
         <div class="category">
           <ul class="list-unstyled mb-0">
+            @foreach ($categories as $categoriess)
             <li class="category-item">
               <a href="property-list.html">
                 <div class="category-icon">
                   <i class="flaticon-building-2"></i>
                 </div>
-                <h6 class="mb-0">Résidentiel</h6>
-                <span>(457)</span>
+                <h6 class="mb-0">{{$categoriess->categorie}}</h6>
+                <span>{{$categoriess->total}}</span>
               </a>
             </li>
-            <li class="category-item">
+            @endforeach
+
+            
+           
+            {{-- <li class="category-item">
               <a href="property-list.html">
                 <div class="category-icon">
                   <i class="flaticon-skyline"></i>
@@ -215,7 +221,7 @@ Browse properties -->
                 <h6 class="mb-0">Assurabilité</h6>
                 <span>(145)</span>
               </a>
-            </li>
+            </li> --}}
           </ul>
         </div>
       </div>
