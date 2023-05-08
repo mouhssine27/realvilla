@@ -14,10 +14,6 @@ use App\Http\controllers\AnnonceController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/aboute', function () {
     return view('aboute_us');
 });
@@ -37,8 +33,6 @@ Route::get('/blog', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::get('/propertySubmit', function () {
-    return view('submit-property');
-});
-Route::get('/afficher', [AnnonceController::class, 'selectAnonce']);
-Route::get('/create', [AnnonceController::class, 'CreateAnonnce']);
+Route::get('/propertySubmit', [AnnonceController::class, 'propertySubmit']);
+Route::get('/', [AnnonceController::class, 'homme']);
+Route::post('/create', [AnnonceController::class, 'CreateAnonnce']);
