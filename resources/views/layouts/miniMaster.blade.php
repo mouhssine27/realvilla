@@ -67,8 +67,26 @@ header -->
               </ul>
             </div>
             <div class="login d-inline-block">
-              <a href="login.html">Bonjour connectez-vous<i class="fa fa-user ps-2"></i></a>
-            </div>
+              @guest
+              @if (Route::has('login'))
+              <a  href="{{ route('login') }}">Bonjour
+                  connectez-vous<i class="fa fa-user ps-2"></i></a>
+              @endif
+
+              @else
+              <a data-bs-toggle="modal" data-bs-target="" data-bs-toggle="modal" data-bs-target=""
+                  href=""> {{ Auth::user()->name }}<i class="fa fa-user ps-2"></i></a>
+
+              <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+     document.getElementById('logout-form').submit();">
+                 
+                  <i class="fa fa-sign-out"></i></a>
+
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                  @csrf
+              </form>
+              @endguest
+          </div>
           </div>
         </div>
       </div>
