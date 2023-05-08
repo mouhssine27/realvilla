@@ -1,8 +1,6 @@
 
 @extends('layouts.master')
 @section('content')
-
-
 <!--=================================
 banner -->
 <section class="banner bg-holder bg-overlay-black-30" style="background-image: url(images/slider1\ .jpg);">
@@ -240,10 +238,11 @@ Browse properties -->
       </div>
     </div>
     <div class="row">
+      @foreach($createData as $createDatas)
       <div class="col-sm-6 col-md-4">
         <div class="property-item">
           <div class="property-image bg-overlay-gradient-04">
-            <img class="img-fluid" src="images/appartement1.webp" alt="">
+            <img class="img-fluid" src="annonce/{{$createDatas->image}}" alt="">
             <div class="property-lable">
               <span class="badge badge-md bg-primary">Bungalow</span>
               <span class="badge badge-md bg-info">Vente </span>
@@ -268,14 +267,14 @@ Browse properties -->
           </div>
           <div class="property-details">
             <div class="property-details-inner">
-              <h5 class="property-title"><a href="property-detail-style-01.html">Grand Appartement Au Dernier Etage </a></h5>
-              <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Collines du temple de Virginia </span>
+              <h5 class="property-title"><a href="property-detail-style-01.html">{{$createDatas->titre}} </a></h5>
+              <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>{{$createDatas->region}}</span>
               <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 10 jours</span>
-              <div class="property-price">$150.00<span> / mois</span> </div>
+              <div class="property-price">${{$createDatas->prix}}<span> / {{$createDatas->Dureelocation}}</span> </div>
               <ul class="property-info list-unstyled d-flex">
-                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Chambres<span>3</span></li>
-                <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bains<span>2</span></li>
-                <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>145m²</span></li>
+                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Chambres<span>{{$createDatas->chambres}}</span></li>
+                <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bains<span>{{$createDatas->sallebain}}</span></li>
+                <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>{{$createDatas->zonenavigateur}}m²</span></li>
               </ul>
             </div>
             <div class="property-btn">
@@ -292,243 +291,7 @@ Browse properties -->
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="property-item">
-          <div class="property-image bg-overlay-gradient-04">
-            <img class="img-fluid" src="images/appartement2.webp" alt="">
-            <div class="property-lable">
-              <span class="badge badge-md bg-primary">Appartement</span>
-              <span class="badge badge-md bg-info">Nouveau </span>
-            </div>
-            <div class="property-agent">
-              <div class="property-agent-image">
-                <img class="img-fluid" src="images/avatar/02.jpg" alt="">
-              </div>
-              <div class="property-agent-info">
-                <a class="property-agent-name" href="#">John doe</a>
-                <span class="d-block">Agent de la societé</span>
-                <ul class="property-agent-contact list-unstyled">
-                  <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
-                  <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="property-agent-popup">
-              <a href="#"><i class="fas fa-camera"></i> 12</a>
-            </div>
-          </div>
-          <div class="property-details">
-            <div class="property-details-inner">
-              <h5 class="property-title"><a href="property-detail-style-01.html">Superbe Maison Familiale </a></h5>
-              <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Vermont dr. hephzibah</span>
-              <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 2 mois</span>
-              <div class="property-price">$326.00<span> / month</span> </div>
-              <ul class="property-info list-unstyled d-flex">
-                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Chambres<span>2</span></li>
-                <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bains<span>3</span></li>
-                <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>215m²</span></li>
-              </ul>
-            </div>
-            <div class="property-btn">
-              <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
-              <ul class="property-listing-actions list-unstyled mb-0">
-                <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
-                <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="property-item">
-          <div class="property-image bg-overlay-gradient-04">
-            <img class="img-fluid" src="images/appartement3.webp" alt="">
-            <div class="property-lable">
-              <span class="badge badge-md bg-primary">Maison d'été </span>
-              <span class="badge badge-md bg-info">Chaud </span>
-            </div>
-            <span class="property-trending" title="trending"><i class="fas fa-bolt"></i></span>
-            <div class="property-agent">
-              <div class="property-agent-image">
-                <img class="img-fluid" src="images/avatar/03.jpg" alt="">
-              </div>
-              <div class="property-agent-info">
-                <a class="property-agent-name" href="#">Felica queen</a>
-                <span class="d-block">Investissement</span>
-                <ul class="property-agent-contact list-unstyled">
-                  <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
-                  <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="property-agent-popup">
-              <a href="#"><i class="fas fa-camera"></i> 03</a>
-            </div>
-          </div>
-          <div class="property-details">
-            <div class="property-details-inner">
-              <h5 class="property-title"><a href="property-detail-style-01.html">Appartement Contemporain</a></h5>
-              <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>rue Newport. mebane, nc</span>
-              <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 6 mois</span>
-              <div class="property-price">$658.00<span> / mois</span> </div>
-              <ul class="property-info list-unstyled d-flex">
-                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Chambres<span>3</span></li>
-                <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bains<span>4</span></li>
-                <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>3,189m²</span></li>
-              </ul>
-            </div>
-            <div class="property-btn">
-              <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
-              <ul class="property-listing-actions list-unstyled mb-0">
-                <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
-                <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="property-item">
-          <div class="property-image bg-overlay-gradient-04">
-            <img class="img-fluid" src="images/appartement4.webp" alt="">
-            <div class="property-lable">
-              <span class="badge badge-md bg-primary">Duplex</span>
-              <span class="badge badge-md bg-info">Chaud</span>
-            </div>
-            <div class="property-agent">
-              <div class="property-agent-image">
-                <img class="img-fluid" src="images/avatar/04.jpg" alt="">
-              </div>
-              <div class="property-agent-info">
-                <a class="property-agent-name" href="#">Sara lisbon</a>
-                <span class="d-block">Construction</span>
-                <ul class="property-agent-contact list-unstyled">
-                  <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
-                  <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="property-agent-popup">
-              <a href="#"><i class="fas fa-camera"></i> 04</a>
-            </div>
-          </div>
-          <div class="property-details">
-            <div class="property-details-inner">
-              <h5 class="property-title"><a href="property-detail-style-01.html">Maison Familiale A Vendre</a></h5>
-              <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Border st. nicholasville, ky</span>
-              <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 12 mois</span>
-              <div class="property-price">$485.00<span> / mois</span> </div>
-              <ul class="property-info list-unstyled d-flex">
-                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Chambres<span>2</span></li>
-                <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bain<span>1</span></li>
-                <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>2,356m²</span></li>
-              </ul>
-            </div>
-            <div class="property-btn">
-              <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
-              <ul class="property-listing-actions list-unstyled mb-0">
-                <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
-                <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="property-item">
-          <div class="property-image bg-overlay-gradient-04">
-            <img class="img-fluid" src="images/appartement5.webp" alt="">
-            <div class="property-lable">
-              <span class="badge badge-md bg-primary">Attiques </span>
-              <span class="badge badge-md bg-info">Louer </span>
-            </div>
-            <span class="property-trending" title="trending"><i class="fas fa-bolt"></i></span>
-            <div class="property-agent">
-              <div class="property-agent-image">
-                <img class="img-fluid" src="images/avatar/05.jpg" alt="">
-              </div>
-              <div class="property-agent-info">
-                <a class="property-agent-name" href="#">Mellissa Doe</a>
-                <span class="d-block">Fondateur & PDG </span>
-                <ul class="property-agent-contact list-unstyled">
-                  <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
-                  <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="property-agent-popup">
-              <a href="#"><i class="fas fa-camera"></i> 10</a>
-            </div>
-          </div>
-          <div class="property-details">
-            <div class="property-details-inner">
-              <h5 class="property-title"><a href="property-detail-style-01.html">Villa De Luxe Avec Piscine</a></h5>
-              <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>West Indian St. Missoula</span>
-              <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 2 ans</span>
-              <div class="property-price">$698.00<span> / mois</span> </div>
-              <ul class="property-info list-unstyled d-flex">
-                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Chambres<span>5</span></li>
-                <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bains<span>4</span></li>
-                <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>1,658m²</span></li>
-              </ul>
-            </div>
-            <div class="property-btn">
-              <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
-              <ul class="property-listing-actions list-unstyled mb-0">
-                <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
-                <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="property-item">
-          <div class="property-image bg-overlay-gradient-04">
-            <img class="img-fluid" src="images/appartement6.webp" alt="">
-            <div class="property-lable">
-              <span class="badge badge-md bg-primary">Studio</span>
-              <span class="badge badge-md bg-info">Nouveau </span>
-            </div>
-            <div class="property-agent">
-              <div class="property-agent-image">
-                <img class="img-fluid" src="images/avatar/06.jpg" alt="">
-              </div>
-              <div class="property-agent-info">
-                <a class="property-agent-name" href="#">Michael Bean</a>
-                <span class="d-block">Recherche</span>
-                <ul class="property-agent-contact list-unstyled">
-                  <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
-                  <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="property-agent-popup">
-              <a href="#"><i class="fas fa-camera"></i> 02</a>
-            </div>
-          </div>
-          <div class="property-details">
-            <div class="property-details-inner">
-              <h5 class="property-title"><a href="property-detail-style-01.html">184 Avenue Lexington </a></h5>
-              <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Hamilton rd. willoughby </span>
-              <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 3 ans</span>
-              <div class="property-price">$236.00<span> / mois</span> </div>
-              <ul class="property-info list-unstyled d-flex">
-                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Chambres<span>2</span></li>
-                <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bains<span>2</span></li>
-                <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>3,657m²</span></li>
-              </ul>
-            </div>
-            <div class="property-btn">
-              <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
-              <ul class="property-listing-actions list-unstyled mb-0">
-                <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
-                <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      @endforeach
       <div class="col-12 text-center">
         <a class="btn btn-link" href="property-list.html"><i class="fas fa-plus"></i>Voir toutes les annonces</a>
       </div>
@@ -553,23 +316,24 @@ Featured properties-->
     <div class="row">
       <div class="col-12">
         <div class="owl-carousel owl-nav-top-right" data-animateOut="fadeOut" data-nav-arrow="true" data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="0">
-          <div class="item">
+        @foreach($createData as $nvcreateData)
+        <div class="item">
             <div class="property-offer">
               <div class="property-offer-item">
-                <div class="property-offer-image bg-holder" style="background: url('images/offre1.jpg');">
+                <div class="property-offer-image bg-holder" style="background: url('annonce/{{$nvcreateData->image}}');background-size:cover">
                   <div class="row">
                     <div class="col-lg-6 col-md-10 col-sm-12">
                       <div class="property-details">
                         <div class="property-details-inner">
-                          <h5 class="property-title"><a href="property-detail-style-01.html">Grand Appartement Au Dernier Etage </a></h5>
-                          <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Collines du temple Virginia</span>
+                          <h5 class="property-title"><a href="property-detail-style-01.html">{{$nvcreateData->titre}}  </a></h5>
+                          <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>{{$nvcreateData->region}} </span>
                           <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 10 jours</span>
-                          <p class="mb-0 d-block mt-3">Pour ceux d'entre vous qui veulent vraiment avoir plus, faire plus, donner plus et être plus.</p>
-                          <div class="property-price">$150.00<span> / mois</span> </div>
+                          <p class="mb-0 d-block mt-3">{{$nvcreateData->descreption}} </p>
+                          <div class="property-price">${{$nvcreateData->prix}} <span> / {{$nvcreateData->Dureelocation}} </span> </div>
                           <ul class="property-info list-unstyled d-flex">
                             <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Lits<span>1</span></li>
-                            <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Chambres<span>2</span></li>
-                            <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>145m²</span></li>
+                            <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Chambres<span>{{$nvcreateData->chambres}}</span></li>
+                            <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span> {{$nvcreateData->zonenavigateur}}m²</span></li>
                           </ul>
                         </div>
                         <div class="property-btn">
@@ -586,39 +350,8 @@ Featured properties-->
               </div>
             </div>
           </div>
-          <div class="item">
-            <div class="property-offer">
-              <div class="property-offer-item">
-                <div class="property-offer-image bg-holder" style="background: url('images/offre2.jpg');">
-                  <div class="row">
-                    <div class="col-lg-6 col-md-10 col-sm-12">
-                      <div class="property-details">
-                        <div class="property-details-inner">
-                          <h5 class="property-title"><a href="property-detail-style-01.html">Villa De Luxe Avec Piscine</a></h5>
-                          <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Antillais Saint Missoula</span>
-                          <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 2 ans</span>
-                          <p class="mb-0 d-block mt-3">Pour ceux d'entre vous qui veulent vraiment avoir plus, faire plus, donner plus et être plus.</p>
-                          <div class="property-price">$698.00<span> / mois</span> </div>
-                          <ul class="property-info list-unstyled d-flex">
-                            <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Lits<span>5</span></li>
-                            <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Chambres<span>4</span></li>
-                            <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>Superficie<span>1,658m²</span></li>
-                          </ul>
-                        </div>
-                        <div class="property-btn">
-                          <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
-                          <ul class="property-listing-actions list-unstyled mb-0">
-                            <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
-                            <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        @endforeach
+        
         </div>
       </div>
     </div>
