@@ -7,6 +7,9 @@ use App\Models\Annonce;
 use App\Models\Categorie;
 use App\Models\Offer;
 use DB;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
 
 class AnnonceController extends Controller
 {
@@ -76,5 +79,12 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
     $categories = Categorie::select()->get();
     $Offer =  Offer::select()->get();
     return view('submit-property', compact('categories','Offer'));
+     }
+     ///propriete list 
+     public function propertlist()
+     {   
+       $data = Annonce::paginate(5);
+         $dataCount=Annonce::paginate(5)->lastPage();
+      return view('property_list',compact('data','dataCount'));
      }
 }

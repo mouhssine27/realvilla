@@ -293,7 +293,7 @@ Browse properties -->
       </div>
       @endforeach
       <div class="col-12 text-center">
-        <a class="btn btn-link" href="property-list.html"><i class="fas fa-plus"></i>Voir toutes les annonces</a>
+        <a class="btn btn-link" href="/property_list"><i class="fas fa-plus"></i>Voir toutes les annonces</a>
       </div>
     </div>
   </div>
