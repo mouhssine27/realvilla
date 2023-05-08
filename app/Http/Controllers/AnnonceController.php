@@ -65,7 +65,7 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
                  return "operation echou";
 
      }
-     public function homme()
+     public function pageprincipale()
      {
         $createData  = DB::Select('select * from annonces where annonces.id!="" limit 6');
         return view("welcome",compact('createData'));

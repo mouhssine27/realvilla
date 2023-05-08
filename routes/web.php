@@ -33,6 +33,8 @@ Route::get('/blog', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+
 Route::get('/propertySubmit', [AnnonceController::class, 'propertySubmit']);
-Route::get('/', [AnnonceController::class, 'homme']);
+Route::get('/', [AnnonceController::class, 'pageprincipale']);
 Route::post('/create', [AnnonceController::class, 'CreateAnonnce']);
