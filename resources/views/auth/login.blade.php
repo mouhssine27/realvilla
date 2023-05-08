@@ -10,7 +10,7 @@
     <title>Real Villa - Real Estate HTML5 Template</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" />
 
     <!-- Google Font -->
     <link rel="stylesheet"
@@ -22,11 +22,9 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}" />
 
     <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
-    <link rel="stylesheet" href="{{ asset('css/select2/select2.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/range-slider/ion.rangeSlider.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/owl-carousel/owl.carousel.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/magnific-popup/magnific-popup.css') }}" />
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- Template Style -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 
@@ -54,7 +52,7 @@ header -->
                             <div class="dropdown d-inline-block ps-2 ps-md-0">
                                 <a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
-                                    Choisissez l'emplacement<i class="fas fa-chevron-down ps-2"></i>
+                                    Choose location<i class="fas fa-chevron-down ps-2"></i>
                                 </a>
                                 <div class="dropdown-menu mt-0" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="#">Global</a>
@@ -73,25 +71,7 @@ header -->
                                 </ul>
                             </div>
                             <div class="login d-inline-block">
-                                @guest
-                                @if (Route::has('login'))
-                                <a  href="{{ route('login') }}">Bonjour
-                                    connectez-vous<i class="fa fa-user ps-2"></i></a>
-                                @endif
-
-                                @else
-                                <a data-bs-toggle="modal" data-bs-target="" data-bs-toggle="modal" data-bs-target=""
-                                    href=""> {{ Auth::user()->name }}<i class="fa fa-user ps-2"></i></a>
-
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                       document.getElementById('logout-form').submit();">
-                                   
-                                    <i class="fa fa-sign-out"></i></a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                                @endguest
+                                <a href="login.html">Bonjour connectez-vous<i class="fa fa-user ps-2"></i></a>
                             </div>
                         </div>
                     </div>
@@ -315,38 +295,176 @@ header -->
                     <a class="btn btn-primary btn-md" href="{{ url('propertySubmit') }}"> <i
                             class="fa fa-plus-circle"></i>Ajouter une annonce </a>
                 </div>
-
             </div>
         </nav>
     </header>
     <!--=================================
  header -->
 
-    @include('partiels.popup.auth');
-    <!--=================================
-call to action -->
-    <section class="py-5 bg-primary">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-9">
-                    <h2 class="text-white mb-0">Vous Souhaitez Vendre Ou Louer Votre Bien ? </h2>
-                </div>
-                <div class="col-lg-3 text-lg-end mt-3 mt-lg-0">
-                    <a class="btn btn-white" href="#">Obtenir un devis gratuit</a>
+
+
+{{-- 
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">{{ __('Login') }}</div>
+                    <form class="row my-4 align-items-center" method="POST" action="{{ route('login') }}">
+                    <div class="card-body">
+                       
+                            @csrf
+                            <div class="modal-body">
+
+                                <form class="row my-4 align-items-center">
+                                    <div class="mb-3 col-sm-12">
+
+
+                                        <input id="email" placeholder="Email" type="email"
+                                            class="form-control @error('email') is-invalid @enderror" name="email"
+                                            value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                        @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3 col-sm-12">
+
+                                        <input id="password" placeholder="Password" type="password"
+                                            class="form-control @error('password') is-invalid @enderror" name="password"
+                                            required autocomplete="current-password">
+                                        @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-sm-6 d-grid">
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul class="list-unstyled d-flex mb-1 mt-sm-0 mt-3">
+                                            <li class="me-1"><a href="{{ route('register') }}"><b>You do not have an account? Click here to register</b></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                                <div class="login-social-media border ps-4 pe-4 pb-4 pt-0 rounded">
+                                    <div class="mb-4 d-block text-center"><b
+                                            class="bg-white ps-2 pe-2 mt-3 d-block">Login or
+                                            Sign in with</b></div>
+                                    <form class="row">
+
+                                        <div class="col-sm-6">
+                                            <a class="btn facebook-bg social-bg-hover d-block mb-3" href="#"><span><i
+                                                        class="fab fa-facebook-f"></i>Login with Facebook</span></a>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <a class="btn twitter-bg social-bg-hover d-block mb-3" href="#"><span><i
+                                                        class="fab fa-twitter"></i>Login with Twitter</span></a>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <a class="btn google-bg social-bg-hover d-block mb-3 mb-sm-0"
+                                                href="#"><span><i class="fab fa-google"></i>Login with Google</span></a>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <a class="btn linkedin-bg social-bg-hover d-block" href="#"><span><i
+                                                        class="fab fa-linkedin-in"></i>Login with Linkedin</span></a>
+                                        </div>
+                                    </form>
+
+                                </div>
+
+                            </div>
+                            
+                       
+                    </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div> --}}
 
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">{{ __('Login') }}</div>
+    
+                    <div class="card-body">
+                        <div class="modal-body">
+                            <form class="row my-4 align-items-center" method="POST" action="{{ route('login') }}">
+                                @csrf
+                                <div class="mb-3 col-sm-12">
+                                    <input id="email" placeholder="Email" type="email"
+                                        class="form-control @error('email') is-invalid @enderror" name="email"
+                                        value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                                <div class="mb-3 col-sm-12">
 
+                                    <input id="password" placeholder="Password" type="password"
+                                        class="form-control @error('password') is-invalid @enderror" name="password"
+                                        required autocomplete="current-password">
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                               
+                                <div class="col-sm-6 d-grid">
+                                    <button type="submit" class="btn btn-primary">Login</button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled d-flex mb-1 mt-sm-0 mt-3">
+                                        <li class="me-1"><a href="{{ route('login') }}"><b>You do not have an account? Click here to register</b></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                            <div class="login-social-media border ps-4 pe-4 pb-4 pt-0 rounded">
+                              <div class="mb-4 d-block text-center"><b
+                                      class="bg-white ps-2 pe-2 mt-3 d-block">Login or
+                                      Sign in with</b></div>
+                              <form class="row">
+    
+                                  <div class="col-sm-6">
+                                      <a class="btn facebook-bg social-bg-hover d-block mb-3" href="#"><span><i
+                                                  class="fab fa-facebook-f"></i>Login with Facebook</span></a>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <a class="btn twitter-bg social-bg-hover d-block mb-3" href="#"><span><i
+                                                  class="fab fa-twitter"></i>Login with Twitter</span></a>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <a class="btn google-bg social-bg-hover d-block mb-3 mb-sm-0"
+                                          href="#"><span><i class="fab fa-google"></i>Login with Google</span></a>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <a class="btn linkedin-bg social-bg-hover d-block" href="#"><span><i
+                                                  class="fab fa-linkedin-in"></i>Login with Linkedin</span></a>
+                                  </div>
+                              </form>
+    
+                          </div>
+    
+                        </div>
+    
+                      
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    </section>
     <!--=================================
-  call to action -->
-
-    @yield('content')
-
-    <!--=================================
-  footer-->
+footer-->
     <footer class="footer bg-dark space-pt">
         <div class="container">
             <div class="row">
@@ -456,16 +574,12 @@ call to action -->
     <!-- JS Global Compulsory (Do not remove)-->
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('js/popper/popper.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
 
     <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
     <script src="{{ asset('js/jquery.appear.js') }}"></script>
     <script src="{{ asset('js/counter/jquery.countTo.js') }}"></script>
-    <script src="{{ asset('js/select2/select2.full.js') }}"></script>
-    <script src="{{ asset('js/range-slider/ion.rangeSlider.min.js') }}"></script>
     <script src="{{ asset('js/owl-carousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('js/jarallax/jarallax.min.js') }}"></script>
-    <script src="{{ asset('js/jarallax/jarallax-video.min.js') }}"></script>
     <script src="{{ asset('js/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
 
     <!-- Template Scripts (Do not remove)-->

@@ -35,6 +35,14 @@ Route::get('/contact', function () {
 });
 
 
+
 Route::get('/propertySubmit', [AnnonceController::class, 'propertySubmit']);
 Route::get('/', [AnnonceController::class, 'pageprincipale']);
 Route::post('/create', [AnnonceController::class, 'CreateAnonnce']);
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
