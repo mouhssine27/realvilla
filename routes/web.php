@@ -50,3 +50,4 @@ Route::get('property_list/{id}', [AnnonceController::class, 'propertylistID']);
 Route::get('details/{name}/{id}', [AnnonceController::class,'details']);
 
 
+
