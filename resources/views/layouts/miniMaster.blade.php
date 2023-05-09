@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" />
 
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,500,600,700%7CRoboto:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,500,600,700%7CRoboto:300,400,500,700"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,500,600,700%7CRoboto:300,400,500,700"
 
     <!-- CSS Global Compulsory (Do not remove)-->
     <link rel="stylesheet" href="{{ asset('css/font-awesome/all.min.css') }}" />
@@ -432,7 +432,7 @@ footer-->
     <!-- JS Global Compulsory (Do not remove)-->
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('js/popper/popper.min.js') }}"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
   
     <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
     <script src="{{ asset('js/jquery.appear.js') }}"></script>

@@ -45,3 +45,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/property_list', [AnnonceController::class, 'propertlist']);
 
 
+Route::get('/testWizard', function () {
+    return view('test-wizard');
+});
