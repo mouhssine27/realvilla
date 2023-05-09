@@ -219,7 +219,7 @@ Listing – grid view -->
           <div class="row g-0">
             <div class="col-lg-4 col-md-5">
               <div class="property-image bg-overlay-gradient-04">
-                <img class="img-fluid" src="annonce/{{$datas->image}}" alt="">
+                <img class="img-fluid" src="/annonce/{{$datas->image}}" alt="">
                 <div class="property-lable">
                   <span class="badge badge-md bg-primary">Bungalow</span>
                   <span class="badge badge-md bg-info">Vente </span>
@@ -273,22 +273,6 @@ Listing – grid view -->
           </div>
         </div>
      @endforeach
-        <div class="row">
-          <div class="col-12">
-            <ul class="pagination mt-3">
-              <li class="page-item disabled me-auto">
-                <span class="page-link b-radius-none">Prev</span>
-              </li>
-              <!--<li class="page-item active" aria-current="page"><span class="page-link">1 </span> <span class="sr-only">(current)</span></li>-->
-              @for ($i = 1; $i <=$dataCount; $i++)
-              <li class="page-item"><a class="page-link" href="property_list?page={{$i}}">{{$i}}</a></li>
-                    @endfor
-              <li class="page-item ms-auto">
-                <a class="page-link b-radius-none" href="#">Next</a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
   </div>

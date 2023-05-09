@@ -88,7 +88,31 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
      {   
        $data = Annonce::paginate(5);
          $dataCount=Annonce::paginate(5)->lastPage();
-      return view('property_list',compact('data','dataCount'));
+         ///modificatuion ou niveaux Categorie
+        $categoriesee = Categorie::select()->get();   
+        $Offere =  Offer::select()->get();
+        ///modification pour total Categorie  et total offere
+        $categoriesTotale = annonce::groupBy('categorie')->select('categorie', DB::raw('count(*) as total'))->get();
+        $offereTotale   = annonce::groupBy('offre')->select('offre', DB::raw('count(*) as total'))->get();
+      return view('property_list',compact('data','dataCount','categoriesee','Offere','categoriesTotale','offereTotale'));
      }
-
+     ///////afficher itemse par id 
+     public function propertylistID($id )
+     {
+        $data  = Annonce::select()->where('categorie',$id)->get();
+        ///modificatuion ou niveaux Categorie
+        $categoriesee = Categorie::select()->get();   
+        $Offere =  Offer::select()->get();
+        ///modification pour total Categorie  et total offere
+        $categoriesTotale = annonce::groupBy('categorie')->select('categorie', DB::raw('count(*) as total'))->get();
+        $offereTotale   = annonce::groupBy('offre')->select('offre', DB::raw('count(*) as total'))->get();
+      return view ('propriete',compact('data','categoriesee','Offere','categoriesTotale','offereTotale'));
+     }
+///////function details annonce 
+public function details($name,$id)
+{
+     $databrt = annonce::find($id);
+    $dtailsParCategories = DB::Select("select * from annonces where annonces.categorie='$name' limit 3");
+  return view("afficherInformation",compact('dtailsParCategories','databrt'));
+}
 }

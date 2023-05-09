@@ -138,7 +138,7 @@ Browse properties -->
           <ul class="list-unstyled mb-0">
             @foreach ($categories as $categoriess)
             <li class="category-item">
-              <a href="property-list.html">
+              <a href="/property_list/{{$categoriess->categorie}}">
                 <div class="category-icon">
                   <i class="flaticon-building-2"></i>
                 </div>
@@ -273,7 +273,7 @@ Browse properties -->
           </div>
           <div class="property-details">
             <div class="property-details-inner">
-              <h5 class="property-title"><a href="property-detail-style-01.html">{{$createDatas->titre}} </a></h5>
+              <h5 class="property-title"><a href="/details/{{$createDatas->categorie}}/{{$createDatas->id}}">{{$createDatas->titre}} </a></h5>
               <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>{{$createDatas->region}}</span>
               <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 10 jours</span>
               <div class="property-price">${{$createDatas->prix}}<span> / {{$createDatas->Dureelocation}}</span> </div>
@@ -284,7 +284,7 @@ Browse properties -->
               </ul>
             </div>
             <div class="property-btn">
-              <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
+              <a class="property-link" href="/details/{{$createDatas->categorie}}/{{$createDatas->id}}">Voir les détails</a>
               <ul class="property-listing-actions list-unstyled mb-0">
                 <li class="property-compare">
                   <a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a>
@@ -299,7 +299,7 @@ Browse properties -->
       </div>
       @endforeach
       <div class="col-12 text-center">
-        <a class="btn btn-link" href="/property_list"><i class="fas fa-plus"></i>Voir toutes les annonces</a>
+        <a class="btn btn-link" href="/"><i class="fas fa-plus"></i>Voir toutes les annonces</a>
       </div>
     </div>
   </div>
@@ -331,7 +331,7 @@ Featured properties-->
                     <div class="col-lg-6 col-md-10 col-sm-12">
                       <div class="property-details">
                         <div class="property-details-inner">
-                          <h5 class="property-title"><a href="property-detail-style-01.html">{{$nvcreateData->titre}}  </a></h5>
+                          <h5 class="property-title"><a href="details/{{$nvcreateData->categorie}}/{{$nvcreateData->id}}">{{$nvcreateData->titre}}  </a></h5>
                           <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>{{$nvcreateData->region}} </span>
                           <span class="property-agent-date"><i class="far fa-clock fa-md"></i>il y a 10 jours</span>
                           <p class="mb-0 d-block mt-3">{{$nvcreateData->descreption}} </p>
@@ -343,7 +343,7 @@ Featured properties-->
                           </ul>
                         </div>
                         <div class="property-btn">
-                          <a class="property-link" href="property-detail-style-01.html">Voir les détails</a>
+                          <a class="property-link" href="details/{{$nvcreateData->categorie}}/{{$nvcreateData->id}}">Voir les détails</a>
                           <ul class="property-listing-actions list-unstyled mb-0">
                             <li class="property-compare"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Comparer" href="#"><i class="fas fa-exchange-alt"></i></a></li>
                             <li class="property-favourites"><a data-bs-toggle="tooltip" data-bs-placement="top" title="Favoris" href="#"><i class="far fa-heart"></i></a></li>
