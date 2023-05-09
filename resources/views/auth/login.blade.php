@@ -300,91 +300,6 @@ header -->
     </header>
     <!--=================================
  header -->
-
-
-
-{{-- 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Login') }}</div>
-                    <form class="row my-4 align-items-center" method="POST" action="{{ route('login') }}">
-                    <div class="card-body">
-                       
-                            @csrf
-                            <div class="modal-body">
-
-                                <form class="row my-4 align-items-center">
-                                    <div class="mb-3 col-sm-12">
-
-
-                                        <input id="email" placeholder="Email" type="email"
-                                            class="form-control @error('email') is-invalid @enderror" name="email"
-                                            value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                        @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-                                    <div class="mb-3 col-sm-12">
-
-                                        <input id="password" placeholder="Password" type="password"
-                                            class="form-control @error('password') is-invalid @enderror" name="password"
-                                            required autocomplete="current-password">
-                                        @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-                                    <div class="col-sm-6 d-grid">
-                                        <button type="submit" class="btn btn-primary">Login</button>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <ul class="list-unstyled d-flex mb-1 mt-sm-0 mt-3">
-                                            <li class="me-1"><a href="{{ route('register') }}"><b>You do not have an account? Click here to register</b></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </form>
-                                <div class="login-social-media border ps-4 pe-4 pb-4 pt-0 rounded">
-                                    <div class="mb-4 d-block text-center"><b
-                                            class="bg-white ps-2 pe-2 mt-3 d-block">Login or
-                                            Sign in with</b></div>
-                                    <form class="row">
-
-                                        <div class="col-sm-6">
-                                            <a class="btn facebook-bg social-bg-hover d-block mb-3" href="#"><span><i
-                                                        class="fab fa-facebook-f"></i>Login with Facebook</span></a>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <a class="btn twitter-bg social-bg-hover d-block mb-3" href="#"><span><i
-                                                        class="fab fa-twitter"></i>Login with Twitter</span></a>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <a class="btn google-bg social-bg-hover d-block mb-3 mb-sm-0"
-                                                href="#"><span><i class="fab fa-google"></i>Login with Google</span></a>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <a class="btn linkedin-bg social-bg-hover d-block" href="#"><span><i
-                                                        class="fab fa-linkedin-in"></i>Login with Linkedin</span></a>
-                                        </div>
-                                    </form>
-
-                                </div>
-
-                            </div>
-                            
-                       
-                    </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -454,9 +369,6 @@ header -->
                           </div>
     
                         </div>
-    
-                      
-    
                     </div>
                 </div>
             </div>
