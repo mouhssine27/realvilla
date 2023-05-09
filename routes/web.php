@@ -43,5 +43,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::get('/property_list', [AnnonceController::class, 'propertlist']);
+//////////itemse Categories
+Route::get('property_list/{id}', [AnnonceController::class, 'propertylistID']);
+///afficher details annonce 
+Route::get('details/{name}/{id}', [AnnonceController::class,'details']);
 
 
