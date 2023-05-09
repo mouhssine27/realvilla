@@ -48,18 +48,17 @@ Submit Property -->
                                 </li>
                             </ul>
                             <div class="tab-content mt-4" id="myTabContent">
-                                <div class="tab-pane fade show active" id="tab-01" role="tabpanel"
-                                    aria-labelledby="tab-01-tab">
+                                <div class="tab-pane" id="tab-01" style="display:block" >
                                     <section>
                                         <div class="row">
                                             <div class="mb-3 col-md-6">
                                                 <label class="form-label">Property Title </label>
                                                 <input type="text" class="form-control"
-                                                    placeholder="Awesome family home" name="titre">
+                                                    placeholder="Awesome family home" name="titre" id="titre">
                                             </div>
                                             <div class="mb-3 col-md-6 select-border">
                                                 <label class="form-label">Offer</label>
-                                                <select class="form-control basic-select" name="offre">
+                                                <select class="form-control basic-select" name="offre" id="offre">
                                                     @foreach($Offer as $Offers)
                                                     <option value="{{$Offers->name}}" selected="selected">{{$Offers->name}}</option>
                                                    @endforeach
@@ -67,7 +66,7 @@ Submit Property -->
                                             </div>
                                             <div class="mb-3 col-md-6 select-border">
                                                 <label class="form-label">Rental Period</label>
-                                                <select class="form-control basic-select" name="Dureelocation">
+                                                <select class="form-control basic-select" name="Dureelocation" >
                                                     <option value="Monthly" selected="selected">Monthly</option>
                                                     <option value="yearly">yearly</option>
                                                 </select>
@@ -106,16 +105,16 @@ Submit Property -->
                                                 <input class="form-control"
                                                     placeholder="URL to oEmbed supported service" name="urlvideo">
                                             </div>
-                                        </div>
+                                        </div>           
                                     </section>
                                 </div>
-                                <div class="tab-pane fade" id="tab-02" role="tabpanel" aria-labelledby="tab-02-tab">
+                                <div class="tab-pane " id="tab-02" >
             
-                                        <input type="file" class="form-control" id="customFile" name="image">
+                                        <input type="file" class="form-control" id="customFile" name="image" >
                                         <label class="input-group-text" for="customFile">Choose file</label>
         
                                 </div>
-                                <div class="tab-pane fade" id="tab-03" role="tabpanel" aria-labelledby="tab-03-tab">
+                                <div class="tab-pane " id="tab-03" >
                                     <iframe
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8351288872545!2d144.9556518!3d-37.8173306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sin!4v1443621171568"
                                         style="border:0; width: 100%; height: 250px;"></iframe>
@@ -123,15 +122,15 @@ Submit Property -->
                                     <div class="row mt-4">
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Google Maps Address </label>
-                                            <input type="text" class="form-control" placeholder="Envato" name="adressegoogle">
+                                            <input type="text" class="form-control" placeholder="Envato" name="adressegoogle" id="adressegoogle">
                                         </div>
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Friendly Address </label>
-                                            <input type="text" class="form-control" placeholder="Envato market" name="adressamicale">
+                                            <input type="text" class="form-control" placeholder="Envato market" name="adressamicale" id="adressamicale">
                                         </div>
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Longitude </label>
-                                            <input type="text" class="form-control" placeholder="-102.243340" name="longitude">
+                                            <input type="text" class="form-control" placeholder="-102.243340" name="longitude" >
                                         </div>
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Latitude </label>
@@ -139,14 +138,14 @@ Submit Property -->
                                         </div>
                                         <div class="mb-3 col-md-12 select-border">
                                             <label class="form-label">Regions</label>
-                                            <select class="form-control basic-select" name='region'>
+                                            <select class="form-control basic-select" name='region' id="region">
                                                 <option value="Los angeles" selected="selected">Los angeles</option>
                                                 <option value="Miami">Miami</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="tab-04" role="tabpanel" aria-labelledby="tab-04-tab">
+                                <div class="tab-pane" id="tab-04">
                                  
                                     <div class="row mt-4">
                                         <div class="mb-3 col-md-6 select-border">
@@ -200,7 +199,7 @@ Submit Property -->
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="tab-05" role="tabpanel" aria-labelledby="tab-05-tab">
+                                <div class="tab-pane " id="tab-05" >
                                  
                                     <div class="row">
                                         <div class="mb-3 col-md-6">
@@ -225,6 +224,7 @@ Submit Property -->
                                         </div>
                                     </div>
 
+
                                     <button class="btn btn-primary mt-3" type="submit">
                                     <i class="fas fa-plus-circle"></i> Upload
                                         floorplans
@@ -234,6 +234,20 @@ Submit Property -->
                             </div>
                         </div>
                     </div>
+                    <div class="nav nav-tabs nav-tabs-03 nav-fill" id="myTab" role="tablist">
+                          <a class="nav-link active" id="A1">
+                                        <span>01</span>
+                               suivant1
+                                    </a>
+                                        <a class="nav-link" id="A2"  >
+                                        <span>02</span>
+                                        suivant2</a>
+                                        <a class="nav-link" id="A3" ><span>03</span>
+                                        suivant3</a>
+                                        <a class="nav-link" id="A4">
+                                        <span>04</span>
+                                        suivant4</a>
+</div>    
                 </div>
             </div>
         </div>
@@ -267,3 +281,58 @@ newsletter -->
 <!--=================================
 newsletter -->
 @endsection
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#A2").click(function(){
+if($('#customFile').val() !=""){
+ $('#tab-02').hide()
+ $('#tab-01').hide()
+$('#tab-03').show()
+   $('#tab-04').hide()
+   $('#tab-05').hide()     
+    } else{
+       alert('tout les champs oblegatoire');  
+    }
+  
+  });
+
+
+  $("#A1").click(function(){
+    if($('#titre').val()!="" && $('#offre').val()!="" && $('#Dureelocation').val()!="" && $('#categorie').val()!="" && $('#prix').val()!="" && $('#zone').val()!="" && $('#pieces').val()!=""){
+    $('#tab-02').show()
+   $('#tab-01').hide()
+   $('#tab-03').hide()
+   $('#tab-04').hide()
+   $('#tab-05').hide()  
+    }
+    else{
+       alert('tout les champs oblegatoire');  
+    }
+  });
+
+
+  $("#A3").click(function(){
+    if($('#adressegoogle').val()!="" && $('#adressamicale').val()!="" && $('#region').val()!=""){
+   $('#tab-02').hide()
+   $('#tab-01').hide()
+   $('#tab-03').hide()
+   $('#tab-04').show()
+   $('#tab-05').hide()
+    }
+    else{
+       alert('tout les champs oblegatoire');  
+    }
+  });
+
+
+  $("#A4").click(function(){
+   $('#tab-02').hide()
+   $('#tab-04').hide()
+   $('#tab-03').hide()
+   $('#tab-04').hide()
+   $('#tab-05').show()
+  });
+});
+</script>
+
