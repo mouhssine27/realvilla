@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
             $table->String('name');
-            $table->String('email')->unique();
+            $table->String('email');
             $table->String('telephone');
-            $table->String('sujet');
-            $table->String('message');
+            $table->text('sujet');
+            $table->text('message');
             $table->timestamps();
         });
     }
