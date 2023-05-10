@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Real Villa - Real Estate HTML5 Template</title>
 
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" />
 
@@ -302,9 +303,18 @@ header -->
     </ul>
     
     </div>
-    <div class="add-listing d-none d-sm-block">
-      <a class="btn btn-primary btn-md" href="{{ url('propertySubmit') }}"> <i class="fa fa-plus-circle"></i>Ajouter une annonce </a>
-    </div>
+    
+    @if(Auth::check())
+    {
+      <div class="add-listing d-none d-sm-block">
+        <a class="btn btn-primary btn-md" href="{{ url('propertySubmit') }}"> <i class="fa fa-plus-circle"></i>Ajouter une annonce </a>
+      </div>
+    }
+
+      @endif
+    
+  
+    
     </div>
   </nav>
 </header>
