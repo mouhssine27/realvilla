@@ -75,17 +75,25 @@ header -->
                 @endif
   
                 @else
-                <a data-bs-toggle="modal" data-bs-target="" data-bs-toggle="modal" data-bs-target=""
-                    href=""> {{ Auth::user()->name }}<i class="fa fa-user ps-2"></i></a>
-  
-                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-       document.getElementById('logout-form').submit();">
-                   
-                    <i class="fa fa-sign-out"></i></a>
-  
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      {{ Auth::user()->name }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="{{ route('user.profile') }}">Mon profile</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li>
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+                          Logout <i style="font-size: 18px" class="fa fa-sign-out"></i></a>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                              @csrf
+                          </form>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
                 @endguest
             </div>
             </div>

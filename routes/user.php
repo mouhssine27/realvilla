@@ -22,3 +22,5 @@ Route::get('/profile', [UserController::class, 'profile'])->name('user.profile')
 
 Route::get('/annonces', [UserController::class, 'annonces'])->name('user.annonces');
 
+Route::post('/updateProfile', [UserController::class, 'UpdateProfile'])->name('user.UpdateProfile');
+
