@@ -311,6 +311,8 @@ header -->
                     </ul>
 
                 </div>
+
+                
                 @if(Auth::check())
                 {
                   <div class="add-listing d-none d-sm-block">

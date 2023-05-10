@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\controllers\AnnonceController;
 use App\Http\controllers\ContactController;
+
 
 
 /*

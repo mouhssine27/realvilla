@@ -303,6 +303,7 @@ header -->
     </ul>
     
     </div>
+
     
     @if(Auth::check())
     {
