@@ -93,9 +93,8 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
+                <a class="nav-link collapsed" href="#" id="Afiche4">
+                    <i class="fas fa-fw fa-folder"  ></i>
                     <span>Ajouter Agence</span>
                 </a>
             </li>
@@ -127,7 +126,58 @@
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
-
+<!----Module annonce---->
+<!--------- Module Annonce ---->
+<form action="supprimerAdminAnnonce" method="get">
+<div class="modalAnonce"  style="display:none">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <input type="hidden"  id="valueannonce" name="idannonce">     
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <input type="submit" value="supprimer"> 
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+<!--------- Module utulisateur ---->
+<form action="supprimerAdminUtulisateur" method="get">
+<div class="modalutulisateur" style="display:none">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <input  id="valueannonce1" type="hidden" name="utul">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-footer">
+      <input type="submit" value="supprimer"> 
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+<!--------- Module agelcy ---->
+<form action="supprimerAdminAgency" method="get">
+<div class="modalagelcy" style="display:none">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <input type="hidden"  id="valueannonce2" name="agily">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-footer">       
+      <input type="submit" value="supprimer"> 
+      </div>
+    </div>
+  </div>
+</div>
+</form>
                     <!-- Content Row -->
                     <div class="row" id="Annonce" style="display:none">
                         <p class="text-center">Annonce</p>
@@ -154,16 +204,20 @@
                                 <td>{{$AnnonceSelects->region}}</td>
                                 <td>{{$AnnonceSelects->chambres}}</td>
                                 <td>{{$AnnonceSelects->zonenavigateur}}</td>
-                                <td>
                                 <td>{{$AnnonceSelects->descreption}}</td>
                                 <td>
                                     <ul class="action-list" >
-                                        <li style="text-decoration-style:none"><a href="#" data-tip="edit">
+                                        <li style="text-decoration-style:none">
+                                        <a href="#">
+                                        <button id="ba" value ="{{$AnnonceSelects->id}}" class="my_button" style="background:none;border:none">
                                             <img src="annonce/sp.png" alt="" style="width:14px">
-                                        </a></li>
-                                        <li style="text-decoration-style:none"><a href="#" data-tip="delete">
-                                        <img src="annonce/md.png" alt="" style="width:14px">
-                                        </i></a>
+                                            </button></a>
+                                        </li>
+                                        <li style="text-decoration-style:none">
+                                        <bottun type="bottun" value ="{{$AnnonceSelects->id}}">
+                                        <img src="annonce/md.png" alt="" style="width:14px"></bottun></li>
+</button>
+
                                     </ul>
                                 </td>
                             </tr>
@@ -194,8 +248,10 @@
                                 <td>{{$users->password}}</td>
                                 <td>
                                     <ul class="action-list" >
-                                        <li style="text-decoration-style:none"><a href="#" data-tip="edit">
+                                        <li style="text-decoration-style:none"><a href="#">
+                                        <button id="ba" value ="{{$users->id}}" class="my_button1" style="background:none;border:none">
                                             <img src="annonce/sp.png" alt="" style="width:14px">
+                                            </button>
                                         </a></li>
                                         <li style="text-decoration-style:none"><a href="#" data-tip="delete">
                                         <img src="annonce/md.png" alt="" style="width:14px">
@@ -216,86 +272,95 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Full Name</th>
-                                <th>Age</th>
-                                <th>Job Title</th>
-                                <th>City</th>
-                                <th>Action</th>
+                                <th>nom</th>
+                                <th>description</th>
+                                <th>addresemail</th>
+                                <th>agency</th>
+                                <th>telephone</th>
+                                <th>societe</th>
+                                <th>numero Societe</th>
+                                <th>Suprimer/modifier</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($agency as $agencys)
                             <tr>
-                                <td>1</td>
-                                <td>Vincent Williamson</td>
-                                <td>31</td>
-                                <td>iOS Developer</td>
-                                <td>Sinaai-Waas</td>
+                                <td>{{$agencys->nom}}</td>
+                                <td>{{$agencys->description}}</td>
+                                <td>{{$agencys->addresemail}}</td>
+                                <td>{{$agencys->agency}}</td>
+                                <td>{{$agencys->telephone}}</td>
+                                <td>{{$agencys->societe}}</td>
+                                <td>{{$agencys->numberphoneS}}</td>
                                 <td>
-                                    <ul class="action-list">
-                                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
-                                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                                    <ul class="action-list" >
+                                    <li style="text-decoration-style:none"><a href="#">
+                                        <button id="ba" value ="{{$agencys->id}}" class="my_button2" style="background:none;border:none">
+                                            <img src="annonce/sp.png" alt="" style="width:14px">
+                                            </button>
+                                        </a></li>
+                                        <li style="text-decoration-style:none"><a href="#" data-tip="delete">
+                                        <img src="annonce/md.png" alt="" style="width:14px">
+                                        </i></a>
                                     </ul>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Taylor Reyes</td>
-                                <td>22</td>
-                                <td>UI/UX Developer</td>
-                                <td>Baileux</td>
-                                <td>
-                                    <ul class="action-list">
-                                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
-                                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Justin Block</td>
-                                <td>26</td>
-                                <td>Frontend Developer</td>
-                                <td>Overland Park</td>
-                                <td>
-                                    <ul class="action-list">
-                                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
-                                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Sean Guzman</td>
-                                <td>26</td>
-                                <td>Web Designer</td>
-                                <td>Gloucester</td>
-                                <td>
-                                    <ul class="action-list">
-                                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
-                                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Keith Carter</td>
-                                <td>20</td>
-                                <td>Graphic Designer</td>
-                                <td>Oud-Turnhout</td>
-                                <td>
-                                    <ul class="action-list">
-                                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
-                                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
-                                    </ul>
-                                </td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
                     </div>
                 </div>
                 <!-- /.container-fluid -->
+			<div class="inner1" style="display:none">
+				<form action="CreateAgencity" method="post"  enctype="multipart/form-data">
+                    @csrf
+					<h3>Ajouter Agency</h3>
+					<label class="form-group">
+						<input type="text" class="form-control"  required name="nom" placeholder="entre nom">
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control"  required name="adressemail" placeholder="entre adressemail">
+						<span class="border"></span>
+					</label>
+                    <label class="form-group">
+						<input type="text" class="form-control"   name="websit" placeholder="entre websit">
+						<span class="border"></span>
+					</label>
+                    <label class="form-group">
+						<input type="text" class="form-control"  required name="agency" placeholder="entre agency">
+						<span class="border"></span>
+					</label>
+                    <label class="form-group">
+						<input type="text" class="form-control"   name="lisencs" placeholder="entre lisencs">
+						<span class="border"></span>
+					</label>
+                    <label class="form-group">
+						<input type="text" class="form-control"  required  name="telephone" placeholder="entre telephone">
+						<span class="border"></span>
+					</label>
+                    <label class="form-group">
+						<input type="text" class="form-control"  required name="societe" placeholder="entre societe">
+						<span class="border"></span>
+					</label>
+                    <label class="form-group">
+						<input type="text" class="form-control"  required name="numberphoneS" placeholder="entre numberphoneS">
+						<span class="border"></span>
+					</label>
+                    <label class="form-group">
+						<input type="file" class="form-control"  required name="image" placeholder="entre image">
+						<span class="border"></span>
+					</label>
+					<label class="form-group" >
+						<textarea  id="" class="form-control" required name="description" placeholder="entre description"></textarea>
+						<span class="border"></span>
+					</label>
+					<button id="button">Submit 
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+				</form>
+			</div>
 
             </div>
             <!-- End of Main Content -->
@@ -11705,6 +11770,148 @@ body.sidebar-toggled footer.sticky-footer {
 .panel .panel-body .table tbody .action-list li a:hover:after{
     display: block;
 }
+/*** *wrapper1/*/
+
+.inner1{
+  max-width: 758px;
+  margin: auto;
+  border: 10px solid #0d99d7;
+  padding: 77px 99px 87px;
+ }
+
+textarea {
+  resize: none; }
+
+h3 {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: "Montserrat-Bold";
+  text-align: center;
+  margin-bottom: 12px;
+  color :black;
+}
+
+p {
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 55px;
+  line-height: 1.8; }
+
+.form-group {
+  position: relative;
+  display: block;
+  margin-bottom: 48px; 
+}
+  .form-group span {
+    font-size: 15px;
+    color: #00ade6;
+    position: absolute;
+    top: 11px;
+    transition: all .2s ease;
+    transform-origin: 0 0;
+    cursor: text; 
+}
+  .form-group span.border {
+    height: 2px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 41px;
+    transform: scaleX(0);
+    transition: all .15s ease;
+    background: #fff; 
+}
+
+.form-control {
+      display: block;
+  width: 100%;
+  height: 43px;
+  font-size: 15px;
+  background:#ECF0F1;
+  font-family: "Montserrat-SemiBold"; 
+}
+textarea.form-control {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+  #buttonbutton {
+  width: 162px;
+  height: 51px;
+  border: 2px solid #fff;
+  margin: auto;
+  margin-top: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background:whitesmoke;
+  color:black;
+  text-transform: uppercase;
+  font-family: "Montserrat-SemiBold";
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  #buttonbutton i {
+    margin-left: 10px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; }
+    #button button1:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098D1;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; }
+    #buttonbutton:hover {
+    border-color: transparent; }
+    #buttonbutton:hover:before {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1); }
+    #button:hover i {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px); }
+
+@media (max-width: 767px) {
+  h3 {
+    font-size: 38px; }
+
+  p {
+    font-size: 14px;
+    padding: 0; }
+
+  .inner {
+    padding: 27px 20px 37px;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none; }
+ }
     </style>
 </body>
 
@@ -11715,17 +11922,73 @@ $('#Afiche1').click(function(){
 $('#Annonce').show()
 $('#utulisatur').hide()
 $('#Agence').hide()
+$('.inner1').hide()
+$('.modalAnonce').hide();
+$('.modalutulisateur').hide();
+$('.modalagelcy').hide();
 });
 
 $('#Afiche2').click(function(){
     $('#Annonce').hide()
 $('#utulisatur').show()
 $('#Agence').hide()
+$('.inner1').hide()
+$('.modalAnonce').hide();
+$('.modalutulisateur').hide();
+$('.modalagelcy').hide();
 });
 
 $('#Afiche3').click(function(){
     $('#Annonce').hide()
 $('#utulisatur').hide()
 $('#Agence').show()
+$('.inner1').hide()
+$('.modalAnonce').hide();
+$('.modalutulisateur').hide();
+$('.modalagelcy').hide();
 });
+$('#Afiche4').click(function(){
+ $('#Annonce').hide()
+$('#utulisatur').hide()
+$('#Agence').hide()
+$('.inner1').show()
+$('.modalAnonce').hide();
+$('.modalutulisateur').hide();
+$('.modalagelcy').hide();
+});
+/*$(document).on('click','.btnSupprimer', function (e) {
+e.preventDefault();
+var stud_id1 = $(this).val();
+alert(
+    $(this).val()
+);
+/*$('#inputePhoto').val(stud_id1);
+$('.modal').show();
+alert('ok');*/
+//})
+
+$('.my_button').click(function() {
+$data = $(this).val();
+$('.modalAnonce').show();
+$('.modalutulisateur').hide();
+$('.modalagelcy').hide();
+$('#valueannonce').val($data );
+});
+
+$('.my_button1').click(function() {
+$data = $(this).val();
+$('.modalAnonce').hide();
+$('.modalutulisateur').show();
+$('.modalagelcy').hide();
+$('#valueannonce1').val($data );
+});
+
+$('.my_button2').click(function() {
+$data = $(this).val();
+$('.modalAnonce').hide();
+$('.modalutulisateur').hide();
+$('.modalagelcy').show();
+$('#valueannonce2').val($data );
+});
+
 </script>
