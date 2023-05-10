@@ -94,7 +94,7 @@ Submit Property -->
                                             </div>
                                             <div class="mb-3 col-md-6">
                                                 <label class="form-label">Area</label>
-                                                <input class="form-control" placeholder="Type (sq ft)" name="zone">
+                                                <input class="form-control" placeholder="Type (sq ft)" name="zone" id="zone">
                                             </div>
                                             <div class="mb-3 col-md-6 select-border">
                                                 <label class="form-label">Rooms</label>
@@ -249,43 +249,38 @@ Submit Property -->
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="nav nav-tabs nav-tabs-03 nav-fill" id="myTab" role="tablist">
-                        <a class="nav-link active" id="A1">
-                            <span>01</span>
-                            suivant1
-                        </a>
-                        <a class="nav-link" id="A2">
-                            <span>02</span>
-                            suivant2</a>
-                        <a class="nav-link" id="A3"><span>03</span>
-                            suivant3</a>
-                        <a class="nav-link" id="A4">
-                            <span>04</span>
-                            suivant4</a>
-                    </div> --}}
                     <div class="d-flex justify-content-end" id="myTab" role="tablist">
-             
                             <button type="button" class="btn btn-success active" id="A1" >
-                                
                                Suivant
                             </button>
-                
-                            <button type="button" class="btn btn-success" id="A2" 
-                               >
-                                {{-- <span>02</span> --}}
+                            <button type="button" class="btn btn-success" id="A2"> 
                                Suivant</button>
-                      
-                            <button type="button" class="btn btn-success" id="A3" >
+                            <button type="button" class="btn btn-success" id="A3">
                                 Suivant</button>
-                     
                             <button type="button" class="btn btn-success" id="A4">
-                            
                                 Suivant</button>
-                                <button type="button" class="btn btn-success" id="A5">
-                            
-                                    Suivant</button>
+                            <button type="button" class="btn btn-success" id="A5">
+                                Suivant</button>
                    
-                    </div>
+                    </div> 
+                    <!-- Modal-alert -->
+                    <div class="modal fade" id="modalAlert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Alert</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>Veuillez remplir tous les champs </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+                           
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
@@ -316,6 +311,8 @@ newsletter -->
     </div>
 </section>
 
+
+
 <!--=================================
 newsletter -->
 @endsection
@@ -337,7 +334,8 @@ newsletter -->
                 $("#A2").hide();
                 $("#A3").show();
             } else {
-                alert('tout les champs oblegatoire');
+                // alert('tout les champs oblegatoire');
+                $('#modalAlert').modal('show');
             }
 
         });
@@ -346,7 +344,8 @@ newsletter -->
         $("#A1").click(function () {
             if ($('#titre').val() != "" && $('#offre').val() != "" && $('#Dureelocation').val() != "" &&
                 $('#categorie').val() != "" && $('#prix').val() != "" && $('#zone').val() != "" && $(
-                    '#pieces').val() != "") {
+                    '#pieces').val() != "" && $('#zone').val() != "" ) {
+                   
                 $("#A2").show();
                 $("#A1").hide();
                 $('#tab-02').show()
@@ -355,7 +354,7 @@ newsletter -->
                 $('#tab-04').hide()
                 $('#tab-05').hide()
             } else {
-                alert('tout les champs oblegatoire');
+                $('#modalAlert').modal('show');
             }
         });
 
@@ -372,7 +371,7 @@ newsletter -->
                 $('#A3').hide()
                 $('#A4').show()
             } else {
-                alert('tout les champs oblegatoire');
+                $('#modalAlert').modal('show');
             }
         });
         
@@ -392,7 +391,7 @@ newsletter -->
             $('#tab-05').show()
             }
             else {
-                alert('tout les champs oblegatoire');
+                $('#modalAlert').modal('show');
             }
         });
 
@@ -405,7 +404,7 @@ newsletter -->
                $('#A4').hide()
                $('#A5').hide()
            } else {
-               alert('tout les champs oblegatoire');
+            $('#modalAlert').modal('show');
            }
        });
        
