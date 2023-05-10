@@ -373,6 +373,7 @@ header -->
                                     <input class="form-control" id="inputLocation" type="text" placeholder="Enter your location" value="San Francisco, CA">
                                 </div>
                             </div>
+                            
                             <!-- Save changes button-->
                             <button class="btn btn-primary" type="button">Save changes</button>
                         </form>
