@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\AnnonceController;
+use App\Http\controllers\ContactController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +49,6 @@ Route::get('/property_list', [AnnonceController::class, 'propertlist']);
 //////////itemse Categories
 Route::get('property_list/{id}', [AnnonceController::class, 'propertylistID']);
 ///afficher details annonce 
-Route::get('details/{name}/{id}', [AnnonceController::class,'details']);
+Route::get('details/{name}/{id}', [AnnonceController::class, 'details']);
 
-
-
+Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');

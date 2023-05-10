@@ -4,6 +4,14 @@
 Contact -->
 <section class="space-ptb">
   <div class="container">
+
+    @if ($message = Session::get('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>{{ $message }}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif 
+
     <div class="row">
       <div class="col-12">
         <div class="section-title">
@@ -12,7 +20,7 @@ Contact -->
       </div>
 
 
-      
+
     </div>
     <div class="row align-items-center">
       <div class="col-lg-5">
@@ -70,22 +78,23 @@ Contact -->
       <div class="col-lg-7 mt-4 mt-lg-0">
         <div class="contact-form">
           <h4 class="mb-4">Besoin D'assistance? Veuillez Remplir Le Formulaire De Contact</h4>
-          <form>
+          <form action="{{route('contact.store')}}" method="POST">
+            @csrf
             <div class="row">
               <div class="mb-3 col-md-6">
-                <input type="text" class="form-control" id="name" placeholder="Votre nom">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom">
               </div>
               <div class="mb-3 col-md-6">
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Votre e-mail">
+                <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Votre e-mail">
               </div>
               <div class="mb-3 col-md-6">
-                <input type="text" class="form-control" id="phone" placeholder="Ton numero de téléphone">
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Ton numero de téléphone">
               </div>
               <div class="mb-3 col-md-6">
-                <input type="text" class="form-control" id="subject" placeholder="Sujet">
+                <input type="text" class="form-control" id="subject" name="sujet" placeholder="Sujet">
               </div>
               <div class="mb-3 col-md-12">
-                <textarea class="form-control" rows="4" placeholder="Votre message"></textarea>
+                <textarea class="form-control" rows="4" name="message" placeholder="Votre message"></textarea>
               </div>
               <div class="mb-3 col-md-12">
                 <div class="form-check">
@@ -95,7 +104,7 @@ Contact -->
               </div>
               </div>
               <div class="col-md-12">
-                <a class="btn btn-primary" href="#">Envoyer le message</a>
+                <button type="submit" class="btn btn-primary">Envoyer le message</button>
               </div>
             </div>
           </form>
