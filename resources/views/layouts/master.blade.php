@@ -325,8 +325,6 @@ header -->
     </header>
     <!--=================================
  header -->
-
-    @include('partiels.popup.auth');
     <!--=================================
 call to action -->
     <section class="py-5 bg-primary">

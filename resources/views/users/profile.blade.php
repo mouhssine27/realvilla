@@ -356,34 +356,21 @@ header -->
                                 <label class="small mb-1" for="inputUsername">Username (how your name will appear to other users on the site)</label>
                                 <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username" value="username">
                             </div>
-                            <div class="row gx-3 mb-3">
-                                <!-- Form Group (organization name)-->
-                                <div class="col-md-6">
-                                    <label class="small mb-1" for="inputOrgName">Organization name</label>
-                                    <input class="form-control" id="inputOrgName" type="text" placeholder="Enter your organization name" value="Start Bootstrap">
-                                </div>
-                                <!-- Form Group (location)-->
-                                <div class="col-md-6">
-                                    <label class="small mb-1" for="inputLocation">Location</label>
-                                    <input class="form-control" id="inputLocation" type="text" placeholder="Enter your location" value="San Francisco, CA">
-                                </div>
-                            </div>
-                            <!-- Form Group (email address)-->
-                            <div class="mb-3">
+                              <!-- Form Group (email address)-->
+                              <div class="mb-3">
                                 <label class="small mb-1" for="inputEmailAddress">Email address</label>
                                 <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="name@example.com">
                             </div>
-                            <!-- Form Row-->
                             <div class="row gx-3 mb-3">
-                                <!-- Form Group (phone number)-->
+                                 <!-- Form Group (phone number)-->
+                                 <div class="col-md-6">
+                                  <label class="small mb-1" for="inputPhone">Phone number</label>
+                                  <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number" value="555-123-4567">
+                              </div>
+                                <!-- Form Group (ville)-->
                                 <div class="col-md-6">
-                                    <label class="small mb-1" for="inputPhone">Phone number</label>
-                                    <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number" value="555-123-4567">
-                                </div>
-                                <!-- Form Group (birthday)-->
-                                <div class="col-md-6">
-                                    <label class="small mb-1" for="inputBirthday">Birthday</label>
-                                    <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" value="06/10/1988">
+                                    <label class="small mb-1" for="inputLocation">Ville</label>
+                                    <input class="form-control" id="inputLocation" type="text" placeholder="Enter your location" value="San Francisco, CA">
                                 </div>
                             </div>
                             <!-- Save changes button-->
