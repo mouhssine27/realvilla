@@ -67,10 +67,15 @@ Submit Property -->
                                             </div>
                                             <div class="mb-3 col-md-6 select-border">
                                                 <label class="form-label">Rental Period</label>
-                                                <select class="form-control basic-select" name="Dureelocation">
-                                                    <option value="Monthly" selected="selected">Monthly</option>
-                                                    <option value="yearly">yearly</option>
-                                                </select>
+                                              
+                                                     <select class="form-control basic-select" name="Dureelocation">
+                                                        @foreach ($Dureelocations as $Dureelocation)
+                                                    {{-- <option value="Monthly" selected="selected">Monthly</option> --}}
+                                                    <option value="{{ $Dureelocation->id }}">{{ $Dureelocation->duree }}</option>
+                                                    @endforeach
+                                                    </select>
+                                            
+                                               
                                             </div>
                                             <div class="mb-3 col-md-6 select-border">
                                                 <label class="form-label">Property Type</label>
