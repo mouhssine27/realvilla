@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Annonce;
 use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
@@ -31,9 +32,13 @@ class UserController extends Controller
                  }
                  $user->save()  ;
                  return redirect()->back()->with('success', 'modification à éte bien enregistré');   
-                
     }
     public function annonces(){
-        return view('users.annonces');
+        $idUser = Auth::id();
+        $annonnces = Annonce::where('userid',$idUser)->get();
+        // return $annonnces;
+        
+        // return $annonnces;
+        return view('users.annonces',compact('annonnces'));
     }
 }

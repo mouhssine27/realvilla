@@ -332,8 +332,8 @@ header -->
     <div class="container-xl px-4 mt-4">
         <!-- Account page navigation-->
         <nav class="nav nav-borders">
-            <a class="nav-link active ms-0" href="{{ route('user.profile') }}" target="__blank">Profile</a>
-            <a class="nav-link" href="{{ route('user.annonces') }}" target="__blank">Annonces</a>
+            <a class="nav-link active ms-0" href="{{ route('user.profile') }}">Profile</a>
+            <a class="nav-link" href="{{ route('user.annonces') }}" >Annonces</a>
             {{-- <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-profile-security-page" target="__blank">Security</a>
             <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-edit-notifications-page"  target="__blank">Notifications</a> --}}
         </nav>
