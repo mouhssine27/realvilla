@@ -441,39 +441,49 @@ header -->
                 <table class="table mb-0">
                     <thead>
                         <tr>
-                            <th class="border-gray-200" scope="col">Transaction ID</th>
-                            <th class="border-gray-200" scope="col">Date</th>
-                            <th class="border-gray-200" scope="col">Amount</th>
-                            <th class="border-gray-200" scope="col">Status</th>
+                          <th class="border-gray-200" scope="col">images</th>
+                            <th class="border-gray-200" scope="col">titres</th>
+                            <th class="border-gray-200" scope="col">durée de location</th>
+                            <th class="border-gray-200" scope="col">prix</th>
+                            <th class="border-gray-200" scope="col">pieces</th>
+                            <th class="border-gray-200" scope="col">offres</th>
+                            <th class="border-gray-200" scope="col">categories</th>
+                            <th class="border-gray-200" scope="col">zones</th>
+                            <th class="border-gray-200" scope="col">salles de bain</th>
+                            <th class="border-gray-200" scope="col">chambres</th>
+                            <th class="border-gray-200" scope="col">parkings</th>
+                            <th class="border-gray-200" scope="col">chauffages</th>
+                            <th class="border-gray-200" scope="col">description</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>#39201</td>
-                            <td>06/15/2021</td>
-                            <td>$29.99</td>
-                            <td><span class="badge bg-light text-dark">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>#38594</td>
-                            <td>05/15/2021</td>
-                            <td>$29.99</td>
-                            <td><span class="badge bg-success">Paid</span></td>
-                        </tr>
-                        <tr>
-                            <td>#38223</td>
-                            <td>04/15/2021</td>
-                            <td>$29.99</td>
-                            <td><span class="badge bg-success">Paid</span></td>
-                        </tr>
-                        <tr>
-                            <td>#38125</td>
-                            <td>03/15/2021</td>
-                            <td>$29.99</td>
-                            <td><span class="badge bg-success">Paid</span></td>
-                        </tr>
+                      @if (isset($annonnces))
+                      @foreach ($annonnces as $annonce )
+                      <tr>
+                        <td><img style="height:35px" src="{{asset('/annonce/'. $annonce->image)}}"  alt=""></td>
+                        <td>{{ $annonce->titre }}</td>
+                        <td>{{ $annonce->Dureelocation }}</td>
+                        <td><span class="badge bg-light text-dark">{{ $annonce->prix }}</span></td>
+                        <td>{{ $annonce->pieces }}</td>
+                        <td>{{ $annonce->offre }}</td>
+                        <td>{{ $annonce->categorie }}</td>
+                        <td>{{ $annonce->zone }}</td>
+                        <td>{{ $annonce->sallebain }}</td>
+                        <td>{{ $annonce->chambres }}</td>
+                        <td>{{ $annonce->parking }}</td>
+                        <td>{{ $annonce->chauffage }}</td>
+                        <td>{{ $annonce->descreption }}</td>
+                    </tr>
+                      @endforeach
                     </tbody>
+                  
+                
                 </table>
+                
+                @else
+                <h6 style="text-align: center">vous avez pas des annonces</h6>
+                @endif
             </div>
         </div>
     </div>
