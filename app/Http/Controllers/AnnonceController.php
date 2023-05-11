@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Annonce;
 use App\Models\Categorie;
 use App\Models\Offer;
+use App\Models\Dureelocation;
+
+use Illuminate\Support\Facades\Auth;
 use DB;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
@@ -39,7 +42,7 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
             'categorie'=> $REQUEST->categorie,
             'zone'=>$REQUEST->zone,
             'urlvideo'=>$REQUEST->urlvideo,
-            'userid'=>'3',
+            'userid'=> auth::id(),
             'image'=> $file_name ,
             'adressegoogle'=> $REQUEST->adressegoogle,
             'longitude'=> $REQUEST->longitude,
@@ -80,7 +83,8 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
      {
     $categories = Categorie::select()->get();
     $Offer =  Offer::select()->get();
-    return view('submit-property', compact('categories','Offer'));
+    $Dureelocations =  Dureelocation::select()->get();
+    return view('submit-property', compact('categories','Dureelocations','Offer'));
      }
 
     
