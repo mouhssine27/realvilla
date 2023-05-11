@@ -42,9 +42,9 @@ Route::post('/create', [AnnonceController::class, 'CreateAnonnce']);
 
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 
 
 Route::get('/property_list', [AnnonceController::class, 'propertlist']);

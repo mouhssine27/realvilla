@@ -313,7 +313,7 @@ header -->
     </div>
 
     
-    @if(Auth::check())
+    @if(Auth::check() && Auth::user()->email_verified_at != null)
     {
       <div class="add-listing d-none d-sm-block">
         <a class="btn btn-primary btn-md" href="{{ url('propertySubmit') }}"> <i class="fa fa-plus-circle"></i>Ajouter une annonce </a>
