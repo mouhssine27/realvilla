@@ -70,7 +70,7 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
      }
      public function pageprincipale()
      {
-        $createData  = DB::Select('select * from annonces where annonces.id!="" limit 6');
+        $createData  = DB::Select('select * from annonces where annonces.id!="" limit 12');
         $categories  =$user_info = annonce::groupBy('categorie')->select('categorie', DB::raw('count(*) as total'))->get();
           return view("welcome",compact('createData','categories'));
     
