@@ -39,7 +39,7 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
             'categorie'=> $REQUEST->categorie,
             'zone'=>$REQUEST->zone,
             'urlvideo'=>$REQUEST->urlvideo,
-            'userid'=> "1",
+            'userid'=>'3',
             'image'=> $file_name ,
             'adressegoogle'=> $REQUEST->adressegoogle,
             'longitude'=> $REQUEST->longitude,

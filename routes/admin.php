@@ -23,5 +23,14 @@ Route::get('/supprimerAdminUtulisateur', [AdminController::class,'Supprimerutuli
 
 Route::get('/supprimerAdminAgency', [AdminController::class,'Supprimeragency']);
 
+//ajouter des nouveaux modification
+Route::get('/Admin.user.Profile/{id}', [AdminController::class, 'profileUser']);
+
+Route::get('/annonces.user.profile', [AdminController::class, 'annoncesUser']);
+
+Route::post('/updateProfile.user.profile/{id}', [AdminController::class,'UpdateProfileUser']);
+Route::get('/updateAgenece.user/{id}', [AdminController::class,'UpdateAgence']);
+Route::post('/updeateAgenceAdmin/{id}', [AdminController::class,'updeateAgence']);
+
 
 
