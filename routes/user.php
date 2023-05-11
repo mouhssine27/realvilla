@@ -18,9 +18,19 @@ use App\Http\controllers\UserController;
 */
 
 
-Route::get('/profile', [UserController::class, 'profile'])->name('user.profile');
 
-Route::get('/annonces', [UserController::class, 'annonces'])->name('user.annonces');
 
-Route::post('/updateProfile', [UserController::class, 'UpdateProfile'])->name('user.UpdateProfile');
+Route::prefix('user')->group(function(){
 
+    Route::get('/profile', [UserController::class, 'profile'])->name('user.profile');
+
+    Route::get('/annonces', [UserController::class, 'annonces'])->name('user.annonces');
+    
+    Route::post('/updateProfile', [UserController::class, 'UpdateProfile'])->name('user.UpdateProfile');
+    
+    Route::post('/updateAnnonce/{id}', [UserController::class, 'updateAnnonce'])->name('user.updateAnnonce');
+    
+    Route::delete('/destroymenu/{id}',[UserController::class, 'destroyAnnonce'])->name('user.destroyAnnonce');
+
+
+});

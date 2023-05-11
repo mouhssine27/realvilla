@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('dureelocations', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('duree');
+            $table->string('duree');
             $table->timestamps();
         });
     }
