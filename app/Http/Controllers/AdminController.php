@@ -53,23 +53,23 @@ class AdminController extends Controller
             'numberphoneS'=>$request->numberphoneS,
          ]);
          if($data){
-            return 'votre acces succes ';
+            return redirect()->back()->with('success', 'operation success');
          }
         
     }
     public function SupprimerAnnonce (request $request)
     {
         $res=Annonce::where('id',$request->idannonce)->delete();
-        return "operation succes ";
+       return redirect()->back()->with('success', 'operation success');
     }
     public function Supprimerutulisateur (request $request)
     {
         $res=User::where('id',$request->utul)->delete();
-        return "operation succes ";
+     return   redirect()->back()->with('success', 'operation success');
     }
     public function Supprimeragency (request $request)
     {
         $res=Agency::where('id',$request->agily)->delete();
-        return "operation succes ";
+     return   redirect()->back()->with('success', 'operation success');
     }
 }

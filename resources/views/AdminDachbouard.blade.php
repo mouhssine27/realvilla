@@ -40,7 +40,9 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
+            @if (Session::has('Session'))
+   <div class="alert alert-info">{{ Session::get('success') }}</div>
+@endif
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
