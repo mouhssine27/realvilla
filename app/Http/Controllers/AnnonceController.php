@@ -94,7 +94,9 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
    $createData  = DB::Select('select * from annonces inner join users on annonces.userid = users.id where annonces.id!="" limit 12  ');
         $categories  =$user_info = annonce::groupBy('categorie')->select('categorie', DB::raw('count(*) as total'))->get();
         $zonenavigateur = annonce::groupBy('zonenavigateur')->select('zonenavigateur', DB::raw('count(*) as total'))->get();
+
         return view("welcome",compact('createData','categories','zonenavigateur'));
+
     }
      public function propertySubmit()
      {

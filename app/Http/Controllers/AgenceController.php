@@ -14,8 +14,8 @@ class AgenceController extends Controller
         return view('agency-grid',compact('agences','paginateAnonces','paginateAnoncesCount'));
     }
     public function show(request $request , $idAgence){
-        $agence = Agency::find($idAgence)->first();
-        return view('agency-details',compact('agence'));
+        $agence = Agency::find($idAgence);
+        return view('agency-details',compact('agence' ));
 
     }
 
