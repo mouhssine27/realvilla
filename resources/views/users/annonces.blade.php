@@ -483,14 +483,20 @@ header -->
                             <tr>
                                 <td><img style="height:35px" src="{{asset('/annonce/'. $annonce->image)}}" alt=""></td>
                                 <td>{{ $annonce->titre }}</td>
-                                <td>{{ $annonce->Dureelocation }}</td>
+                                @if($annonce->Dureelocation == 1)
+                                <td>Monthly</td>
+                                @else
+                                <td>Years</td>
+                                @endif
                                 <td><span class="badge bg-light text-dark">{{ $annonce->prix }}</span></td>
                                 <td>{{ $annonce->pieces }}</td>
                                 <td>{{ $annonce->offre }}</td>
                                 @if($annonce->categorie == 1)
-                                <td>villa</td>
+                                <td>appartement</td>
+                                @elseif($annonce->categorie == 2)
+                                <td>park</td>
                                 @else
-                                <td>Appartement</td>
+                                <td>vila</td>
                                 @endif
                                 <td>{{ $annonce->zone }}</td>
                                 <td>{{ $annonce->sallebain }}</td>

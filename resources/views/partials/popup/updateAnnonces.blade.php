@@ -28,16 +28,17 @@
                             <label for="dureelocation">Durée de location</label>
                             <select class="form-control basic-select" name="dureelocation" id="dureelocation">
                                 @foreach($dureeLocations as $dureeLocation)
-                                <option value=" {{$dureeLocation->id}}" selected="selected">
+                                <option value=" {{$dureeLocation->id}}" @if($dureeLocation->id == $annonceDureLocation ) selected @endif>
                                     {{$dureeLocation->duree}}</option>
                                 @endforeach
+                                {{-- <option value="{{ $entreprise->id }}" @if($employeur->entreprise_id == $entreprise->id) selected @endif>{{ $entreprise->nom }}</option> --}}
                             </select>
                         </div>
                         <div class="col">
                             <label for="Offres">Offres</label>
                             <select class="form-control basic-select" name="Offres" id="Offres">
                                 @foreach($offres as $offre)
-                                <option value="{{$offre->id}}" selected="selected">
+                                <option value="{{$offre->id}}" @if($offre->id == $annonceOffre) selected @endif>
                                     {{$offre->name}}</option>
                                 @endforeach
                             </select>
@@ -47,31 +48,32 @@
                         <label for="dureelocation">Categories</label>
                         <select class="form-control basic-select" name="categorie" id="categorie">
                             @foreach($categories as $categorie)
-                            <option value=" {{$categorie->id}}" selected="selected">
+                            <option value=" {{$categorie->id}}" @if($categorie->id == $annonceCategorie ) selected @endif >
                                 {{$categorie->name}}</option>
                             @endforeach
+                            
                         </select>
                     </div>
-
+                
                     <div class="row">
                       <div class="col">
                           <label for="Pieces">Pieces</label>
                           <select class="form-control basic-select" name="Pieces" id="Pieces"> 
-                              <option value="1" selected="selected">
-                                  01</option>
-                              <option value="2" selected="selected">
-                                  02</option>
+                            @for ($i = 0; $i < 4; $i++)
+                            <option value="{{ $i }}"  @if($i == $annoncePieces ) selected @endif>
+                                {{$i}}
+                            </option>
+                            @endfor
                           </select>
                       </div>
                       <div class="col">
                           <label for="chambres">chambres</label>
                           <select class="form-control basic-select" name="chambres" id="chambres">
-                            <option value="1" selected="selected">
-                              01</option>
-                          <option value="2" >
-                              02</option>
-                              <option value="3">
-                                03</option>
+                            @for ($i = 0; $i < 4; $i++)
+                            <option value="{{ $i }}"  @if($i == $annonceChambres ) selected @endif>
+                                {{$i}}
+                            </option>
+                            @endfor
                           </select>
                       </div>
                   </div>
@@ -92,12 +94,11 @@
                     <div class="form-group">
                       <label for="salleBain">Salle de bain</label>
                       <select class="form-control basic-select" name="salleBain" id="salleBain">
-                        <option value="1" selected="selected">
-                          01</option>
-                      <option value="2" >
-                          02</option>
-                          <option value="3" >
-                            03</option>
+                        @for ($i = 0; $i < 4; $i++)
+                            <option value="{{ $i }}"  @if($i == $annonceSalleBain ) selected @endif>
+                                {{$i}}
+                            </option>
+                        @endfor
                       </select>
                   </div>
                     <div class="form-group">
