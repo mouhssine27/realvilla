@@ -277,7 +277,7 @@ header -->
             </ul>
           </li> -->
           <li class="nav-item dropdown">
-            <a class="nav-link" href="{{ url('agency') }}">Agences </a>
+            <a class="nav-link" href="{{ route('agenes') }}">Agences </a>
   
             <!-- <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="agency-grid.html">Agency grid</a></li>

@@ -108,9 +108,9 @@ header -->
             <div class="container-fluid">
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
                     data-bs-target=".navbar-collapse"><i class="fas fa-align-left"></i></button>
-                <a class="navbar-brand" href="index.html">
-                    <img class="img-fluid" src="images/logo.svg" alt="logo">
-                </a>
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                      <img class="img-fluid" src="{{ asset('images/logo.svg') }}" alt="logo">
+                  </a>
                 <div class="navbar-collapse collapse justify-content-center">
                     <ul class="nav navbar-nav">
                         <li class="nav-item dropdown">
@@ -281,7 +281,7 @@ header -->
           </ul>
         </li> -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="{{ url('agency') }}">Agences </a>
+                          <a class="nav-link" href="{{ route('agenes') }}">Agences </a>
 
                             <!-- <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="agency-grid.html">Agency grid</a></li>
