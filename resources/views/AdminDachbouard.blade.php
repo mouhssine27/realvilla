@@ -42,7 +42,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">{{Auth::guard('admin')->user()->name}}</div>
             </a>
 
             <!-- Divider -->
@@ -103,9 +103,10 @@
                     <i class="fas fa-fw fa-folder"  ></i>
                     <span>Ajouter Agence</span>
                 </a>
+
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                <a class="nav-link collapsed" href="{{route('admin.logoutt')}}" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Déconection</span>
@@ -134,6 +135,8 @@
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="AficheAjouterA" ><i
                                 class="fas fa-download fa-sm text-white-50"></i> Ajouter Agence</a>
                     </div>
+
+                 
 <!----Module annonce---->
 <!--------- Module Annonce ---->
 @include('userAdmin.modalAnonce')
