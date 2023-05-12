@@ -40,7 +40,7 @@ class Annonce extends Model
         'zonenavigateur',
         'descreption',
         'titredetage',
-
+        'validation'
     ];
 
     public $timestamps = false ;

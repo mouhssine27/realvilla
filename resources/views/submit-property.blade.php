@@ -2,6 +2,12 @@
 @section('content')
 <!--=================================
 Submit Property -->
+@if ($message = Session::get('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>{{ $message }}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif 
 <section class="space-ptb">
     <img src="users/1683540639.webp" alt="">
     <form method="post" action="create" enctype="multipart/form-data">

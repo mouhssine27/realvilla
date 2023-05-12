@@ -33,6 +33,22 @@ $file_name1=time().'.'.$file_extension1;
 $path1 ='navigateur';
 $REQUEST->fichiernavigateur->move($path1,$file_name1);
     }
+        if($REQUEST->longitude !=""){
+          $longitude  =  $REQUEST->longitude;
+        }else{
+          $longitude  = "N/A";
+        }
+        if($REQUEST->atitude !=""){
+          $atitude  =  $REQUEST->atitude;
+        }else{
+          $atitude  = "N/A";
+        }
+        if($REQUEST->urlvideo !=""){
+          $urlvideo  =  $REQUEST->urlvideo;
+        }else{
+          $urlvideo  = "N/A";
+        }
+
   $createData  = Annonce::create([
             "titre" => $REQUEST->titre,
             'Dureelocation' => $REQUEST->Dureelocation,
@@ -41,13 +57,13 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
             'offre'=> $REQUEST->offre,
             'categorie'=> $REQUEST->categorie,
             'zone'=>$REQUEST->zone,
-            'urlvideo'=>$REQUEST->urlvideo,
+            'urlvideo'=>$urlvideo ,
             'userid'=> auth::id(),
             'image'=> $file_name ,
             'adressegoogle'=> $REQUEST->adressegoogle,
-            'longitude'=> $REQUEST->longitude,
+            'longitude'=> $longitude,
             'adressamicale'=> $REQUEST->adressamicale,
-            'atitude'=> $REQUEST->atitude,
+            'atitude'=> $atitude ,
             'region'=> $REQUEST->region,
             'agebatiment'=>$REQUEST->agebatiment,
             'sallebain'=>$REQUEST->sallebain,
@@ -63,10 +79,11 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
             'zonenavigateur'=>$REQUEST->zonenavigateur,
             'descreption'=>$REQUEST->descreption,
             'titredetage'=>$REQUEST->titredetage,
+            'validation' =>"non"
   ]);
          
          if($createData){
-            return "operation succes";
+    return redirect()->back()->with('success', 'ajoutre de votre annonce à éte bien enregistré');
                  }
                  return "operation echou";
 

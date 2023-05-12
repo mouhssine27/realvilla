@@ -49,7 +49,9 @@ header -->
         @endif 
 <!-- Modal -->
 <div  >
-    <form  method="post" enctype="multipart/form-data">
+
+    <form  method="post" enctype="multipart/form-data" action="/UpdeateOperation/{{ $annonnces->id}}">
+
       @csrf
     <div class="modal-dialog">
         <div class="modal-content">
@@ -63,63 +65,78 @@ header -->
                     <div class="row">
                         <div class="col">
                             <label for="titre">titre</label>
+
                             <input type="text" class="form-control" placeholder="" name="titre" value="{{ $annonnces->titre }}">
+
                         </div>
                         <div class="col">
                             <label for="prix">prix</label>
                             <input type="text" class="form-control" id="prix" placeholder=""
+
                                 value="{{ $annonnces->prix }}" name="prix">
+
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <label for="dureelocation">Durée de location</label>
                             <select class="form-control basic-select" name="dureelocation" id="dureelocation">
-                                @foreach($dureeLocations as $dureeLocation)
-                                <option value=" {{$dureeLocation->id}}" selected="selected">
+
+                            <option value="{{ $annonnces->	Dureelocation }}">{{ $annonnces->Dureelocation }}</option>
+                            @foreach($dureeLocations as $dureeLocation)
+                                <option value=" {{$dureeLocation->duree}}">
                                     {{$dureeLocation->duree}}</option>
                                 @endforeach
                             </select>
-                        </div>
-                        <div class="col">
+                            <div class="col">
                             <label for="Offres">Offres</label>
                             <select class="form-control basic-select" name="Offres" id="Offres">
-                                @foreach($offres as $offre)
-                                <option value="{{$offre->id}}" selected="selected">
+                            @foreach($offres as $offre)
+                                <option value="{{$offre->name}}" selected="selected">
                                     {{$offre->name}}</option>
                                 @endforeach
+                                <option value="{{$annonnces->offre}}" selected>{{$annonnces->offre}}</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="form-group">
+                        </div>
+                        <div class="form-group">
                         <label for="dureelocation">Categories</label>
                         <select class="form-control basic-select" name="categorie" id="categorie">
-                        @foreach($categories as $categorie)
-                            <option value=" {{$categorie->id}}" selected="selected">
+                        @foreach($categories  as $categorie)
+                            <option value=" {{$categorie->name}}" selected="selected">
                                 {{$categorie->name}}</option>
                             @endforeach
+                            <option value="{{$annonnces->categorie}}" selected>{{$annonnces->categorie}}</option>
+
                         </select>
                     </div>
-
                     <div class="row">
                       <div class="col">
                           <label for="Pieces">Pieces</label>
+                        
                           <select class="form-control basic-select" name="Pieces" id="Pieces"> 
-                              <option value="1" selected="selected">
-                                  01</option>
-                              <option value="2" selected="selected">
-                                  02</option>
+                          @foreach($number as $numbers)
+                              @if($numbers != $annonnces->pieces)
+                          <option value="{{$numbers}}" selected="selected">
+                          {{$numbers}}</option>
+                          @endif
+                                  @endforeach
+                                  <option value="{{$annonnces->pieces}}" selected>{{$annonnces->pieces}}</option>
+
                           </select>
                       </div>
                       <div class="col">
                           <label for="chambres">chambres</label>
                           <select class="form-control basic-select" name="chambres" id="chambres">
-                            <option value="1" selected="selected">
-                              01</option>
-                          <option value="2" >
-                              02</option>
-                              <option value="3">
-                                03</option>
+
+                          @foreach($number as $numbers)
+                              @if($numbers != $annonnces->chambres)
+                          <option value="{{$numbers}}" selected="selected">
+                          {{$numbers}}</option>
+                          @endif
+                                  @endforeach
+                        <option value="{{$annonnces->chambres}}" selected>{{$annonnces->chambres}}</option>
+
                           </select>
                       </div>
                   </div>
@@ -140,13 +157,14 @@ header -->
                     <div class="form-group">
                       <label for="salleBain">Salle de bain</label>
                       <select class="form-control basic-select" name="salleBain" id="salleBain">
-                        <option value="1" selected="selected">
-                          01</option>
-                      <option value="2" >
-                          02</option>
-                          <option value="3" >
-                            03</option>
-                      </select>
+
+                          @foreach($number as $numbers)
+                              @if($numbers != $annonnces->sallebain)
+                          <option value="{{$numbers}}" selected="selected">
+                          {{$numbers}}</option>
+                          @endif
+                                  @endforeach
+                        <option value="{{$annonnces->sallebain}}" selected>{{$annonnces->sallebain}}</option>
                   </div>
                     <div class="form-group">
                         <label for="zone">chauffage</label>
@@ -157,10 +175,6 @@ header -->
                         <label for="description">description</label>
                         <textarea class="form-control" id="description" name="description" rows="3">{{ $annonnces->descreption }}</textarea>
                     </div>
-
-
-
-
                     <div class="form-group">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -173,7 +187,9 @@ header -->
             </div>
          
             <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+
             </div>
         </div>
     </div>

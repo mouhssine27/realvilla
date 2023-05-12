@@ -23,8 +23,10 @@
                                         <button id="ba" value ="{{$users->id}}" class="my_button1" style="background:none;border:none">
                                             <img src="annonce/sp.png" alt="" style="width:14px">
                                             </button>
-                                        </a></li>
-                                        <li style="text-decoration-style:none"><a href="/Admin.user.Profile/{{$users->id}}" data-tip="updeate">
+                                        </a>
+                                    </li>
+                                        <li style="text-decoration-style:none">
+                                        <a href="/Admin.user.Profile/{{$users->id}}" data-tip="updeate">
                                         <img src="annonce/md.png" alt="" style="width:14px">
                                         </i></a>
                                     </ul>
