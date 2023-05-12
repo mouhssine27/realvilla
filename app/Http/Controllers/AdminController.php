@@ -8,6 +8,7 @@ use App\Models\Categorie;
 use App\Models\Offer;
 use App\Models\User;
 use App\Models\Agency;
+use App\Models\Dureelocation;
 use DB;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
@@ -150,5 +151,14 @@ public function updeateAgence($id,request $request)
   
 }
 
+
+public function updeateAnoonceAdmin($id)
+{
+   $annonnces = Annonce::find($id);
+$dureeLocations = Dureelocation::select()->get();
+$offres = Offer::select()->get();
+$categories = Categorie::select()->get();
+return view('userAdmin.UpdateAnnonceAdmin',compact('categories','offres','dureeLocations','annonnces'));
+}
 
 }

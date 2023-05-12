@@ -33,8 +33,8 @@
                                             </button></a>
                                         </li>
                                         <li style="text-decoration-style:none">
-                                        <bottun type="bottun" value ="{{$AnnonceSelects->id}}">
-                                        <img src="annonce/md.png" alt="" style="width:14px"></bottun></li>
+                                        <a href="updeateAnoonceAdmin/{{$AnnonceSelects->id}}"><bottun type="bottun" value ="{{$AnnonceSelects->id}}">
+                                        <img src="annonce/md.png" alt="" style="width:14px"></bottun></a></li>
 </button>
 
                                     </ul>
