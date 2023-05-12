@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Annonce;
 use App\Models\Categorie;
 use App\Models\Offer;
+use App\Models\Dureelocation;
 use App\Models\User;
 use App\Models\Agency;
 use DB;
@@ -149,6 +150,41 @@ public function updeateAgence($id,request $request)
    }
   
 }
+public function updeateAnnoceAdmin($id)
+{
+    $number = ["1","2","3","4",];
+ $annonnces = Annonce::find($id);
+  $dureeLocations =Dureelocation::select()->wherenot('duree',$annonnces->Dureelocation)->get();
+  $offres  = Offer::select()->wherenot('name',$annonnces->offre)->get();
+  $categories  = Categorie::select()->wherenot('name',$annonnces->categorie)->get();
+return view('userAdmin.UpdateAnnonceAdmin',compact('annonnces','categories','dureeLocations','offres','dureeLocations','number'));
+}
 
+public function UpdeateOpet($id , request $request)
+{     
+   $annonce= Annonce::find($id);
+   $annonce->titre = $request->titre;   
+   $annonce->prix = $request->prix;   
+   $annonce->Dureelocation = $request->dureelocation; 
+   $annonce->offre = $request->Offres;   
+   $annonce->categorie = $request->categorie;   
+   $annonce->pieces =$request->Pieces; 
+   $annonce->chambres = $request->chambres;   
+   $annonce->zone = $request->zone;   
+   $annonce->parking = $request->parking; 
+   $annonce->sallebain = $request->salleBain;   
+   $annonce->chauffage = $request->chauffage; 
+   $annonce->descreption = $request->description; 
+   $annonce->save();
+   return redirect()->back()->with('success', 'modification de votre annonce à éte bien enregistré');   
+}
+
+public function ActiverAnnonce($id)
+{
+   $ActiveAnnonce = Annonce::find($id);
+   $ActiveAnnonce->validation = "oui";
+   $ActiveAnnonce->save();
+return redirect()->back()->with('success', 'Annonce et Confirmer');   
+}
 
 }

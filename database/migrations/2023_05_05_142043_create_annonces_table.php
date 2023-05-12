@@ -44,6 +44,7 @@ return new class extends Migration
             $table->String('zonenavigateur');
             $table->String('descreption');
             $table->String('titredetage');
+            $table->string('validation');
             $table->timestamps();
         });
     }
