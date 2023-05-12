@@ -7,6 +7,7 @@ use App\Models\Annonce;
 use App\Models\Categorie;
 use App\Models\Offer;
 use App\Models\Dureelocation;
+use App\Models\User;
 
 use Illuminate\Support\Facades\Auth;
 use DB;
@@ -92,16 +93,19 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
      {
         $createData  = DB::Select('select * from annonces where annonces.id!="" limit 12');
         $categories  =$user_info = annonce::groupBy('categorie')->select('categorie', DB::raw('count(*) as total'))->get();
-          return view("welcome",compact('createData','categories'));
+          $zonenavigateur = annonce::groupBy('zonenavigateur')->select('zonenavigateur', DB::raw('count(*) as total'))->get();
+        
+        return view("welcome",compact('createData','categories','zonenavigateur'));
     
      }
 
      public function propertySubmit()
      {
+       $zon = ['casablanca' , 'rabat' ,'mohamadia' , 'berchid' , 'settat'];
     $categories = Categorie::select()->get();
     $Offer =  Offer::select()->get();
     $Dureelocations =  Dureelocation::select()->get();
-    return view('submit-property', compact('categories','Dureelocations','Offer'));
+    return view('submit-property', compact('categories','Dureelocations','Offer','zon'));
      }
 
     
@@ -131,9 +135,12 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
      }
 ///////function details annonce 
 public function details($name,$id)
-{
-     $databrt = annonce::find($id);
+{  
+  $databrt = annonce::find($id);
+ $profile  = User::select()->where('id',$databrt->userid)->get();
+  
     $dtailsParCategories = DB::Select("select * from annonces where annonces.categorie='$name' limit 3");
-  return view("afficherInformation",compact('dtailsParCategories','databrt'));
+  return view("afficherInformation",compact('dtailsParCategories','databrt','profile'));
 }
+
 }

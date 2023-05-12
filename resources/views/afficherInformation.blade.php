@@ -33,14 +33,16 @@
             </div>
             <div class="agent-contact">
               <div class="d-flex align-items-center p-4 border border-bottom-0">
+              @foreach($profile as $profiles)
                 <div class="agent-contact-avatar me-3">
-                  <img class="img-fluid rounded-circle avatar avatar-xl" src="images/avatar/01.jpg" alt="">
+                  <img class="img-fluid rounded-circle avatar avatar-xl" src="/imageUser/{{$profiles->image}}" alt="">
                 </div>
                 <div class="agent-contact-name">
-                  <h6>Joana williams</h6>
-                  <a href="#">Agent de la société</a>
-                  <span class="d-block"><i class="fas fa-phone-volume pe-2 mt-2"></i>(123) 345-6789</span>
+                  <h6>{{$profiles->name}}</h6>
+                  <a href="#">{{$profiles->email }}</a>
+                  <span class="d-block"><i class="fas fa-phone-volume pe-2 mt-2"></i>{{$profiles->phone}}</span>
                 </div>
+                @endforeach
               </div>
               <div class="d-flex">
                 <a href="#" class="btn btn-dark col b-radius-none">Voir les annonces</a>
@@ -189,7 +191,7 @@
                     </div>
                     <div id="collapseOne" class="collapse show accordion-content" aria-labelledby="headingOne" data-bs-parent="#accordion">
                       <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate labore amet nulla a nobis iste consequuntur laudantium natus corporis, eveniet quo quidem perferendis sint illo autem, aut incidunt enim libero.</p>
+                        <p>{{$databrt->descreption}}</p>
                         <img class="img-fluid" src="images/property/floor-plans-01.jpg" alt="">
                       </div>
                     </div>
@@ -204,7 +206,7 @@
                     </div>
                     <div id="collapseTwo" class="collapse accordion-content" aria-labelledby="headingTwo" data-bs-parent="#accordion">
                       <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit rem esse qui voluptatem tempore nobis nihil, ex, odit vel exercitationem aperiam provident consectetur. Ea, eos, blanditiis! Rem quia, doloremque numquam.</p>
+                        <p>{{$databrt->descreption}}</p>
                         <img class="img-fluid" src="images/property/floor-plans-01.jpg" alt="">
                       </div>
                     </div>
@@ -435,6 +437,7 @@
     <h5 class="mb-4">Biens Similaires</h5>
     <div class="row">
       @foreach($dtailsParCategories as $dtailsParCategoriess)
+      @if($dtailsParCategoriess->validation !="non")
       <div class="col-md-4">
         <div class="property-item">
           <div class="property-image bg-overlay-gradient-04">
@@ -449,7 +452,7 @@
                 <img class="img-fluid" src="images/avatar/01.jpg" alt="">
               </div>
               <div class="property-agent-info">
-                <a class="property-agent-name" href="#">Alice Williams</a>
+                <a class="property-agent-name" href="#"></a>
                 <span class="d-block">Company Agent</span>
                 <ul class="property-agent-contact list-unstyled">
                   <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
@@ -483,6 +486,7 @@
           </div>
         </div>
       </div>
+      @endif
       @endforeach
     </div>
   </div>

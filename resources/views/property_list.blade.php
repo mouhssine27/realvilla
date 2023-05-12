@@ -215,6 +215,7 @@ Listing – grid view -->
           </ul>
         </div>
         @foreach($data as $datas )
+        @if($datas->validation !="non")
         <div class="property-item property-col-list mt-4">
           <div class="row g-0">
             <div class="col-lg-4 col-md-5">
@@ -272,6 +273,7 @@ Listing – grid view -->
             </div>
           </div>
         </div>
+        @endif
      @endforeach
         <div class="row">
           <div class="col-12">
