@@ -170,6 +170,7 @@ Browse properties -->
     </div>
     <div class="row">
       @foreach($createData as $createDatas)
+      @if($createDatas->validation!="non")
       <div class="col-sm-6 col-md-4">
         <div class="property-item">
           <div class="property-image bg-overlay-gradient-04">
@@ -222,6 +223,7 @@ Browse properties -->
           </div>
         </div>
       </div>
+      @endif
       @endforeach
       <div class="col-12 text-center">
         <a class="btn btn-link" href="/"><i class="fas fa-plus"></i>Voir toutes les annonces</a>
@@ -248,6 +250,7 @@ Featured properties-->
       <div class="col-12">
         <div class="owl-carousel owl-nav-top-right" data-animateOut="fadeOut" data-nav-arrow="true" data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="0">
         @foreach($createData as $nvcreateData)
+        @if($nvcreateData->validation !="non")
         <div class="item">
             <div class="property-offer">
               <div class="property-offer-item">
@@ -281,6 +284,7 @@ Featured properties-->
               </div>
             </div>
           </div>
+          @endif
         @endforeach
         
         </div>
@@ -568,27 +572,13 @@ Browse properties by location -->
       <div class="col-12">
         <div class="location-list">
           <div class="row align-items-center">
-            <div class="col-lg-4 col-sm-6  border-end">
+            <div class="col-lg-4 col-sm-6  border-end">     
+                 @foreach($zonenavigateur as $zonenavigateurs)
               <ul class="list-unstyled mb-0">
-                <li><a href="property-list.html">Australia <span class="ms-auto">02</span> </a></li>
-                <li><a href="property-list.html">Belgium <span class="ms-auto">02</span> </a></li>
-                <li><a href="property-list.html">Brazil <span class="ms-auto">02</span> </a></li>
-                <li><a href="property-list.html">Central African Republic <span class="ms-auto">02</span> </a></li>
-                <li><a href="property-list.html">Cook/ Chef <span class="ms-auto">02</span> </a></li>
-                <li><a href="property-list.html">Dominica <span class="ms-auto">02</span> </a></li>
-                <li><a href="property-list.html">Egypt <span class="ms-auto">02</span> </a></li>
+                <li><a href="property-list.html">{{$zonenavigateurs->zonenavigateur}}<span class="ms-auto">{{$zonenavigateurs->total}}</span> </a></li>
               </ul>
+              @endforeach
             </div>
-            <div class="col-lg-4 col-sm-6">
-              <ul class="list-unstyled mb-0">
-                <li><a href="property-list.html">France <span class="ms-auto">02</span> </a></li>
-                <li><a href="property-list.html">Greece <span class="ms-auto">02</span> </a></li>
-                <li><a href="property-list.html">Hawaii* <span class="ms-auto">02</span> </a></li>
-                <li><a href="property-list.html">India <span class="ms-auto">02</span> </a></li>
-                <li><a href="property-list.html">Italy <span class="ms-auto">02</span> </a></li>
-                <li><a href="property-list.html">Jordan <span class="ms-auto">02</span> </a></li>
-                <li><a href="property-list.html">Kazakhstan <span class="ms-auto">02</span> </a></li>
-              </ul>
             </div>
             <div class="col-lg-4">
               <div class="bg-holder py-sm-5" style="background-image: url(images/google-map.png);">

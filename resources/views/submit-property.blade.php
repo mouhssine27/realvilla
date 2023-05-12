@@ -77,7 +77,7 @@ Submit Property -->
                                                      <select class="form-control basic-select" name="Dureelocation">
                                                         @foreach ($Dureelocations as $Dureelocation)
                                                     {{-- <option value="Monthly" selected="selected">Monthly</option> --}}
-                                                    <option value="{{ $Dureelocation->id }}">{{ $Dureelocation->duree }}</option>
+                                                    <option value="{{ $Dureelocation->duree }}">{{ $Dureelocation->duree }}</option>
                                                     @endforeach
                                                     </select>
                                             
@@ -105,7 +105,13 @@ Submit Property -->
                                             </div>
                                             <div class="mb-3 col-md-6">
                                                 <label class="form-label">Area</label>
-                                                <input class="form-control" placeholder="Type (sq ft)" name="zone" id="zone">
+        
+                                                <select class="form-control basic-select" name="zone" id="zon">
+                                                    @foreach($zon as $zonne)
+                                                    <option value="{{$zonne}}" selected="selected">{{$zonne}}</option>
+                                                    @endforeach
+                                                    <option value="02">02</option>
+                                                </select>
                                             </div>
                                             <div class="mb-3 col-md-6 select-border">
                                                 <label class="form-label">Rooms</label>

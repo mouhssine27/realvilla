@@ -51,7 +51,7 @@
                                             </a>
                                         </li>
                                         <li style="text-decoration-style:none">
-                                        <a href="/updeateAnnoceAdmin/{{$AnnonceSelects->id}}" data-tip="updeate">
+                                        <a href="/annonncesDetailsAdmin/{{$AnnonceSelects->id}}" >
                                         Voir Détails
                                         </i></a>                          
                                     </li>

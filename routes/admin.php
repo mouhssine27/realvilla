@@ -30,11 +30,12 @@ Route::get('/annonces.user.profile', [AdminController::class, 'annoncesUser']);
 
 Route::post('/updateProfile.user.profile/{id}', [AdminController::class,'UpdateProfileUser']);
 Route::get('/updateAgenece.user/{id}', [AdminController::class,'UpdateAgence']);
-
+Route::post('/updeateAgenceAdmin.user/{id}', [AdminController::class,'updeateAgenceAdmin']);
 Route::get('/updeateAnnoceAdmin/{id}', [AdminController::class,'updeateAnnoceAdmin']);
 Route::post('/UpdeateOperation/{id}', [AdminController::class,'UpdeateOpet']);
 Route::get('/ActiverAnnonce/{id}', [AdminController::class,'ActiverAnnonce']);
-
+////Details Anonce admin
+Route::get('/annonncesDetailsAdmin/{id}', [AdminController::class,'annonncesDetails']);
 
 
 

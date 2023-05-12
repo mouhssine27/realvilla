@@ -47,7 +47,7 @@ header -->
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         @endif 
-        <form style="margin-left:10px" action="/updeateAgenceAdmin/{{$agence->id}}" method="post"  enctype="multipart/form-data" > 
+        <form style="margin-left:10px" action="/updeateAgenceAdmin.user/{{$agence->id}}" method="post"  enctype="multipart/form-data" > 
    @csrf
         <div class="card mb-4 mb-xl-0">
                     <div class="card-header text-center">Profile Agence</div>

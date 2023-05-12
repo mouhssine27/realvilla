@@ -9,7 +9,6 @@ use App\Models\Offer;
 use App\Models\Dureelocation;
 use App\Models\User;
 use App\Models\Agency;
-use App\Models\Dureelocation;
 use DB;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
@@ -113,7 +112,7 @@ public function UpdateAgence($id)
    return view('userAdmin.modalUpdeateAgility',compact('agence'));
 
 }
-public function updeateAgence($id,request $request)
+public function updeateAgenceAdmin($id,request $request)
 {       $dataUpdeate = Agency::find($id); 
    if($request->image1!=""){
    $file_extension=$request->image1->getClientOriginalExtension();
@@ -196,5 +195,13 @@ $offres = Offer::select()->get();
 $categories = Categorie::select()->get();
 return view('userAdmin.UpdateAnnonceAdmin',compact('categories','offres','dureeLocations','annonnces'));
 }
+
+ //////Daitails annonce
+ public function annonncesDetails($id)
+
+ {
+$annonncesDetails = Annonce::find($id);
+ return view('userAdmin.AffichageDeatilsAnnonce',compact('annonncesDetails'));
+ }
 
 }
