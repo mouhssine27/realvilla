@@ -91,14 +91,14 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
      }
      public function pageprincipale()
      {
-        $createData  = DB::Select('select * from annonces where annonces.id!="" limit 12');
+         $createData  = DB::Select('select * from annonces where annonces.id!="" limit 12');
         $categories  =$user_info = annonce::groupBy('categorie')->select('categorie', DB::raw('count(*) as total'))->get();
-          $zonenavigateur = annonce::groupBy('zonenavigateur')->select('zonenavigateur', DB::raw('count(*) as total'))->get();
-        
-        return view("welcome",compact('createData','categories','zonenavigateur'));
-    
-     }
-
+        $zonenavigateur = annonce::groupBy('zonenavigateur')->select('zonenavigateur', DB::raw('count(*) as total'))->get();
+    return  $profile =User::select()
+        ->join("annonces", "users.id", "=", "annonces.userid")
+        ->get()->groupBy('name');
+        return view("welcome",compact('createData','categories','zonenavigateur','profile'));
+    }
      public function propertySubmit()
      {
        $zon = ['casablanca' , 'rabat' ,'mohamadia' , 'berchid' , 'settat'];
