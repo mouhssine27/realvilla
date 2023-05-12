@@ -20,6 +20,7 @@ class Agency extends Model
         'telephone',
         'societe' ,
         'numberphoneS',
+        'adresse'
     ];
 
     public $timestamps = false ;

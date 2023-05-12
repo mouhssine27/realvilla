@@ -25,9 +25,7 @@ Route::get('/aboute', function () {
     return view('aboute_us');
 });
 
-Route::get('/agency', function () {
-    return view('agency-grid');
-});
+
 
 Route::get('/blog', function () {
     return view('blog');
@@ -44,6 +42,7 @@ Route::get('/', [AnnonceController::class, 'pageprincipale']);
 Route::post('/create', [AnnonceController::class, 'CreateAnonnce']);
 
 
+Auth::routes();
 
 Auth::routes(['verify' => true]);
 
@@ -57,3 +56,4 @@ Route::get('property_list/{id}', [AnnonceController::class, 'propertylistID']);
 Route::get('details/{name}/{id}', [AnnonceController::class, 'details']);
 
 Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
+

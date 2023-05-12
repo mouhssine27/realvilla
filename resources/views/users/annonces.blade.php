@@ -289,7 +289,7 @@ header -->
             </ul>
           </li> -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="{{ url('agency') }}">Agences </a>
+                            <a class="nav-link" href="{{ route('agenes') }}">Agences </a>
 
                             <!-- <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="agency-grid.html">Agency grid</a></li>
@@ -490,13 +490,15 @@ header -->
                                 @endif
                                 <td><span class="badge bg-light text-dark">{{ $annonce->prix }}</span></td>
                                 <td>{{ $annonce->pieces }}</td>
-                                <td>{{ $annonce->offre }}</td>
+                                @if($annonce->offre == 1)
+                                <td>a vendre</td>
+                                @else
+                                <td>a louer</td>
+                                @endif
                                 @if($annonce->categorie == 1)
                                 <td>appartement</td>
-                                @elseif($annonce->categorie == 2)
-                                <td>park</td>
                                 @else
-                                <td>vila</td>
+                                <td>villa</td>
                                 @endif
                                 <td>{{ $annonce->zone }}</td>
                                 <td>{{ $annonce->sallebain }}</td>
@@ -602,7 +604,9 @@ footer-->
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-4 text-center text-md-start">
-                        <a href="index.html"><img class="img-fluid footer-logo" src="images/logo-light.svg" alt=""> </a>
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            <img class="img-fluid" src="{{ asset('images/logo.svg') }}" alt="logo">
+                        </a>
                     </div>
                     <div class="col-md-4 text-center my-3 mt-md-0 mb-md-0">
                         <a id="back-to-top" class="back-to-top" href="#"><i class="fas fa-angle-double-up"></i> </a>

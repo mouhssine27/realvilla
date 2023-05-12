@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('description');
             $table->String('image');
             $table->String('adressemail');
+            $table->text('adresse')->nullable();
             $table->String('websit');
             $table->String('agency');
             $table->String('lisencs');

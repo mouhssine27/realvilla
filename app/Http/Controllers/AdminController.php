@@ -27,6 +27,10 @@ class AdminController extends Controller
     public function CreateAgencity(request $request)
     { 
 
+       $data= $request->all();
+       $adresse = $data['adresse'];
+      //  return $data ; 
+
         $file_extension=$request->image->getClientOriginalExtension();
          $file_name=time().'.'.$file_extension;
          $path ='AgencyFile';
@@ -41,7 +45,7 @@ class AdminController extends Controller
          }else{
             $lisencs ="N/A";
          }
-         $data  = Agency::create([
+         $Agency  = Agency::create([
             'nom' => $request->nom,
             'description' =>$request->description,
             'image' =>$file_name,
@@ -52,7 +56,10 @@ class AdminController extends Controller
             'telephone'=>$request->telephone,
             'societe'=>$request->societe,
             'numberphoneS'=>$request->numberphoneS,
+            'adresse'=> $adresse
          ]);
+        
+       
          if($data){
             return redirect()->back()->with('success', 'ajouter à éte bien enregistré');
          }
