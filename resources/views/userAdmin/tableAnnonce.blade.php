@@ -34,10 +34,12 @@
                                             </button></a>
                                         </li>
                                         <li style="text-decoration-style:none">
+
                                         <a href="/updeateAnnoceAdmin/{{$AnnonceSelects->id}}" data-tip="updeate">
                                         <img src="annonce/md.png" alt="" style="width:14px;margin-left:30px">
                                         </i></a>                          
                                     </li>
+
 </button>
                                     </ul>
                                     @endif

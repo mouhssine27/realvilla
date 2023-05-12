@@ -49,7 +49,9 @@ header -->
         @endif 
 <!-- Modal -->
 <div  >
+
     <form  method="post" enctype="multipart/form-data" action="/UpdeateOperation/{{ $annonnces->id}}">
+
       @csrf
     <div class="modal-dialog">
         <div class="modal-content">
@@ -63,18 +65,23 @@ header -->
                     <div class="row">
                         <div class="col">
                             <label for="titre">titre</label>
-                            <input type="text" class="form-control" placeholder="" name="titre" value="{{$annonnces->titre}}">
+
+                            <input type="text" class="form-control" placeholder="" name="titre" value="{{ $annonnces->titre }}">
+
                         </div>
                         <div class="col">
                             <label for="prix">prix</label>
                             <input type="text" class="form-control" id="prix" placeholder=""
-                                value="{{$annonnces->prix }}" name="prix">
+
+                                value="{{ $annonnces->prix }}" name="prix">
+
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <label for="dureelocation">Durée de location</label>
                             <select class="form-control basic-select" name="dureelocation" id="dureelocation">
+
                             <option value="{{ $annonnces->	Dureelocation }}">{{ $annonnces->Dureelocation }}</option>
                             @foreach($dureeLocations as $dureeLocation)
                                 <option value=" {{$dureeLocation->duree}}">
@@ -115,11 +122,13 @@ header -->
                           @endif
                                   @endforeach
                                   <option value="{{$annonnces->pieces}}" selected>{{$annonnces->pieces}}</option>
+
                           </select>
                       </div>
                       <div class="col">
                           <label for="chambres">chambres</label>
                           <select class="form-control basic-select" name="chambres" id="chambres">
+
                           @foreach($number as $numbers)
                               @if($numbers != $annonnces->chambres)
                           <option value="{{$numbers}}" selected="selected">
@@ -127,6 +136,7 @@ header -->
                           @endif
                                   @endforeach
                         <option value="{{$annonnces->chambres}}" selected>{{$annonnces->chambres}}</option>
+
                           </select>
                       </div>
                   </div>
@@ -147,6 +157,7 @@ header -->
                     <div class="form-group">
                       <label for="salleBain">Salle de bain</label>
                       <select class="form-control basic-select" name="salleBain" id="salleBain">
+
                           @foreach($number as $numbers)
                               @if($numbers != $annonnces->sallebain)
                           <option value="{{$numbers}}" selected="selected">
@@ -164,10 +175,6 @@ header -->
                         <label for="description">description</label>
                         <textarea class="form-control" id="description" name="description" rows="3">{{ $annonnces->descreption }}</textarea>
                     </div>
-
-
-
-
                     <div class="form-group">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -180,7 +187,9 @@ header -->
             </div>
          
             <div class="modal-footer">
+
                                 <button type="submit" class="btn btn-primary">Save changes</button>
+
             </div>
         </div>
     </div>

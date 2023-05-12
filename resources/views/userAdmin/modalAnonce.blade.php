@@ -1,7 +1,7 @@
 
-<form action="supprimerAdminAnnonce" method="get" style="display:none">
+<form action="supprimerAdminAnnonce" method="get" >
  <!-- Logout Modal-->
- <div class="modal" id="modalAnonce">
+ <div class="modal" id="modalAnonce" style="display:none">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <input type="hidden"  id="valueannonce" name="idannonce">

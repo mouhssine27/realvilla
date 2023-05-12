@@ -9,6 +9,7 @@ use App\Models\Offer;
 use App\Models\Dureelocation;
 use App\Models\User;
 use App\Models\Agency;
+use App\Models\Dureelocation;
 use DB;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
@@ -185,6 +186,15 @@ public function ActiverAnnonce($id)
    $ActiveAnnonce->validation = "oui";
    $ActiveAnnonce->save();
 return redirect()->back()->with('success', 'Annonce et Confirmer');   
+}
+
+public function updeateAnoonceAdmin($id)
+{
+   $annonnces = Annonce::find($id);
+$dureeLocations = Dureelocation::select()->get();
+$offres = Offer::select()->get();
+$categories = Categorie::select()->get();
+return view('userAdmin.UpdateAnnonceAdmin',compact('categories','offres','dureeLocations','annonnces'));
 }
 
 }
