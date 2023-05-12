@@ -46,18 +46,34 @@ class UserController extends Controller
     public function annonces(){
         $idUser = Auth::id();
         $annonnces = Annonce::where('userid',$idUser)->get();
+        $FindAnnonce = Annonce::where('userid',$idUser)->first();
+        if(isset( $FindAnnonce->Dureelocation, $FindAnnonce->categorie,$FindAnnonce->offre,$FindAnnonce->pieces,$FindAnnonce->chambres,$FindAnnonce->sallebain)){
+            $annonceDureLocation =  $FindAnnonce->Dureelocation;
+            $annonceCategorie =  $FindAnnonce->categorie;
+            $annonceOffre =  $FindAnnonce->offre;
+            $annoncePieces =  $FindAnnonce->pieces;
+            $annonceChambres =  $FindAnnonce->chambres;
+            $annonceSalleBain =  $FindAnnonce->sallebain;
+            $dureeLocations = Dureelocation::select()->get();
+            $offres = Offer::select()->get();
+            $categories = Categorie::select()->get();
+            return view('users.annonces',compact('annonnces','dureeLocations','offres','categories','annonceDureLocation','annonceCategorie','annonceOffre','annoncePieces','annoncePieces','annonceChambres','annonceSalleBain'));
+        }
+        else{
+            return view('users.annonces',compact('annonnces'));
+        }
+
+
+        }
+    
        
-        $dureeLocations = Dureelocation::select()->get();
-        $offres = Offer::select()->get();
-        $categories = Categorie::select()->get();
         // return $categories;
 
         
         // return $annonnces;
         
         // return $annonnces;
-        return view('users.annonces',compact('annonnces','dureeLocations','offres','categories'));
-    }
+      
 
     public function updateAnnonce(request $request, $idAnnonce){
         $data= $request->all();     
