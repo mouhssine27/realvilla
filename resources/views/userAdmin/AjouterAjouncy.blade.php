@@ -26,6 +26,10 @@
 						<input type="text" class="form-control"  required  name="telephone" placeholder="entre telephone">
 						<span class="border"></span>
 					</label>
+					<label class="form-group">
+						<input type="text" class="form-control"  required  name="adresse" placeholder="entre adresse agence">
+						<span class="border"></span>
+					</label>
                     <label class="form-group">
 						<input type="text" class="form-control"  required name="societe" placeholder="entre societe">
 						<span class="border"></span>

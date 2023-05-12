@@ -136,74 +136,27 @@ Listing – grid view -->
           </ul>
         </div>
         <div class="row">
+          @foreach ( $agences as $agence )
           <div class="col-lg-6 col-sm-6">
             <div class="agent text-center mt-4">
               <div class="agent-detail">
                 <div class="agent-avatar avatar avatar-xllll">
-                  <img class="img-fluid rounded-circle" src="images/agency/01.png" alt="">
+                  <img class="img-fluid rounded-circle" src="{{asset('/AgencyFile/'. $agence->image)}}"alt="">
                 </div>
                 <div class="agent-info">
-                  <h6> <a href="agency-detail.html">Lotissements En Duplex</a></h6>
-                  <span><i class="fas fa-map-marker-alt fa-xs pe-2"></i>Collines du temple de Virginia Drive</span>
-                  <p class="mt-3 mb-0" style="text-align: justify;">Et ce ne sont pas seulement les parents qui en sont la cause – les enseignants, les amis, les membres du clergé ou toute autre personne qui en est la cause.</p>
+                  <h6> <a href="agency-detail.html">{{ $agence->nom }}</a></h6>
+                  <span><i class="fas fa-map-marker-alt fa-xs pe-2"></i>{{ $agence->adresse }}</span>
+                  <p class="mt-3 mb-0" style="text-align: justify;">{{ $agence->description }}.</p>
                 </div>
               </div>
               <div class="agent-button">
-                <a class="btn btn-light d-grid" href="agency-detail.html">Voir le profil</a>
+                <a class="btn btn-light d-grid" href="{{ route('showAgency',$agence->id) }}">Voir le profil</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-sm-6">
-            <div class="agent text-center mt-4">
-              <div class="agent-detail">
-                <div class="agent-avatar avatar avatar-xllll">
-                  <img class="img-fluid rounded-circle" src="images/agency/02.png" alt="">
-                </div>
-                <div class="agent-info">
-                  <h6> <a href="agency-detail.html">Domaines Commerciaux </a></h6>
-                  <span><i class="fas fa-map-marker-alt fa-xs pe-2"></i>Été antillais St. Missoula</span>
-                  <p class="mt-3 mb-0" style="text-align: justify;">"Rien ne change jusqu'à ce que quelque chose bouge" - tel est le cri de guerre de l'auteur et journaliste Robert Ringer.</p>
-                </div>
-              </div>
-              <div class="agent-button">
-                <a class="btn btn-light d-grid" href="agency-detail.html">Voir le profil</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-sm-6">
-            <div class="agent text-center mt-4">
-              <div class="agent-detail">
-                <div class="agent-avatar avatar avatar-xllll">
-                  <img class="img-fluid rounded-circle" src="images/agency/03.png" alt="">
-                </div>
-                <div class="agent-info">
-                  <h6> <a href="agency-detail.html">Serre </a></h6>
-                  <span><i class="fas fa-map-marker-alt fa-xs pe-2"></i>Parc des expositions St. North Bergen, NJ</span>
-                  <p class="mt-3 mb-0" style="text-align: justify;">Donc, voilà; les six étapes qui vous aideront à atteindre le pays légendaire de la réussite et du succès !</p>
-                </div>
-              </div>
-              <div class="agent-button">
-                <a class="btn btn-light d-grid" href="agency-detail.html">Voir le profil</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-sm-6">
-            <div class="agent text-center mt-4">
-              <div class="agent-detail">
-                <div class="agent-avatar avatar avatar-xllll">
-                  <img class="img-fluid rounded-circle" src="images/agency/04.png" alt="">
-                </div>
-                <div class="agent-info">
-                  <h6> <a href="agency-detail.html">Appartements De Feuilles </a></h6>
-                  <span><i class="fas fa-map-marker-alt fa-xs pe-2"></i>Piper Drive Sion</span>
-                  <p class="mt-3 mb-0" style="text-align: justify;">L'extraordinaire succès de Franklin dans la vie et en politique peut être attribué à sa persévérance à surmonter les siens.</p>
-                </div>
-              </div>
-              <div class="agent-button">
-                <a class="btn btn-light d-grid" href="agency-detail.html">Voir le profil</a>
-              </div>
-            </div>
-          </div>
+          @endforeach
+       
+        
         </div>
         <div class="row">
           <div class="col-12">

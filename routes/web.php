@@ -26,9 +26,7 @@ Route::get('/aboute', function () {
     return view('aboute_us');
 });
 
-Route::get('/agency', function () {
-    return view('agency-grid');
-});
+
 
 Route::get('/blog', function () {
     return view('blog');
