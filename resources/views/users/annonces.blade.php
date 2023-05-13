@@ -497,6 +497,8 @@ header -->
                                 @endif
                                 @if($annonce->categorie == 1)
                                 <td>appartement</td>
+                                @elseif($annonce->categorie == 2)
+                                <td>park</td>
                                 @else
                                 <td>villa</td>
                                 @endif
