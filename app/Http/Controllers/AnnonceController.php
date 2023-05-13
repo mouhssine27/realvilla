@@ -92,6 +92,11 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
      public function pageprincipale()
      {
    $createData  = DB::Select('select * from annonces inner join users on annonces.userid = users.id where annonces.id!="" limit 12  ');
+  // return $createData ;
+      // $users = User::all();
+     
+
+
         $categories  =$user_info = annonce::groupBy('categorie')->select('categorie', DB::raw('count(*) as total'))->get();
         $zonenavigateur = annonce::groupBy('zonenavigateur')->select('zonenavigateur', DB::raw('count(*) as total'))->get();
 

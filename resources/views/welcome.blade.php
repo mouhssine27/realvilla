@@ -174,7 +174,7 @@ Browse properties -->
       <div class="col-sm-6 col-md-4">
         <div class="property-item">
           <div class="property-image bg-overlay-gradient-04">
-            <img class="img-fluid" src="annonce/{{$createDatas->image}}" alt="">
+            <img class="img-fluid" src="{{asset('/annonce/'. $createDatas->image)}}" alt="">
             <div class="property-lable">
               <span class="badge badge-md bg-primary">Bungalow</span>
               <span class="badge badge-md bg-info">Vente </span>
@@ -182,7 +182,7 @@ Browse properties -->
             <span class="property-trending" title="trending"><i class="fas fa-bolt"></i></span>
             <div class="property-agent">
               <div class="property-agent-image">
-                <img class="img-fluid" src="annonce/{{$createDatas->photos}}" alt="">
+                <img class="img-fluid" src="{{asset('/imageUser/'. $createDatas->photos)}}" alt="">
               </div>
               <div class="property-agent-info">
                 <a class="property-agent-name" href="#">Alice Williams</a>

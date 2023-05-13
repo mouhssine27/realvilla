@@ -354,11 +354,11 @@ header -->
                     <div class="card-header">Profile Picture</div>
                     <div class="card-body text-center">
                         <!-- Profile picture image-->
-                        <img id="blah" class="img-account-profile rounded-circle mb-2" src="{{asset('/imageUser/'. $authUser->image)}}" alt="">
+                        <img id="blah" class="img-account-profile rounded-circle mb-2" src="{{asset('/imageUser/'. $authUser->photos)}}" alt="">
                         <!-- Profile picture help block-->
                         <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
                         <!-- Profile picture upload button-->
-                        <input style="padding: 0 !important" class="btn btn-success" name="image" type='file' onchange="readURL(this);" />
+                        <input style="padding: 0 !important" class="btn btn-success" name="photos" type='file' onchange="readURL(this);" />
                     </div>
                 </div>
             </div>
