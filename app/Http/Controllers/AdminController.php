@@ -97,18 +97,18 @@ class AdminController extends Controller
   public function UpdateProfileUser($id , request $request){
    // return 1;
    $data= $request->all();       
-   if($request->image !=""){
-       $file_extension =$request->image->getClientOriginalExtension();
+   if($request->photos !=""){
+       $file_extension =$request->photos->getClientOriginalExtension();
        $file_name =time().'.'.$file_extension;
        $path ='imageUser';
-       $request->image->move($path,$file_name);
+       $request->photos->move($path,$file_name);
             }
             $user= User::find($id);
             $user->name = $data['name'];   
             $user->phone = $data['phone'];   
             $user->ville = $data['ville']; 
             if(isset($file_name)){
-               $user->image = $file_name; 
+               $user->photos = $file_name; 
             }
             $user->save()  ;
             return redirect()->back()->with('success', 'modification à éte bien enregistré');   

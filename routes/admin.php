@@ -45,4 +45,4 @@ Route::get('/annonncesDetailsAdmin/{id}', [AdminController::class, 'annonncesDet
 Route::get('/Admin', [AdminAuthController::class, 'showAdminLoginForm'])->name('admin.login-view');
 Route::post('/Admin', [AdminAuthController::class, 'adminLogin'])->name('admin.login');
 Route::get('/Admin/logout', [AdminAuthController::class, 'Logout'])->name('admin.logoutt');
-Route::get('/Admin/dashboard', [AdminAuthController::class, 'dashboard'])->middleware('auth:admin');
+Route::get('/Admin/dashboard', [AdminController::class, 'AdminSelect'])->middleware('auth:admin');

@@ -29,12 +29,12 @@
                                     <ul class="action-list" >
                                     <li style="text-decoration-style:none"><a href="#">
                                         <button id="ba" value ="{{$agencys->id}}" class="my_button2" style="background:none;border:none">
-                                            <img src="annonce/sp.png" alt="" style="width:14px">
+                                            <img src="/annonce/sp.png" alt="" style="width:14px">
                                             </button>
                                         </a></li>
                                         <li style="text-decoration-style:none">
                                         <a  href=" /updateAgenece.user/{{$agencys->id}}">
-                                        <img src="annonce/md.png" alt="" style="width:14px">
+                                        <img src="/annonce/md.png" alt="" style="width:14px">
                                         </i></a>
                                     </ul>
                                 </td>
