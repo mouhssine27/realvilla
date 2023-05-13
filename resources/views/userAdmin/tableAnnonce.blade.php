@@ -30,13 +30,13 @@
                                         <li style="text-decoration-style:none">
                                         <a href="#">
                                         <button id="ba" value ="{{$AnnonceSelects->id}}" class="my_button" style="background:none;border:none;margin-left:10px">
-                                            <img src="annonce/sp.png" alt="" style="width:24px;margin-left:10px">
+                                            <img src="/annonce/sp.png" alt="" style="width:24px;margin-left:10px">
                                             </button></a>
                                         </li>
                                         <li style="text-decoration-style:none">
 
                                         <a href="/updeateAnnoceAdmin/{{$AnnonceSelects->id}}" data-tip="updeate">
-                                        <img src="annonce/md.png" alt="" style="width:14px;margin-left:30px">
+                                        <img src="/annonce/md.png" alt="" style="width:14px;margin-left:30px">
                                         </i></a>                          
                                     </li>
 
@@ -47,7 +47,7 @@
                                     <ul class="action-list" >
                                         <li style="text-decoration-style:none">
                                         <a href="/ActiverAnnonce/{{$AnnonceSelects->id}}">
-                                        <img src="annonce/virifier.jpg" alt="" style="width:54px;background:none">
+                                        <img src="/annonce/virifier.jpg" alt="" style="width:54px;background:none">
                                             </a>
                                         </li>
                                         <li style="text-decoration-style:none">

@@ -36,7 +36,7 @@ header -->
  <div class="container-xl px-4 mt-4">
         <!-- Account page navigation-->
         <nav class="nav nav-borders">
-            <a class="nav-link active ms-0" href="/admin/dashboard">Dashboard</a>
+            <a class="nav-link active ms-0" href="/Admin/dashboard">Dashboard</a>
             {{-- <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-profile-security-page" target="__blank">Security</a>
             <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-edit-notifications-page"  target="__blank">Notifications</a> --}}
         </nav>
@@ -57,13 +57,13 @@ header -->
                     <div class="card-header">Profile Picture</div>
                     <div class="card-body text-center">
                         <!-- Profile picture image-->
-                        @if($authUserAdmin->image!="")
-                        <img id="blah" class="img-account-profile rounded-circle mb-2" src="{{asset('/imageUser/'. $authUserAdmin->image)}}" alt="">
+                        @if($authUserAdmin->photos!="")
+                        <img id="blah" class="img-account-profile rounded-circle mb-2" src="{{asset('/imageUser/'. $authUserAdmin->photos)}}" alt="">
                         @endif
                         <!-- Profile picture help block-->
                         <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
                         <!-- Profile picture upload button-->
-                        <input style="padding: 0 !important" class="btn btn-success" name="image" type='file' onchange="readURL(this);" />
+                        <input style="padding: 0 !important" class="btn btn-success" name="photos" type='file' onchange="readURL(this);" />
                     </div>
                 </div>
             </div>

@@ -23,9 +23,9 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="css/admindhachbouard.css" rel="stylesheet">
-    <script src="Admin/admindahachbouard"></script>
+    <link href="{{ asset('css/sb-admin-2.min.css"') }}" rel="stylesheet">
+    <link href="{{ asset('css/admindhachbouard.css') }}" rel="stylesheet">
+    <script src="{{ asset('Admin/admindahachbouard') }}"></script>
 
 </head>
 

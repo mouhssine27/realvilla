@@ -1,5 +1,5 @@
 <div class="inner1" style="display:none">
-				<form action="CreateAgencity" method="post"  enctype="multipart/form-data">
+				<form action="/CreateAgencity" method="post"  enctype="multipart/form-data">
                     @csrf
 					<h3>Ajouter Agency</h3>
 					<label class="form-group">
