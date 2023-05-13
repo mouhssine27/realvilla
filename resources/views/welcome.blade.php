@@ -182,19 +182,19 @@ Browse properties -->
             <span class="property-trending" title="trending"><i class="fas fa-bolt"></i></span>
             <div class="property-agent">
               <div class="property-agent-image">
-                <img class="img-fluid" src="images/avatar/01.jpg" alt="">
+                <img class="img-fluid" src="annonce/{{$createDatas->photos}}" alt="">
               </div>
               <div class="property-agent-info">
                 <a class="property-agent-name" href="#">Alice Williams</a>
                 <span class="d-block">Agent de la societé</span>
                 <ul class="property-agent-contact list-unstyled">
-                  <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
+                  <li><a href="https://wa.me/{{$createDatas->phone}}"><i class="fas fa-mobile-alt"></i> </a> {{$createDatas->phone}}</li>
                   <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
                 </ul>
               </div>
             </div>
             <div class="property-agent-popup">
-              <a href="#"><i class="fas fa-camera"></i> 06</a>
+              <a href="#"><i class="fas fa-camera"></i> </a>
             </div>
           </div>
           <div class="property-details">
