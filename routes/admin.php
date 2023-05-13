@@ -19,6 +19,7 @@ use App\Http\controllers\AdminController;
 //Route::get('/Admin', [AdminController::class,'AdminSelect']);
 Route::post('/CreateAgencity', [AdminController::class,'CreateAgencity']);
 Route::get('/supprimerAdminAnnonce', [AdminController::class,'SupprimerAnnonce']);
+
 Route::get('/supprimerAdminUtulisateur', [AdminController::class,'Supprimerutulisateur']);
 
 Route::get('/supprimerAdminAgency', [AdminController::class,'Supprimeragency']);
