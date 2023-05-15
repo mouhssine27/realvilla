@@ -191,7 +191,8 @@ public function ActiverAnnonce($id)
    $ActiveAnnonce = Annonce::find($id);
    $ActiveAnnonce->validation = "oui";
    $ActiveAnnonce->save();
-return redirect("/Admin/dashboard")->with('success', 'Annonce et Confirmer');   
+return redirect("/Admin/dashboard")->with('success', 'Annonce et Confirmer');
+   
 }
 
 public function updeateAnoonceAdmin($id)
