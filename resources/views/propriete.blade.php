@@ -273,6 +273,7 @@ Listing – grid view -->
             </div>
           </div>
         </div>
+        
         @endif
      @endforeach
       </div>
