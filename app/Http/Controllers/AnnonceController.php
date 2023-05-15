@@ -91,11 +91,10 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
      }
      public function pageprincipale()
      {
-   $createData  = DB::Select('select * from annonces inner join users on annonces.userid = users.id where annonces.id!="" limit 12  ');
-  // return $createData ;
-      // $users = User::all();
-     
 
+      $createData =  DB::table('users')
+      ->join('annonces','userid', '=', 'users.id')
+      ->get();
 
         $categories  =$user_info = annonce::groupBy('categorie')->select('categorie', DB::raw('count(*) as total'))->get();
         $zonenavigateur = annonce::groupBy('zonenavigateur')->select('zonenavigateur', DB::raw('count(*) as total'))->get();
@@ -141,6 +140,7 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
 public function details($name,$id)
 {  
   $databrt = annonce::find($id);
+
    $dtailsParCategories = DB::Select("select * from annonces where annonces.categorie='$name' limit 3");
   return view("afficherInformation",compact('dtailsParCategories','databrt'));
 }
