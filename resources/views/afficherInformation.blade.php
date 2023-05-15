@@ -33,16 +33,15 @@
             </div>
             <div class="agent-contact">
               <div class="d-flex align-items-center p-4 border border-bottom-0">
-              @foreach($profile as $profiles)
+           
                 <div class="agent-contact-avatar me-3">
-                  <img class="img-fluid rounded-circle avatar avatar-xl" src="/imageUser/{{$profiles->image}}" alt="">
+                  <img class="img-fluid rounded-circle avatar avatar-xl" src="/imageUser{{$databrt->photos}}" alt="">
                 </div>
                 <div class="agent-contact-name">
-                  <h6>{{$profiles->name}}</h6>
-                  <a href="#">{{$profiles->email }}</a>
-                  <span class="d-block"><i class="fas fa-phone-volume pe-2 mt-2"></i>{{$profiles->phone}}</span>
+                  <h6>{{$databrt->name}}</h6>
+                  <a href="#">{{$databrt->email}}</a>
+                  <span class="d-block"><i class="fas fa-phone-volume pe-2 mt-2"></i>{{$databrt->phone}}/span>
                 </div>
-                @endforeach
               </div>
               <div class="d-flex">
                 <a href="#" class="btn btn-dark col b-radius-none">Voir les annonces</a>

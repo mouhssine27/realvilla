@@ -141,10 +141,8 @@ $REQUEST->fichiernavigateur->move($path1,$file_name1);
 public function details($name,$id)
 {  
   $databrt = annonce::find($id);
- $profile  = User::select()->where('id',$databrt->userid)->get();
-  
-    $dtailsParCategories = DB::Select("select * from annonces where annonces.categorie='$name' limit 3");
-  return view("afficherInformation",compact('dtailsParCategories','databrt','profile'));
+   $dtailsParCategories = DB::Select("select * from annonces where annonces.categorie='$name' limit 3");
+  return view("afficherInformation",compact('dtailsParCategories','databrt'));
 }
 
 }
