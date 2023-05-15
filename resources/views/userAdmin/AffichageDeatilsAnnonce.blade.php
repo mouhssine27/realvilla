@@ -36,7 +36,7 @@ header -->
  <div class="container-xl px-4 mt-4">
         <!-- Account page navigation-->
         <nav class="nav nav-borders">
-            <a class="nav-link active ms-0" href="/admin/dashboard">Dashboard</a>
+            <a class="nav-link active ms-0" href="/Admin/dashboard">Dashboard</a>
             {{-- <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-profile-security-page" target="__blank">Security</a>
             <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-edit-notifications-page"  target="__blank">Notifications</a> --}}
         </nav>
