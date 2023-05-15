@@ -27,13 +27,9 @@ class AdminAuthController extends Controller
         ]);
 
         $AnnonceSelect = Annonce::select()->get();
-        $user  = User::select()->get();
-        $agency  = Agency::select()->get();
-
 
         if (Auth::guard('admin')->attempt($request->only(['email', 'password']), $request->get('remember'))) {
-
-            return view('AdminDachbouard', compact('AnnonceSelect', 'user', 'agency'));
+            return redirect('/Admin/dashboard');
         }
 
         return back()->withInput($request->only('email', 'remember'));
@@ -48,7 +44,7 @@ class AdminAuthController extends Controller
 
         Auth::guard('admin')->logout();
 
-        return view('auth.loginadmin');
+        return redirect('/Admin') ;
     }
 
     public function dashboard()
